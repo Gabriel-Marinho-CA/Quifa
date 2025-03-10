@@ -1,0 +1,298 @@
+{{ 'product-highlight-by-turbo.css' | asset_url | stylesheet_tag }}
+{% style %}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+  .product-highlight.section-{{ section.id }}-padding {
+    background-color:{{ section.settings.bg_color }};
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: -1;
+        content:"";
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ section.settings.bg_image | image_url: width: section.settings.bg_image.width , height: section.settings.bg_image.height}}");
+        background-repeat: round;
+        opacity: .10;
+    }
+
+    * {
+        line-height: 1;
+        color: {{ section.settings.text_color }};
+    }
+
+    strong {
+        color: {{ section.settings.strong_color }};
+    }
+
+    .hgl-text {
+        border: 2px solid {{ section.settings.strong_color }};
+        * {
+            color: {{ section.settings.strong_color }};
+        }
+
+    }
+  }
+</style>
+
+<div
+  class="product-highlight section-{{ section.id }}-padding"
+  {% if section.settings.id_section %}
+    id="{{ section.settings.id_section |  handleize}}"
+  {% endif %}
+  style="background-color:{{ section.settings.bg_color }};"
+>
+  <div class="pdp_highlight page-width">
+    <div class="wrapper">
+      <div class="icon-top-left">
+        {% if section.settings.icon_top_left != blank %}
+          {{ section.settings.icon_top_left | image_url: width: 90, height: 90 | image_tag }}
+        {% endif %}
+      </div>
+      <div class="left">
+        <div class="wrapper-text">
+          <div class="title-hgl">
+            {{ section.settings.title }}
+          </div>
+          <div class="subtitle-hgl">
+            {{ section.settings.subtitle }}
+          </div>
+        </div>
+        <div class="buy-btn-hgl desktop">
+          <a
+            href="{{ section.settings.link_btn }}"
+            style="background-color: {{ section.settings.btn_color_bg }}; color: {{ section.settings.btn_color_text }}"
+          >
+            {{ section.settings.btn_text }}
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        {% comment %}
+          <div class="bottom-left hgl-text">
+            {{ section.settings.bottom_left }}
+          </div>
+          <div class="top-left hgl-text">
+            {{ section.settings.top_left }}
+          </div>
+          <div class="bottom-right hgl-text">
+            {{ section.settings.bottom_right }}
+          </div>
+          <div class="top-right hgl-text">
+            {{ section.settings.top_right }}
+          </div>
+        {% endcomment %}
+        <div class="image">
+          {% if section.settings.product_image != blank %}
+            <div class="wrapper-pdp-image">
+              <div class="desktop">
+                {% if section.settings.product_image != blank %}
+                  {{
+                    section.settings.product_image
+                    | image_url:
+                      width: section.settings.product_image.width,
+                      height: section.settings.product_image.height
+                    | image_tag
+                  }}
+                {% endif %}
+              </div>
+              <div class="mobile">
+                {% if section.settings.product_image_mobile == blank and section.settings.product_image != blank %}
+                  {{
+                    section.settings.product_image
+                    | image_url:
+                      width: section.settings.product_image.width,
+                      height: section.settings.product_image.height
+                    | image_tag
+                  }}
+                {% else %}
+                  {{
+                    section.settings.product_image_mobile
+                    | image_url:
+                      width: section.settings.product_image_mobile.width,
+                      height: section.settings.product_image_mobile.height
+                    | image_tag
+                  }}
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% comment %}
+            {% if section.settings.icon_bottom_right_product != blank %}
+              <div class="icon-bottom-right-pdp">
+                {{ section.settings.icon_bottom_right_product | image_url: width: 120, height: 140 | image_tag }}
+              </div>
+            {% endif %}
+          {% endcomment %}
+        </div>
+      </div>
+      <div class="buy-btn-hgl mobile">
+        <a
+          href="{{ section.settings.link_btn }}"
+          style="background-color: {{ section.settings.btn_color_bg }}; color: {{ section.settings.btn_color_text }}"
+        >
+          {{ section.settings.btn_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Destaque de produto",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Cores"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Cor background",
+      "default": "#FF4375"
+    },
+    {
+      "type": "color",
+      "id": "strong_color",
+      "label": "Cor destaque",
+      "default": "#B4FA64"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Cor dos textos",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "btn_color_bg",
+      "label": "Cor background botão",
+      "default": "#B4FA64"
+    },
+    {
+      "type": "color",
+      "id": "btn_color_text",
+      "label": "Cor Texto botão",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Textos"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitulo"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Texto botão"
+    },
+    {
+      "type": "url",
+      "id": "link_btn",
+      "label": "Link do botão"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_left",
+      "label": "Texto baixo esquerda"
+    },
+    {
+      "type": "richtext",
+      "id": "top_left",
+      "label": "Texto cima esquerda"
+    },
+    {
+      "type": "richtext",
+      "id": "bottom_right",
+      "label": "Texto baixo direita"
+    },
+    {
+      "type": "richtext",
+      "id": "top_right",
+      "label": "Texto cima direita"
+    },
+    {
+      "type": "header",
+      "content": "Imagens"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Imagem background"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_top_left",
+      "label": "Icone cima esquerda"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Imagem do produto"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image_mobile",
+      "label": "Imagem do produto mobile"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product highlight"
+    }
+  ]
+}
+{% endschema %}

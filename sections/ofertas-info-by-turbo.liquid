@@ -1,0 +1,247 @@
+{% style %}
+    .deals-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .deals-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+<style>
+  .deals-bar-fixed.deals-{{ section.id }} {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px -4px 8px 0px #00000014;
+    display: none;
+    visibility:hidden;
+    
+    &.active {
+      visibility:visible;
+    }
+
+    @media (min-width: 800px) {
+      &.desktop {
+        display: block !important;
+      }
+    }
+    @media (max-width: 799px) {
+
+
+
+    &.mobile.sticky-mobile {
+      position: fixed !important;
+      display: block !important;
+    }
+      &.mobile {
+        display: block !important;
+        position: initial !important;
+
+        ul {
+          overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+          -webkit-overflow-scrolling: auto;
+          padding: 0 0 1rem 0;
+
+          li {
+            min-width: fit-content;
+          }
+        }
+      }
+    }
+
+    &[data-sticky="true"] {
+      position: fixed;
+      bottom: 0;
+      z-index: 10;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      * {
+        margin: 0;
+        line-height: 1;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        strong {
+          font-weight: 400 !important;
+        }
+
+        .title-card {
+          * {
+            font-size: 18px;
+            font-weight: 300;
+            color: #4d4d4d;
+          }
+        }
+        .subtitle-card {
+          * {
+            color: #4d4d4d;
+            font-weight: 300;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+</style>
+
+
+<div
+  class="deals-bar-fixed deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}{% if section.settings.deal_bar_sticky_mobile %} sticky-mobile{% endif %}"
+  {% if section.settings.deal_bar_active %}
+    data-sticky="true"
+  {% endif %}
+>
+  <div class="page-width">
+    <div class="wrapper-deals">
+      <ul>
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {%- when '@app' -%}
+              {% render block %}
+            {% when 'deal' %}
+              <li>
+                {% if block.settings.img != blank %}
+                  {{ block.settings.img | image_url: width: 40, height: 40 | image_tag }}
+                {% endif %}
+
+                <div class="right-card">
+                  <div class="title-card">
+                    {{ block.settings.title }}
+                  </div>
+                  <div class="subtitle-card">
+                    {{ block.settings.subtitle }}
+                  </div>
+                </div>
+              </li>
+            {% else %}
+
+          {% endcase %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fixed_deal_bar = document.querySelector('.deals-bar-fixed');
+    const targetElement = document.querySelector('.extra-footer-copy');
+
+    if (!targetElement) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          fixed_deal_bar.classList.remove('active');
+        } else {
+          fixed_deal_bar.classList.add('active');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(targetElement);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Ofertas info by turbo",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+
+  "settings": [
+    {
+      "type": "checkbox",
+      "label": "Ativar sticky",
+      "id": "deal_bar_active",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "label": "Ativar sticky no mobile",
+      "id": "deal_bar_sticky_mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "label": "Exibir no mobile",
+      "id": "deal_bar_active_mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "deal",
+      "name": "Card Oferta",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Imagem Oferta"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Titulo Oferta"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Subtitulo Oferta"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barra de Ofertas"
+    }
+  ]
+}
+{% endschema %}
