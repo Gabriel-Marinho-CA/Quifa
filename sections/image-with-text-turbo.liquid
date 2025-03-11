@@ -16,10 +16,32 @@
   .image-with-text-turbo {
     background: {{ section.settings.bg_wrapper_content }};
 
+  .section-wrapper {
+        background:  {{ section.settings.section.settings.img | img_url: 'master'}};
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.right-bg {
+            background-position: right;
+        }
+
+        @media (max-width:1000px) {
+            background:  {{ section.settings.section.settings.img_mobile | img_url: 'master'}};
+        }
+    }
+
   .wrapper {
     display: flex;
     align-items: center;
     flex-direction: {{ section.settings.box_align}};
+
+    .right {
+        min-height: {{ section.settings.section.settings.img.height }};
+
+        @media (max-width:1000px) {
+            min-height: {{ section.settings.section.settings.img_mobile.height }};
+        }
+    }
   }
 
     .desktop,
@@ -147,7 +169,7 @@
                 }
 
                 @media screen and (max-width:999px) {
-                  max-width: 100%;
+                  /* max-width: 100%; */
                 }
             }
           }
@@ -158,47 +180,49 @@
 <div
   class="image-with-text-turbo image-with-text-turbo-{{ section.id }} image-with-text-turbo-{{ section.id }}-padding desktop"
 >
-  <div class="page-width">
-  {% if section.settings.title != blank %}
-    <div class="title-banner">
-      {{ section.settings.title }}
-    </div>
-    
-  {% endif %}
-    <div class="wrapper">
-      <div class="left">
-        <div class="wrapper-text">
-          <div class="title-text">
-            {{ section.settings.title_text }}
-          </div>
-          <div class="content-text">
-            {{ section.settings.content_text }}
-          </div>
-          <div class="check-button">
-            <a href="{{ section.settings.link_btn }}">
-              {{ section.settings.btn_label }}
-            </a>
+
+  <div class="section-wrapper {% if section.settings.box_align == "row-reverse" %}right-bg{% endif %}">
+    <div class="page-width">
+      {% if section.settings.title != blank %}
+        <div class="title-banner">
+          {{ section.settings.title }}
+        </div>
+      {% endif %}
+      <div class="wrapper">
+        <div class="left">
+          <div class="wrapper-text">
+            <div class="title-text">
+              {{ section.settings.title_text }}
+            </div>
+            <div class="content-text">
+              {{ section.settings.content_text }}
+            </div>
+            <div class="check-button">
+              <a href="{{ section.settings.link_btn }}">
+                {{ section.settings.btn_label }}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="right">
-        <div class="desktop">
-          {% if section.settings.img != blank %}
-            {{
-              section.settings.img
-              | image_url: width: section.settings.img.width, height: section.settings.img.height
-              | image_tag
-            }}
-          {% endif %}
-        </div>
-        <div class="mobile">
-          {% if section.settings.img_mobile != blank %}
-            {{
-              section.settings.img_mobile
-              | image_url: width: section.settings.img_mobile.width, height: section.settings.img_mobile.height
-              | image_tag
-            }}
-          {% endif %}
+        <div class="right">
+          <div class="desktop">
+            {% if section.settings.img != blank %}
+              {{
+                section.settings.img
+                | image_url: width: section.settings.img.width, height: section.settings.img.height
+                | image_tag
+              }}
+            {% endif %}
+          </div>
+          <div class="mobile">
+            {% if section.settings.img_mobile != blank %}
+              {{
+                section.settings.img_mobile
+                | image_url: width: section.settings.img_mobile.width, height: section.settings.img_mobile.height
+                | image_tag
+              }}
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -214,6 +238,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "image_bg",
+      "label": "Imagem como background",
+      "default": true
+    },
     {
       "type": "color_background",
       "id": "bg_wrapper_content",
@@ -289,21 +319,21 @@
       "default": "#fff"
     },
     {
-        "type": "select",
-        "id": "box_align",
-        "options": [
-          {
-            "value": "row",
-            "label": "left"
-          },
-          {
-            "value": "row-reverse",
-            "label": "right"
-          }
-        ],
-        "default": "row",
-        "label": "Selecione a direção da caixa de texto"
-      },
+      "type": "select",
+      "id": "box_align",
+      "options": [
+        {
+          "value": "row",
+          "label": "left"
+        },
+        {
+          "value": "row-reverse",
+          "label": "right"
+        }
+      ],
+      "default": "row",
+      "label": "Selecione a direção da caixa de texto"
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
@@ -336,3 +366,6 @@
   ]
 }
 {% endschema %}
+
+/* border-image-source: linear-gradient(360deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%,
+#62CEBF 100%); */
