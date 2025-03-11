@@ -26,15 +26,22 @@
             background-position: left;
         }
 
-        @media (max-width:1000px) {
-            background: url(" {{ section.settings.img_mobile | img_url: 'master' }}");
-        }
     }
+
+    @media (max-width:1000px) {
+        .section-wrapper-img-bg {
+            background: url(" {{ section.settings.img_mobile | img_url: 'master' }}");
+                }
+            }
 
   .wrapper {
     display: flex;
     align-items: center;
     flex-direction: {{ section.settings.box_align}};
+
+    @media (max-width:1000px) {
+        flex-direction: column-reverse;
+    }
 
     .right {
         height: calc(86vw - {{ section.settings.img.height }}px);
