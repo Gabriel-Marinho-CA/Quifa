@@ -119,7 +119,8 @@
       "type": "image-with-text-turbo",
       "custom_css": [
         "strong {background-image: linear-gradient( 270deg, #f8c24d 0%, #f51a51 20.5%, #9d36ac 45%, #573bd9 65%, #2396b5 82.25%, #62cebf 100% ); background-clip: text; -webkit-background-clip: text; color: transparent;}",
-        ".title-text {max-width: 400px;}"
+        ".title-text {max-width: 400px;}",
+        ".wrapper {padding: 2.5rem 0;}"
       ],
       "settings": {
         "image_is_bg": true,
