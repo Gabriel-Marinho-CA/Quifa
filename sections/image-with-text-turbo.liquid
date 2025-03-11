@@ -17,7 +17,7 @@
     background: {{ section.settings.bg_wrapper_content }};
 
   .section-wrapper {
-        background: url("{{ section.settings.section.settings.img | img_url: 'master' }}");
+        background: url("{{ section.settings.img | img_url: 'master' }}");
         background-size: contain;
         background-repeat: no-repeat;
 
@@ -26,7 +26,7 @@
         }
 
         @media (max-width:1000px) {
-            background: url(" {{ section.settings.section.settings.img_mobile | img_url: 'master' }}");
+            background: url(" {{ section.settings.img_mobile | img_url: 'master' }}");
         }
     }
 
@@ -180,7 +180,6 @@
 <div
   class="image-with-text-turbo image-with-text-turbo-{{ section.id }} image-with-text-turbo-{{ section.id }}-padding desktop"
 >
-
   <div class="section-wrapper {% if section.settings.box_align == "row-reverse" %}right-bg{% endif %}">
     <div class="page-width">
       {% if section.settings.title != blank %}
