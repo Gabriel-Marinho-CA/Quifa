@@ -87,6 +87,7 @@
           }
           .check-button {
             a {
+                text-decoration: none;
                 font-size:16px;
                 font-weight:500;
                 background-color: {{ section.settings.btn_bg}};
@@ -98,6 +99,10 @@
                 display:flex;
                 justify-content:center;
                 align-items:center;
+
+                &:hover {
+                  background-color: #061433;
+                }
             }
           }
       }
@@ -170,9 +175,16 @@
     {
       "type": "richtext",
       "id": "title",
-      "label": "Titulo seção",
+      "label": "Titulo sessão",
       "default": "<h2>Você sabia que fumantes podem ter<br/><strong>deficiências de vitaminas e minerais</strong>?</h2>"
     },
+    {
+      "type": "color",
+      "id": "color_title",
+      "default": "#1E2239",
+      "label": "Cor do titulo da sessão"
+    },
+    
     {
       "type": "header",
       "content": "Box de conteudo"
