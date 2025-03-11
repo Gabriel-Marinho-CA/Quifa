@@ -57,15 +57,26 @@
             "title": "<p>Imunidade</p>",
             "subtitle": ""
           }
+        },
+        "deal_mtJxxp": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_1.svg",
+            "title": "<p>Energia</p>",
+            "subtitle": ""
+          }
         }
       },
       "block_order": [
-        "deal_393fjV"
+        "deal_393fjV",
+        "deal_mtJxxp"
       ],
       "settings": {
         "deal_bar_active": false,
         "deal_bar_sticky_mobile": false,
         "deal_bar_active_mobile": false,
+        "bg_color": "#013F56",
+        "text_color": "#fff",
         "padding_top": 36,
         "padding_bottom": 36
       }
