@@ -16,7 +16,7 @@
   .image-with-text-turbo {
     background: {{ section.settings.bg_wrapper_content }};
 
-  .section-wrapper {
+  .section-wrapper-img-bg {
         background: url("{{ section.settings.img | img_url: 'master' }}");
         background-size: contain;
         background-repeat: no-repeat;
@@ -180,7 +180,8 @@
 <div
   class="image-with-text-turbo image-with-text-turbo-{{ section.id }} image-with-text-turbo-{{ section.id }}-padding desktop"
 >
-  <div class="section-wrapper {% if section.settings.box_align == "row-reverse" %}right-bg{% endif %}">
+
+  <div class="{% if section.settings.image_is_bg %}section-wrapper-img-bg {% if section.settings.box_align == "row-reverse" %}right-bg{% endif %}{% endif %} ">
     <div class="page-width">
       {% if section.settings.title != blank %}
         <div class="title-banner">
@@ -204,24 +205,26 @@
           </div>
         </div>
         <div class="right">
-          <div class="desktop">
-            {% if section.settings.img != blank %}
-              {{
-                section.settings.img
-                | image_url: width: section.settings.img.width, height: section.settings.img.height
-                | image_tag
-              }}
-            {% endif %}
-          </div>
-          <div class="mobile">
-            {% if section.settings.img_mobile != blank %}
-              {{
-                section.settings.img_mobile
-                | image_url: width: section.settings.img_mobile.width, height: section.settings.img_mobile.height
-                | image_tag
-              }}
-            {% endif %}
-          </div>
+          {% if section.settings.image_is_bg %}
+            <div class="desktop">
+              {% if section.settings.img != blank %}
+                {{
+                  section.settings.img
+                  | image_url: width: section.settings.img.width, height: section.settings.img.height
+                  | image_tag
+                }}
+              {% endif %}
+            </div>
+            <div class="mobile">
+              {% if section.settings.img_mobile != blank %}
+                {{
+                  section.settings.img_mobile
+                  | image_url: width: section.settings.img_mobile.width, height: section.settings.img_mobile.height
+                  | image_tag
+                }}
+              {% endif %}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -239,7 +242,7 @@
   "settings": [
     {
       "type": "checkbox",
-      "id": "image_bg",
+      "id": "image_is_bg",
       "label": "Imagem como background",
       "default": true
     },
