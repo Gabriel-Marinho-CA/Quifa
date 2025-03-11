@@ -103,20 +103,43 @@
         "img": "shopify://shop_images/Frame_1261153477.png",
         "img_mobile": "shopify://shop_images/Frame_1261153477_1.png",
         "title": "<h2>Você sabia que fumantes podem ter<br/><strong>deficiências de vitaminas e minerais</strong>?</h2>",
+        "color_title": "#1E2239",
         "title_text": "<h4>O que a ciência nos mostra sobre essa conexão</h4>",
         "content_text": "<p>Estudos indicam que pessoas que fumam podem ter necessidades nutricionais diferentes.<br/>O cigarro pode influenciar como o corpo absorve e utiliza vitaminas e minerais essenciais.</p>",
+        "color_content": "#fff",
         "btn_label": "Conferir produtos",
         "link_btn": "",
-        "btn_bg": "#fff",
+        "btn_bg": "#ffffff",
         "btn_text_color": "#111c30",
         "padding_top": 96,
         "padding_bottom": 68
+      }
+    },
+    "image_with_text_turbo_aUPGbC": {
+      "type": "image-with-text-turbo",
+      "settings": {
+        "bg_wrapper_content": "linear-gradient(180deg, rgba(17, 28, 48, 1), rgba(1, 51, 86, 1) 100%)",
+        "img": "shopify://shop_images/Captura_de_tela_2025-03-11_003138.jpg",
+        "img_mobile": "shopify://shop_images/Group_1000006296.png",
+        "title": "",
+        "color_title": "#1E2239",
+        "title_text": "<p>Como os nutrientes ajudam no <strong>equilíbrio do seu corpo</strong>?</p>",
+        "content_text": "<p>Vitaminas e minerais ajudam o corpo a funcionar da melhor forma. Nutrientes como vitamina C e zinco são conhecidos por apoiar a imunidade, enquanto o complexo B está ligado à energia e ao bem-estar. Em algumas situações, as necessidades nutricionais podem aumentar, tornando a reposição uma escolha inteligente para manter o equilíbrio</p>",
+        "color_content": "#fff",
+        "btn_label": "Conferir produtos",
+        "link_btn": "",
+        "btn_bg": "#fff",
+        "btn_text_color": "#1d3469",
+        "box_align": "row",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "main_banner_by_turbo_GDiJUC",
     "ofertas_info_by_turbo_GjEaez",
-    "image_banner_by_turbo_wagt98"
+    "image_banner_by_turbo_wagt98",
+    "image_with_text_turbo_aUPGbC"
   ]
 }
