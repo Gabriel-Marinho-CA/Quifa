@@ -94,7 +94,9 @@
       {{ section.settings.title }}
     </div>
     <div class="wrapper-image">
-      {{ section.settings.img | image_url: width: section.settings.width, height: section.settings.height | image_tag }}
+       {% if section.settings.img != blank %}
+        {{ section.settings.img | image_url: width: section.settings.width, height: section.settings.height | image_tag }}        
+       {% endif %}
 
       <div class="wrapper-text">
         <div class="title-text">
