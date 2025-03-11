@@ -17,7 +17,7 @@
     background: {{ section.settings.bg_wrapper_content }};
 
   .section-wrapper {
-        background:  {{ section.settings.section.settings.img | img_url: 'master'}};
+        background: url("{{ section.settings.section.settings.img | img_url: 'master' }}");
         background-size: contain;
         background-repeat: no-repeat;
 
@@ -26,7 +26,7 @@
         }
 
         @media (max-width:1000px) {
-            background:  {{ section.settings.section.settings.img_mobile | img_url: 'master'}};
+            background: url(" {{ section.settings.section.settings.img_mobile | img_url: 'master' }}");
         }
     }
 
@@ -36,10 +36,10 @@
     flex-direction: {{ section.settings.box_align}};
 
     .right {
-        min-height: {{ section.settings.section.settings.img.height }};
+        min-height: {{ section.settings.img.height }};
 
         @media (max-width:1000px) {
-            min-height: {{ section.settings.section.settings.img_mobile.height }};
+            min-height: {{ section.settings.img_mobile.height }};
         }
     }
   }
