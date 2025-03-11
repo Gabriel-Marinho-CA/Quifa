@@ -45,6 +45,19 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "header_categ_nav_dREp6k": {
+          "type": "header_categ_nav",
+          "settings": {
+            "text_categ": "Categoria",
+            "btn_label": "Comprar",
+            "color_scheme_categ": ""
+          }
+        }
+      },
+      "block_order": [
+        "header_categ_nav_dREp6k"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
