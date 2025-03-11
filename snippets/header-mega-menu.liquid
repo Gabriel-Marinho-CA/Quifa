@@ -64,6 +64,13 @@
                           {%- endfor -%}
                         </ul>
                       {%- endif -%}
+                      {% if childlink.title | escape == "produtos" %}
+                        {% for item in section.blocks %}
+                          {% if item.type =="header_categ_nav" %}
+                              {{ item.settings.text_categ }}
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
                     </li>
                   {%- endfor -%}
                 </ul>
