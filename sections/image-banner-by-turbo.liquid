@@ -1,6 +1,6 @@
 {% style %}
     .banner-image-custom-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
@@ -33,6 +33,9 @@
 
     .title-banner {
       margin-bottom: 7rem;
+      @media (max-width:999px) {
+        margin-bottom: 4rem;
+      }
       * {
           text-align: center;
           color: {{ section.settings.color_title }};
