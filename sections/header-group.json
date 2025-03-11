@@ -54,10 +54,43 @@
             "btn_label": "Comprar",
             "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
           }
+        },
+        "header_categ_nav_nfAL6k": {
+          "type": "header_categ_nav",
+          "settings": {
+            "categ_link": "",
+            "text_categ": "Categoria",
+            "image_categ": "shopify://shop_images/caixa.png",
+            "btn_label": "Comprar",
+            "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
+          }
+        },
+        "header_categ_nav_yFFnnn": {
+          "type": "header_categ_nav",
+          "settings": {
+            "categ_link": "",
+            "text_categ": "Categoria",
+            "image_categ": "shopify://shop_images/caixa.png",
+            "btn_label": "Comprar",
+            "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
+          }
+        },
+        "header_categ_nav_ipx6th": {
+          "type": "header_categ_nav",
+          "settings": {
+            "categ_link": "",
+            "text_categ": "Categoria",
+            "image_categ": "shopify://shop_images/caixa.png",
+            "btn_label": "Comprar",
+            "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
+          }
         }
       },
       "block_order": [
-        "header_categ_nav_dREp6k"
+        "header_categ_nav_dREp6k",
+        "header_categ_nav_nfAL6k",
+        "header_categ_nav_yFFnnn",
+        "header_categ_nav_ipx6th"
       ],
       "settings": {
         "logo_position": "middle-left",
