@@ -46,9 +46,33 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "ofertas_info_by_turbo_GjEaez": {
+      "type": "ofertas-info-by-turbo",
+      "blocks": {
+        "deal_393fjV": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1.svg",
+            "title": "<p>Imunidade</p>",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "deal_393fjV"
+      ],
+      "settings": {
+        "deal_bar_active": false,
+        "deal_bar_sticky_mobile": false,
+        "deal_bar_active_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main_banner_by_turbo_GDiJUC"
+    "main_banner_by_turbo_GDiJUC",
+    "ofertas_info_by_turbo_GjEaez"
   ]
 }
