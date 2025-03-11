@@ -14,34 +14,15 @@
 <style>
   .deals-bar-fixed.deals-{{ section.id }} {
     width: 100%;
-    background-color: {{section.settings.bg_color}};
-    box-shadow: 0px -4px 8px 0px #00000014;
-    display: none;
-    visibility:hidden;
+    background-color: {{ section.settings.bg_color }};
     
-    &.active {
-      visibility:visible;
-    }
-
     * {
       color: {{ section.settings.text_color }}
     }
 
-    @media (min-width: 800px) {
-      &.desktop {
-        display: block !important;
-      }
-    }
     @media (max-width: 799px) {
 
-    &.mobile.sticky-mobile {
-      position: fixed !important;
-      display: block !important;
-    }
       &.mobile {
-        display: block !important;
-        position: initial !important;
-
         ul {
           overflow-x: scroll;
           -webkit-overflow-scrolling: touch;
@@ -53,12 +34,6 @@
           }
         }
       }
-    }
-
-    &[data-sticky="true"] {
-      position: fixed;
-      bottom: 0;
-      z-index: 10;
     }
 
     ul {
@@ -134,29 +109,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const fixed_deal_bar = document.querySelector('.deals-bar-fixed');
-    const targetElement = document.querySelector('.extra-footer-copy');
-
-    if (!targetElement) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          fixed_deal_bar.classList.remove('active');
-        } else {
-          fixed_deal_bar.classList.add('active');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(targetElement);
-  });
-</script>
-
 {% schema %}
 {
   "name": "Ofertas info by turbo",
@@ -167,24 +119,6 @@
   },
 
   "settings": [
-    {
-      "type": "checkbox",
-      "label": "Ativar sticky",
-      "id": "deal_bar_active",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "label": "Ativar sticky no mobile",
-      "id": "deal_bar_sticky_mobile",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "label": "Exibir no mobile",
-      "id": "deal_bar_active_mobile",
-      "default": false
-    },
     {
       "type":"color",
       "id":"bg_color",
