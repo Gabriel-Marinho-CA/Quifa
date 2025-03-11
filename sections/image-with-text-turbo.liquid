@@ -59,7 +59,8 @@
         }
 
         @media (max-width:999px) {
-            height: {{ section.settings.img_mobile.height }}px;
+        
+            height:   calc(({{ section.settings.img_mobile.height }} / 339) * 100vw);;
         }
     }
   }
