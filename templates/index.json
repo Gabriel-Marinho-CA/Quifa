@@ -228,6 +228,57 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "section_benefits_health_turbo_xLx9kX": {
+      "type": "section-benefits-health-turbo",
+      "blocks": {
+        "benefit_rgQUY9": {
+          "type": "benefit",
+          "settings": {
+            "img": "shopify://shop_images/picture.png",
+            "title": "<p>Equilíbrio nutricional</p>",
+            "subtitle": "<p>Ajuda a suprir as necessidades específicas do corpo, repondo vitaminas e minerais essenciais.</p>"
+          }
+        },
+        "benefit_f8qMyM": {
+          "type": "benefit",
+          "settings": {
+            "img": "shopify://shop_images/picture_1.png",
+            "title": "<p>Melhora na qualidade de vida</p>",
+            "subtitle": "<p>Ajuda você a se sentir mais disposto e saudável todos os dias. </p>"
+          }
+        },
+        "benefit_6hUk7e": {
+          "type": "benefit",
+          "settings": {
+            "img": "shopify://shop_images/picture_2.png",
+            "title": "<p>Suporte completo para o corpo</p>",
+            "subtitle": "<p>Promove o funcionamento ideal de diversas funções essenciais do organismo.</p>"
+          }
+        },
+        "benefit_qzGaz6": {
+          "type": "benefit",
+          "settings": {
+            "img": "shopify://shop_images/picture_3.png",
+            "title": "<p>Cuidado integrado</p>",
+            "subtitle": "<p>Combina ciência e ativos selecionados para apoiar saúde física e mental</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_rgQUY9",
+        "benefit_f8qMyM",
+        "benefit_6hUk7e",
+        "benefit_qzGaz6"
+      ],
+      "settings": {
+        "title": "<h2>Benefícios essenciais para apoiar a sua saúde</h2>",
+        "color_title": "#1E2239",
+        "text_color": "#5a585a",
+        "text_color_title_card": "#1E2239",
+        "padding_top": 72,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -238,6 +289,7 @@
     "image_with_text_turbo_Arh8WU",
     "image_with_text_turbo_qytcVA",
     "image_with_text_turbo_kmgKf6",
-    "image_with_text_turbo_igDFCn"
+    "image_with_text_turbo_igDFCn",
+    "section_benefits_health_turbo_xLx9kX"
   ]
 }
