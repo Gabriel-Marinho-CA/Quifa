@@ -1,11 +1,11 @@
 {% style %}
-    .deals-{{ section.id }}-padding {
+    .banner-image-custom-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
-    .deals-{{ section.id }}-padding {
+    .banner-image-custom-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
@@ -13,7 +13,25 @@
 {% endstyle %}
 
 <style>
-  .title-banner {
+  .banner-image-turbo {
+
+    .desktop,
+    .mobile {
+      display: none;
+    }
+
+    @media (min-width:1000px) {
+      .desktop {
+        display:block !important;
+      }
+    }
+    @media (max-width:999px) {
+      .mobile {
+        display:block !important;
+      }
+    }
+
+    .title-banner {
       * {
           text-align: center;
           color: {{ section.settings.color_title }};
@@ -84,6 +102,8 @@
           }
       }
   }
+  }
+
 </style>
 
 <div
@@ -94,9 +114,16 @@
       {{ section.settings.title }}
     </div>
     <div class="wrapper-image">
-       {% if section.settings.img != blank %}
-        {{ section.settings.img | image_url: width: section.settings.width, height: section.settings.height | image_tag }}        
-       {% endif %}
+      <div class="desktop">
+        {% if section.settings.img != blank %}
+         {{ section.settings.img | image_url: width: section.settings.img.width, height: section.settings.img.height | image_tag }}        
+        {% endif %}
+      </div>
+      <div class="mobile">
+        {% if section.settings.img_mobile != blank %}
+          {{ section.settings.img_mobile | image_url: width: section.settings.img_mobile.width, height: section.settings.img_mobile.height | image_tag }}        
+         {% endif %}
+      </div>
 
       <div class="wrapper-text">
         <div class="title-text">
