@@ -37,7 +37,8 @@
     flex-direction: {{ section.settings.box_align}};
 
     .right {
-        min-height: {{ section.settings.img.height }}px;
+        height: calc(86vw - {{ section.settings.img.height }}px);
+        max-height: {{ section.settings.img.height }}px;
 
         @media (max-width:1000px) {
             min-height: {{ section.settings.img_mobile.height }}px;
@@ -122,7 +123,7 @@
           }
 
           .title-text {
-            padding-bottom: 1.5rem;        
+            padding-bottom: 1.5rem;
 
             * {
                font-size: 32px;
@@ -183,7 +184,6 @@
 <div
   class="image-with-text-turbo image-with-text-turbo-{{ section.id }} image-with-text-turbo-{{ section.id }}-padding desktop"
 >
-
   <div class="{% if section.settings.image_is_bg %}section-wrapper-img-bg {% if section.settings.box_align == "row-reverse" %}left-bg{% endif %}{% endif %} ">
     <div class="page-width">
       {% if section.settings.title != blank %}
@@ -209,8 +209,7 @@
         </div>
         <div class="right">
           {% if section.settings.image_is_bg %}
-            {% else %}
-                
+          {% else %}
             <div class="desktop">
               {% if section.settings.img != blank %}
                 {{
