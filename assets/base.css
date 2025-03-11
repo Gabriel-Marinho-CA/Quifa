@@ -2960,9 +2960,9 @@ details[open] > .header__menu-item .icon-caret {
   position: static;
 }
 header .list-menu {
-  li * {
-    font-size: 18px;
-    color: #4d4d4d;
+  li *:not(button) {
+    font-size: 16px;
+    color: #434752;
     text-decoration: none;
   }
 }
