@@ -23,14 +23,16 @@
       visibility:visible;
     }
 
+    * {
+      color: {{ section.settings.text_color }}
+    }
+
     @media (min-width: 800px) {
       &.desktop {
         display: block !important;
       }
     }
     @media (max-width: 799px) {
-
-
 
     &.mobile.sticky-mobile {
       position: fixed !important;
@@ -76,20 +78,16 @@
         align-items: center;
         gap: 1rem;
 
-        strong {
-          font-weight: 400 !important;
-        }
 
         .title-card {
           * {
-            font-size: 18px;
-            font-weight: 300;
-            color: #4d4d4d;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
           }
         }
         .subtitle-card {
           * {
-            color: #4d4d4d;
             font-weight: 300;
             font-size: 18px;
           }
@@ -192,6 +190,12 @@
       "id":"bg_color",
       "default":"#013F56",
       "label": "Cor background"
+    },
+    {
+      "type":"color",
+      "id":"text_color",
+      "default":"#fff",
+      "label": "Cor dos textos"
     },
     {
       "type": "header",
