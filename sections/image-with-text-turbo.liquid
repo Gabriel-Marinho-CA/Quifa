@@ -20,9 +20,10 @@
         background: url("{{ section.settings.img | img_url: 'master' }}");
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: right;
 
-        &.right-bg {
-            background-position: right;
+        &.left-bg {
+            background-position: left;
         }
 
         @media (max-width:1000px) {
@@ -181,7 +182,7 @@
   class="image-with-text-turbo image-with-text-turbo-{{ section.id }} image-with-text-turbo-{{ section.id }}-padding desktop"
 >
 
-  <div class="{% if section.settings.image_is_bg %}section-wrapper-img-bg {% if section.settings.box_align == "row-reverse" %}right-bg{% endif %}{% endif %} ">
+  <div class="{% if section.settings.image_is_bg %}section-wrapper-img-bg {% if section.settings.box_align == "row-reverse" %}left-bg{% endif %}{% endif %} ">
     <div class="page-width">
       {% if section.settings.title != blank %}
         <div class="title-banner">
