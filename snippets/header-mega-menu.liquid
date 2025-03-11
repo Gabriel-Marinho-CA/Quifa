@@ -99,9 +99,9 @@
                     {% if link.title == 'Produtos' or link.title == 'produtos' %}
                       {% for item in section.blocks %}
                         {% if item.type == 'header_categ_nav' %}
-                          <li>
+                          <li class="categ-list-wrapper">
                             <a href="{{ item.settings.categ_link }}" title="{{ item.text_categ }}">
-                              <span>
+                              <span class="title-categ">
                                 {{ item.settings.text_categ }}
                               </span>
                               {{
