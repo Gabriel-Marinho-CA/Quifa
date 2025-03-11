@@ -2971,6 +2971,10 @@ header .list-menu {
     border-radius: 32px;
     width: 100%;
     min-height: 32px;
+    transition: all .3s ease;
+    &:hover {
+      background-color: #061433;
+    }
     
     &::before,
     &::after {
