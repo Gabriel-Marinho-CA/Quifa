@@ -68,7 +68,7 @@
             }
           }
           .check-button {
-            button {
+            a {
                 font-size:16px;
                 font-weight:500;
                 background-color: {{ section.settings.btn_bg}};
@@ -104,9 +104,9 @@
           {{ section.settings.content_text }}
         </div>
         <div class="check-button">
-          <button>
+          <a href="{{ section.settings.link_btn }}">
             {{ section.settings.btn_label }}
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -122,10 +122,10 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    { 
+    {
       "type": "color_background",
       "id": "bg_wrapper_content",
-      "label": "Cor do background da Box",     
+      "label": "Cor do background da Box",
       "default": "linear-gradient(50% 50% at 50% 50%, #111C30 0%, #013356 100%)"
     },
     {
@@ -161,16 +161,27 @@
       "default": "<p>Estudos indicam que pessoas que fumam podem ter necessidades nutricionais diferentes.<br/>O cigarro pode influenciar como o corpo absorve e utiliza vitaminas e minerais essenciais.</p>"
     },
     {
-        "type": "color",
-        "id":"btn_bg",
-        "default":"#fff",
-        "label": "Background botão"
+      "type": "text",
+      "id": "btn_label",
+      "default": "Conferir produtos",
+      "label": "Label do botão"
     },
     {
-        "type": "color",
-        "id":"btn_text_color",
-        "label": "Cor label botão",
-        "default":"#fff"
+      "type": "url",
+      "id": "link_btn",
+      "label": "Link do botão"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "default": "#fff",
+      "label": "Background botão"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Cor label botão",
+      "default": "#fff"
     },
     {
       "type": "header",
