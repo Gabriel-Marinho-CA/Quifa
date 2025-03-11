@@ -15,7 +15,7 @@
   .deals-bar-fixed.deals-{{ section.id }} {
     width: 100%;
     background-color: {{ section.settings.bg_color }};
-    
+
     * {
       color: {{ section.settings.text_color }};
       text-transform:uppercase;
@@ -44,6 +44,20 @@
       justify-content: center;
       gap: 64px;
 
+      @media (max-width:547px) {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        row-gap: 2rem;
+        column-gap: 2rem;
+        padding: 0;
+
+        img {
+          max-width: 32px;
+          height: auto;
+          width: 100%;
+        }
+      }
+
       * {
         margin: 0;
         line-height: 1;
@@ -60,19 +74,26 @@
             font-size: 20px;
             font-weight: 600;
             letter-spacing: 0.2px;
+
+            @media (max-width:547px) {
+              font-size: 15px;
+            }
           }
         }
         .subtitle-card {
           * {
             font-weight: 300;
             font-size: 18px;
+
+            @media (max-width:547px) {
+              font-size: 13px;
+            }
           }
         }
       }
     }
   }
 </style>
-
 
 <div
   class="deals-bar-fixed deals-{{ section.id }} deals-{{ section.id }}-padding desktop {% if section.settings.deal_bar_active_mobile %}mobile{% endif %}{% if section.settings.deal_bar_sticky_mobile %} sticky-mobile{% endif %}"
@@ -121,15 +142,15 @@
 
   "settings": [
     {
-      "type":"color",
-      "id":"bg_color",
-      "default":"#013F56",
+      "type": "color",
+      "id": "bg_color",
+      "default": "#013F56",
       "label": "Cor background"
     },
     {
-      "type":"color",
-      "id":"text_color",
-      "default":"#fff",
+      "type": "color",
+      "id": "text_color",
+      "default": "#fff",
       "label": "Cor dos textos"
     },
     {
