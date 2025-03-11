@@ -192,18 +192,39 @@
       "settings": {
         "image_is_bg": false,
         "bg_wrapper_content": "linear-gradient(180deg, rgba(243, 243, 243, 1), rgba(255, 255, 255, 1) 100%)",
-        "img": "shopify://shop_images/Frame_1261153517.png",
-        "img_mobile": "shopify://shop_images/Frame_1261153523.png",
+        "img": "shopify://shop_images/Frame_1261153517_1.png",
+        "img_mobile": "shopify://shop_images/Frame_1261153517_1_f6baba2a-7fdb-49f7-a231-0e4c1893885e.png",
         "title": "",
         "color_title": "#1d234c",
-        "title_text": "<p>Nicoben Adulto completo</p>",
-        "content_text": "<p>Ideal para quem buscam umasuplementação completa e equilibrada para ajudar a mitigar os impactos do tabagismo na saúde, reforçando a imunidade, protegendo a saúde óssea e ação antioxidante.</p>",
+        "title_text": "<p>Nicoben Cabelo, pele e unhas</p>",
+        "content_text": "<p>Cuida da saúde e aparência da pele, dos cabelos e das unhas, tratando a deteriorização que pode ocorrer pelo tabagismo. </p>",
         "color_content": "#1e2239",
         "btn_label": "Comprar",
         "link_btn": "",
         "btn_bg": "#111c30",
         "btn_text_color": "#ffffff",
         "box_align": "row-reverse",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_turbo_igDFCn": {
+      "type": "image-with-text-turbo",
+      "settings": {
+        "image_is_bg": false,
+        "bg_wrapper_content": "linear-gradient(90deg, rgba(222, 95, 128, 1), rgba(226, 106, 73, 1) 100%)",
+        "img": "shopify://shop_images/Frame_1261153523_2.png",
+        "img_mobile": "shopify://shop_images/Frame_1261153523_2_eb56f064-e115-4106-a9e4-615ae3d20ce5.png",
+        "title": "",
+        "color_title": "#1d234c",
+        "title_text": "<p>Nicoben Cabelo, pele e unhas</p>",
+        "content_text": "<p>Cuida da saúde e aparência da pele, dos cabelos e das unhas, tratando a deteriorização que pode ocorrer pelo tabagismo. </p>",
+        "color_content": "#ffffff",
+        "btn_label": "Comprar",
+        "link_btn": "",
+        "btn_bg": "#111c30",
+        "btn_text_color": "#ffffff",
+        "box_align": "row",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -216,6 +237,7 @@
     "image_with_text_turbo_aUPGbC",
     "image_with_text_turbo_Arh8WU",
     "image_with_text_turbo_qytcVA",
-    "image_with_text_turbo_kmgKf6"
+    "image_with_text_turbo_kmgKf6",
+    "image_with_text_turbo_igDFCn"
   ]
 }
