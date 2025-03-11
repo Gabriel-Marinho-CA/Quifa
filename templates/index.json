@@ -143,6 +143,10 @@
     },
     "image_with_text_turbo_Arh8WU": {
       "type": "image-with-text-turbo",
+      "custom_css": [
+        ".title-banner * {font-size: 48px; line-height: 1; text-transform: uppercase;}",
+        ".wrapper-text {max-width:423px;}"
+      ],
       "settings": {
         "image_is_bg": false,
         "bg_wrapper_content": "linear-gradient(180deg, rgba(243, 243, 243, 1), rgba(255, 255, 255, 1) 100%)",
