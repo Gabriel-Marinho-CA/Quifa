@@ -32,8 +32,8 @@
         .section-wrapper-img-bg {
             background: url(" {{ section.settings.img_mobile | img_url: 'master' }}");
             background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
+            background-repeat: no-repeat;
+            background-position: right;
                 }
             }
 
@@ -47,11 +47,14 @@
     }
 
     .right {
-        height: calc(86vw - {{ section.settings.img.height }}px);
-        max-height: {{ section.settings.img.height }}px;
 
-        @media (max-width:1000px) {
-            min-height: {{ section.settings.img_mobile.height }}px;
+        @media (min-width:1000px) {
+            height: calc(86vw - {{ section.settings.img.height }}px);
+            max-height: {{ section.settings.img.height }}px;
+        }
+
+        @media (max-width:999px) {
+            height: {{ section.settings.img.height }}px;
         }
     }
   }
