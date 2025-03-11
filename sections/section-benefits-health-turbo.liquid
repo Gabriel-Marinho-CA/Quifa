@@ -13,67 +13,70 @@
 {% endstyle %}
 
 <style>
-  .benefit-{{ section.id }} {
-    .swipper-custom-buttons {
-        display:flex;
-        gap:2rem;
-        .swiper-button-prev,
-        .swiper-button-next {
-            position:initial;
+    .benefit-{{ section.id }} {
+      .swipper-custom-buttons {
+          display:flex;
+          gap:2rem;
+          .swiper-button-prev,
+          .swiper-button-next {
+              position:initial;
+              margin: 0;
+              height: fit-content;
 
-            &::after {
-                font-size: 20px;
-                font-weight: bold;
-                color: #111C30;
-                -webkit-text-stroke: 1px;
-            }
-        }
-    }
-    .wrapper-cards {
-        * {
-          margin:0;
-          line-height: 1;
-      }
-    }
-      ul {
-        padding:0;
-
-        li {
-            max-width:304px;
-        }
-      }
-      .title-section {
-        display: flex;
-        justify-content: space-between;
-
-          *{
-            font-size: 24px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.48px;
-            color: {{ section.settings.color_title }}
+              &::after {
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: #111C30;
+                  -webkit-text-stroke: 1px;
+              }
           }
       }
-
-      .card-benefit {
-        .image-wrapper {
-            img {
-                border-radius:32px;
-                height: auto;
-            }
-        }
-        .title-card * {
-            font-size: 16px;
-            line-height: 1.3;
-            color: {{ section.settings.text_color_title_card }}
-        }
-        .subtitle-card * {
-            font-size: 14px;
-            line-height: 1.3;
-            color: {{ section.settings.text_color }}
+      .wrapper-cards {
+          * {
+            margin:0;
+            line-height: 1;
         }
       }
-  }
+        ul {
+          padding:0;
+
+          li {
+              max-width:304px;
+          }
+        }
+        .title-section {
+          display: flex;
+          justify-content: space-between;
+            align-items: center;
+            *{
+              font-size: 24px;
+              font-weight: 500;
+              text-transform: uppercase;
+              letter-spacing: 0.48px;
+              color: {{ section.settings.color_title }}
+              margin: 0;
+            }
+        }
+
+        .card-benefit {
+          .image-wrapper {
+              img {
+                  border-radius:32px;
+                  height: auto;
+              }
+          }
+          .title-card * {
+              font-size: 16px;
+              line-height: 1.3;
+              color: {{ section.settings.text_color_title_card }}
+          }
+          .subtitle-card * {
+              font-size: 14px;
+              line-height: 1.3;
+              color: {{ section.settings.text_color }}
+          }
+        }
+    }
 </style>
 
 <div
@@ -84,10 +87,8 @@
       {{ section.settings.title }}
 
       <div class="swipper-custom-buttons">
-        <div class="swiper-button-prev ">
-        </div>
-        <div class="swiper-button-next">
-        </div>
+        <div class="swiper-button-prev "></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
     <div class="wrapper-cards">
