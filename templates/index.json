@@ -140,12 +140,34 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "image_with_text_turbo_Arh8WU": {
+      "type": "image-with-text-turbo",
+      "settings": {
+        "image_is_bg": false,
+        "bg_wrapper_content": "linear-gradient(180deg, rgba(243, 243, 243, 1), rgba(255, 255, 255, 1) 100%)",
+        "img": "shopify://shop_images/Frame_1261153517.png",
+        "img_mobile": "shopify://shop_images/Frame_1261153523.png",
+        "title": "<p>Conheça a linha </p><p>completa Nicoben</p>",
+        "color_title": "#1d234c",
+        "title_text": "<p>Nicoben Adulto completo</p>",
+        "content_text": "<p>Ideal para quem buscam umasuplementação completa e equilibrada para ajudar a mitigar os impactos do tabagismo na saúde, reforçando a imunidade, protegendo a saúde óssea e ação antioxidante.</p>",
+        "color_content": "#1e2239",
+        "btn_label": "Conferir produtos",
+        "link_btn": "",
+        "btn_bg": "#111c30",
+        "btn_text_color": "#fff",
+        "box_align": "row-reverse",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main_banner_by_turbo_GDiJUC",
     "ofertas_info_by_turbo_GjEaez",
     "image_banner_by_turbo_wagt98",
-    "image_with_text_turbo_aUPGbC"
+    "image_with_text_turbo_aUPGbC",
+    "image_with_text_turbo_Arh8WU"
   ]
 }
