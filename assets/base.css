@@ -2966,12 +2966,15 @@ header .list-menu {
     text-decoration: none;
   }
   button {
+    font-size: 12px;
+    font-weight: 400;
     border-radius: 32px;
     width: 100%;
+    min-height: 32px;
     
     &::before,
     &::after {
-      border-radius: 32px;
+      display: none;
     }
   }
 }
