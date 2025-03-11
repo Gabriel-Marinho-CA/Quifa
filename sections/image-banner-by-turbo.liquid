@@ -70,11 +70,15 @@
 
           @media (min-width:1000px) {
             position:absolute;
-          right:0;
-          max-width: 560px;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
+            right:0;
+            max-width: 560px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          @media (max-width:999px) {
+            margin-top: 1.5rem;
           }
 
           * {
@@ -92,6 +96,10 @@
                font-weight: 500;
                text-transform: uppercase;
                line-height: 1.1;
+
+               @media (max-width:999px) {
+                font-size: 18px;
+               }
            }
           }
 
@@ -101,6 +109,10 @@
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 1.5;
+
+                @media (max-width:999px) {
+                font-size: 16px;
+               }
             }
           }
           .check-button {
@@ -123,6 +135,10 @@
                 &:hover {
                   background-color: #061433;
                   color:#fff;
+                }
+
+                @media (max-width:999px) {
+                  max-width: 100%;
                 }
             }
           }
