@@ -2974,6 +2974,7 @@ header .list-menu {
     transition: all .3s ease;
     &:hover {
       background-color: #061433;
+      text-decoration: underline;
     }
     
     &::before,
