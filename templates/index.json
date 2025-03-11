@@ -118,7 +118,8 @@
     "image_with_text_turbo_aUPGbC": {
       "type": "image-with-text-turbo",
       "custom_css": [
-        "strong {background-image: linear-gradient(270deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%, #62CEBF 100%); background-clip: text; -webkit-background-clip: text; color: transparent;}"
+        "strong {background-image: linear-gradient( 270deg, #f8c24d 0%, #f51a51 20.5%, #9d36ac 45%, #573bd9 65%, #2396b5 82.25%, #62cebf 100% ); background-clip: text; -webkit-background-clip: text; color: transparent;}",
+        ".title-text {max-width: 400px;}"
       ],
       "settings": {
         "image_is_bg": true,
