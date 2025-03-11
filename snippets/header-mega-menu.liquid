@@ -34,6 +34,14 @@
                   class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
                 >
+                  {% if link.title == 'Produtos' or link.title == 'produtos' %}
+                    {% for item in section.blocks %}
+                      {% if item.type == 'header_categ_nav' %}
+                        {{ item.settings.text_categ }}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+
                   {%- for childlink in link.links -%}
                     <li>
                       <a
@@ -64,13 +72,6 @@
                           {%- endfor -%}
                         </ul>
                       {%- endif -%}
-                      {% if childlink.title | escape == "produtos" %}
-                        {% for item in section.blocks %}
-                          {% if item.type =="header_categ_nav" %}
-                              {{ item.settings.text_categ }}
-                          {% endif %}
-                        {% endfor %}
-                      {% endif %}
                     </li>
                   {%- endfor -%}
                 </ul>
