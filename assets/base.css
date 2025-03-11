@@ -2958,7 +2958,7 @@ details[open] > .header__menu-item .icon-caret {
   margin-left: 1rem;
   position: static;
 }
-.custom-categ-megamenu {
+header .mega-menu__list.custom-categ-megamenu {
   grid-template-columns: repeat(4,minmax(0,200px));
   justify-content: center;
 }
