@@ -25,7 +25,18 @@
         &.left-bg {
             background-position: left;
         }
+        .right {
 
+            @media (min-width:1000px) {
+                height: calc(86vw - {{ section.settings.img.height }}px);
+                max-height: {{ section.settings.img.height }}px;
+            }
+
+            @media (max-width:999px) {
+
+                height: calc(({{ section.settings.img_mobile.height }} / 339) * 85vw);;
+            }
+        }
     }
 
     @media (max-width:1000px) {
@@ -48,19 +59,6 @@
 
         .left {
             margin-top: 3.5rem;
-        }
-    }
-
-    .right {
-
-        @media (min-width:1000px) {
-            height: calc(86vw - {{ section.settings.img.height }}px);
-            max-height: {{ section.settings.img.height }}px;
-        }
-
-        @media (max-width:999px) {
-        
-            height: calc(({{ section.settings.img_mobile.height }} / 339) * 85vw);;
         }
     }
   }
