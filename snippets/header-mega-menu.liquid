@@ -89,11 +89,11 @@
                 </summary>
                 <div
                   id="MegaMenu-Content-{{ forloop.index }}"
-                  class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup custom-categ-megamenu"
+                  class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup "
                   tabindex="-1"
                 >
                   <ul
-                    class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                    class="mega-menu__list custom-categ-megamenu page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                     role="list"
                   >
                     {% if link.title == 'Produtos' or link.title == 'produtos' %}
