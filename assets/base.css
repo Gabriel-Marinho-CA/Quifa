@@ -2965,6 +2965,15 @@ header .list-menu {
     color: #434752;
     text-decoration: none;
   }
+  button {
+    border-radius: 32px;
+    width: 100%;
+    
+    &::before,
+    &::after {
+      border-radius: 32px;
+    }
+  }
 }
 
 header-menu > details,
