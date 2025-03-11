@@ -14,16 +14,32 @@
 
 <style>
   .benefit-{{ section.id }} {
+    .swipper-custom-buttons {
+        display:flex;
+        gap:2rem;
+        .swiper-button-prev,
+        .swiper-button-next {
+            position:initial;
+        }
+    }
       * {
           margin:0;
           line-height: 1;
       }
-      .title-section *{
-        font-size: 24px;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.48px;
-        color: {{ section.settings.color_title }}
+      ul {
+        padding:0;
+      }
+      .title-section {
+        display: flex;
+        justify-content: space-between;
+
+          *{
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.48px;
+            color: {{ section.settings.color_title }}
+          }
       }
 
       .card-benefit {
@@ -70,7 +86,9 @@
             {% if item.type == 'benefit' %}
               <li class="swiper-slide card-benefit">
                 <div class="image-wrapper">
-                  {{ item.settings.img | image_url: width: 304, height: 300 | image_tag }}
+                  {% if item.settings.img != blank %}
+                    {{ item.settings.img | image_url: width: 304, height: 300 | image_tag }}
+                  {% endif %}
                 </div>
                 <div class="title-card">
                   {{ item.settings.title }}
