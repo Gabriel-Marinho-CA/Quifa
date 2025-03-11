@@ -65,18 +65,33 @@
             "title": "<p>Energia</p>",
             "subtitle": ""
           }
+        },
+        "deal_hB7QMa": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_e4d2ca98-db9f-478f-82b2-812e5bd14661.svg",
+            "title": "<p>Antioxidante</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_zbhPMQ": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1.svg",
+            "title": "<p>Metabolismo</p>",
+            "subtitle": ""
+          }
         }
       },
       "block_order": [
         "deal_393fjV",
-        "deal_mtJxxp"
+        "deal_mtJxxp",
+        "deal_hB7QMa",
+        "deal_zbhPMQ"
       ],
       "settings": {
-        "deal_bar_active": false,
-        "deal_bar_sticky_mobile": false,
-        "deal_bar_active_mobile": false,
-        "bg_color": "#013F56",
-        "text_color": "#fff",
+        "bg_color": "#013f56",
+        "text_color": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
       }
