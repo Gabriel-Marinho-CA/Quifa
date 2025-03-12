@@ -80,6 +80,7 @@
     .field {
       background: #fff;
       border-radius: 32px;
+      height: 56px;
 
       input {
         background: #fff;
