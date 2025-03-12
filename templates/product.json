@@ -282,8 +282,8 @@
       "type": "faq-section-turbo",
       "settings": {
         "title_sec": "<h2>PERGUNTAS FREQUENTES</h2>",
-        "color_content": "#111C30",
-        "color_content_title": "#434752",
+        "color_content": "#434752",
+        "color_content_title": "#111c30",
         "color_title": "#111C30",
         "padding_top": 96,
         "padding_bottom": 96
