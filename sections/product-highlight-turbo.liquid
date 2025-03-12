@@ -30,10 +30,10 @@
               {{ product.title }}
             </div>
             <div class="title-text">
-              {{ meta.titulo_secao_destaque_1 }}
+              {{ meta.titulo_secao_destaque_1 | metafield_tag }}
             </div>
             <div class="content-text">
-              {{ meta.conteudo_secao_destaque_1 }}
+              {{ meta.conteudo_secao_destaque_1 | metafield_tag }}
             </div>
             <div class="buy-button">
               <button data-variant-id="{{ product.selected_or_first_available_variant.id }}">
@@ -43,7 +43,11 @@
           </div>
         </div>
         <div class="right">
-          {{ meta.img_secao_destaque_1 }}
+          {{
+            meta.img_secao_destaque_1
+            | image_url: width: meta.img_secao_destaque_1.width, height: meta.img_secao_destaque_1.height
+            | image_tag
+          }}
         </div>
       </div>
     </div>
