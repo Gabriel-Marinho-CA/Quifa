@@ -20,11 +20,17 @@
           line-height: 1;
       }
     }
+
+
       ul {
         padding:0;
 
         li {
-            max-width:300px;
+            max-width:280px;
+
+            &:nth-child(1) {
+                margin-left: calc(-670px + 47vw);
+            }
         }
       }
       .title-section {
@@ -82,7 +88,7 @@
 <div
   class="ativo-{{ section.id }} ativo-{{ section.id }}-padding"
 >
-  <div class="page-width">
+  <div class="wrapper-ativo-content">
     <div class="title-section">
       {{ section.settings.title }}
     </div>
