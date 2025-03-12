@@ -34,7 +34,7 @@
         "contact_6yqUqd": {
           "type": "contact",
           "settings": {
-            "heading": "<h4>Contato</h4>",
+            "heading": "<h4>CONTATO</h4>",
             "body": "<p>Atendimento: Segunda à Sexta: 09:00 às 18:00</p>"
           }
         },
@@ -58,6 +58,20 @@
             "img_social": "shopify://shop_images/icon-redesocial_2.svg",
             "link_social": ""
           }
+        },
+        "link_list_DYNk3z": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<h4>LINKS</h4>",
+            "menu": "links"
+          }
+        },
+        "link_list_VryJPw": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<p>AJUDA</p>",
+            "menu": "ajuda"
+          }
         }
       },
       "block_order": [
@@ -66,7 +80,9 @@
         "contact_6yqUqd",
         "socias_W3YLxe",
         "socias_3RtXyB",
-        "socias_iNpPTg"
+        "socias_iNpPTg",
+        "link_list_DYNk3z",
+        "link_list_VryJPw"
       ],
       "settings": {
         "copyright_text": "",
