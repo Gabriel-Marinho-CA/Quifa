@@ -26,21 +26,29 @@
             <div class="logo-footer" style="max-width: {{ block.settings.width }}px;">
               {% if block.settings.logo != blank %}
                 <a href="/" title="Logo - Home">
-                {{
-                  block.settings.logo
-                  | image_url: width: block.settings.logo.width, height: block.settings.logo.height
-                  | image_tag: loading: 'lazy'
-                }}
+                  {{
+                    block.settings.logo
+                    | image_url: width: block.settings.logo.width, height: block.settings.logo.height
+                    | image_tag: loading: 'lazy'
+                  }}
                 </a>
-      
               {% endif %}
-  
             </div>
             {% if block.settings.text_rodape != blank %}
               <div class="text-logo">
                 {{ block.settings.text_rodape }}
               </div>
             {% endif %}
+          </div>
+        {% when 'newsletter' %}
+          <div class="newsletter-wrapper">
+            <div class="title-newsleter">
+              {{ block.settings.heading }}
+            </div>
+            {% render 'newsletter-block',
+              placeholder: block.settings.placeholder,
+              button_label: block.settings.button
+            %}
           </div>
         {% when 'contact' %}
           <div class="contact col-footer">
@@ -62,7 +70,6 @@
                             | image_url: width: 40, height: 40
                             | image_tag: loading: 'lazy'
                           }}
-                        
                         {% endif %}
                       </a>
                     </li>
@@ -79,7 +86,7 @@
             <div class="wrapper wapper-payment">
               <ul>
                 {% for block_payment in section.blocks %}
-                  {% if block_payment.type =='pagamento_img' %}
+                  {% if block_payment.type == 'pagamento_img' %}
                     <li>
                       {% if block_payment.settings.payment_img != blank %}
                         {{ block_payment.settings.payment_img | image_url: width: 33, height: 20 | image_tag }}
@@ -121,7 +128,7 @@
           href="https://www.turbopartners.com.br/?utm_source=clients&utm_medium=organic&utm_campaign=footer&utm_content=gkbrand"
           title="Turbo Partners"
         >
-        🚀 Creado por <strong> Turbo Partners</strong>
+          🚀 Creado por <strong> Turbo Partners</strong>
         </a>
       </div>
     </div>
