@@ -101,9 +101,12 @@
             {% if item.type == 'ativo' %} {% endcomment %}
               <li class="swiper-slide card-ativo">
                 <div class="image-wrapper">
-                    {% assign dsadsadsa = meta.titulo_card_ativos.value | split: ',' %}
+                    {% assign dsadsadsa = meta.titulo_card_ativos.value  %}
+                    <script>
+                        console.log('{{ dsadsadsa | json }}')
+                    </script>
                     {{ dsadsadsa[0] }}
-                    {{ dsadsadsa[0].value }}
+                    {{ dsadsadsa[0] }}
 
            
                     {% comment %} titulo_card_ativos
