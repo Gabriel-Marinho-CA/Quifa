@@ -23,19 +23,15 @@
     .wrapper {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: 3rem;
+      justify-content: center;
+      gap: 92px;
 
-      @media (min-width:1500px) {
-        gap:15rem;
-      }
       @media (max-width:1000px) {
         flex-direction:column;
         gap:2rem;
       }
 
       .right {
-        flex: 1;
         max-width: 560px;
       }
       .left {
@@ -45,6 +41,8 @@
         img {
           height: auto;
           width: 100%;
+          border-radius: 32px;
+          max-width: 500px;
         }
       }
     }
