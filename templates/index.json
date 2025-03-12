@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/E-BANNER__SLIDE_V1.png",
             "image-mob": "shopify://shop_images/E-BANNER__SLIDE_V1_1.png",
-            "image_link": "",
+            "image_link": "shopify://products/nicoben-adulto-completo",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -332,8 +332,8 @@
         "instagram_link": "",
         "title_section_color": "#111c30",
         "color_subtitle": "#434752",
-        "btn_color_bg": "#111C30",
-        "btn_color_text": "#fff",
+        "btn_color_bg": "#111c30",
+        "btn_color_text": "#ffffff",
         "padding_top": 68,
         "padding_bottom": 88
       }
