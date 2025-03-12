@@ -1749,7 +1749,7 @@ a.product__text {
       color: #000;
       display: flex;
       align-items: center;
-      white-space: pre;
+      /* white-space: pre; */
       line-height: 0;
 
       @media (max-width: 547px) {
