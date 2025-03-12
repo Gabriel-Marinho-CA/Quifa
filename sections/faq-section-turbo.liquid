@@ -1,0 +1,126 @@
+{% assign meta = product.metafields.custom %}
+
+{% style %}
+    .faq-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .faq-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+    .faq-{{ section.id }} {
+
+      * {
+        color: {{ section.settings.color_content }};
+      }
+      .title-text {
+        margin-bottom: 4rem;
+      * {
+            font-size: 56px;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing:0.64px;
+            text-transform: uppercase;
+            margin: 0;
+            color: {{ section.settings.color_title }};
+            text-align:center;
+            @media (max-width:1000px) {
+            font-size: 24px;
+            }
+      }
+    }
+
+
+  }
+</style>
+<div id="faq" class="faq-{{ section.id }} faq-{{ section.id }}-padding ">
+  <div class="page-width">
+    <div class="title-text">
+      {{ section.settings.title_sec }}
+    </div>
+    <div class="wrapper-accordion">
+      {% assign ask = meta.perguntas_faq.value %}
+      {% assign resp = meta.respostas_faq.value %}
+
+      {% assign count = 0 %}
+      {% for item in ask %}
+        <details>
+          <summary>
+            <p>{{ item }}</p>
+          </summary>
+          <div class="response">
+            <p>{{ resp[count] }}</p>
+          </div>
+        </details>
+        {% assign count = count | plus: 1 %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title_sec",
+      "label": "Titulo da seção",
+      "default": "<h2>PERGUNTAS FREQUENTES</h2>"
+    },
+    {
+      "type": "color",
+      "id": "color_content",
+      "default": "#111C30",
+      "label": "Cor do conteudo texto"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "default": "#111C30",
+      "label": "Cor do titulo da sessão"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}
