@@ -316,8 +316,8 @@
       "settings": {
         "bg_sec": "linear-gradient(90deg, rgba(17, 28, 48, 1), rgba(1, 51, 86, 1) 100%)",
         "title": "<h2>Depoimentos</h2>",
-        "color_title": "#fff",
-        "text_color": "#fff",
+        "color_title": "#ffffff",
+        "text_color": "#ffffff",
         "padding_top": 52,
         "padding_bottom": 52
       }
@@ -327,9 +327,13 @@
       "settings": {
         "id_section": "",
         "title": "<p>Acompanhe nosso instagram</p>",
+        "subtitle": "<p>Dicas e conteúdo para uma vida mais saudável</p>",
         "instagram_title": "@nicoben",
         "instagram_link": "",
         "title_section_color": "#111c30",
+        "color_subtitle": "#434752",
+        "btn_color_bg": "#111C30",
+        "btn_color_text": "#fff",
         "padding_top": 36,
         "padding_bottom": 36
       }
