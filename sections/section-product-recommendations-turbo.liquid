@@ -25,3 +25,33 @@
     {% endif %}
   </div>
 </section>
+
+
+<script>
+  function handleProductRecomendations() {
+  const productRecommendationsSection = document.querySelector(
+    "#experimente-tambem .product-recommendations"
+  );
+
+  const url = productRecommendationsSection.dataset.url;
+
+  try {
+    fetch(url)
+      .then((response) => response.text())
+      .then((text) => {
+        const html = document.createElement("div");
+        html.innerHTML = text;
+        const recommendations = html.querySelector(
+          "#experimente-tambem .product-recommendations"
+        );
+
+        if (recommendations && recommendations.innerHTML.trim().length) {
+          productRecommendationsSection.innerHTML = recommendations.innerHTML;
+          swiperProductRecomendations();
+        }
+      });
+  } catch (error) {
+    console.error(error);
+  }
+}
+</script>
