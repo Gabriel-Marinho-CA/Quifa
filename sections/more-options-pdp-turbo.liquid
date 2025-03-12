@@ -1,0 +1,280 @@
+{% style %}
+    .more-options-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .more-options-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+  .more-options-{{ section.id }} {
+    background: {{ section.settings.bg_wrapper_content }};
+
+    .title-banner {
+      margin-bottom: 4rem;
+      * {
+        font-size: 40px;
+        line-height: 1;
+        margin: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    li {
+      padding: 1.5rem 1rem;
+      max-width: 260px;
+      * {
+        color: {{ section.settings.color_content }};
+      }
+
+      &.card-highlight {
+        background-color: #111C30;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 32px;
+          padding: 1.5px;
+          background: linear-gradient(270deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%, #62CEBF 100%);
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask-composite: add, add;
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          pointer-events: none;
+        }
+      }
+      .wrapper-img {
+        width: 100%;
+        img {
+          width: 100%;
+          height: auto;
+          margin-inline:auto ;
+        }
+      }
+
+      .title-card {
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.32px;
+        }
+      }
+      .sutitle-card {
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.4;
+          opacity: .64;
+        }
+      }
+
+      .buy-area {
+        button {
+          width: 100%;
+          border: none;
+          font-size: 17px;
+          font-weight: 500;
+          border-radius: 32px;
+          height: 43px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color:#1D3469;
+          &.btn-border {
+            border: 1px solid {{ section.settings.color_content }} ;
+            font-size: 16px;
+            height: 40px;
+            color:{{section.settings.color_content }};
+          }
+        }
+      }
+    }
+  }
+</style>
+<div
+  class="more-options-{{ section.id }} more-options-{{ section.id }}-padding"
+>
+  <div class="page-width">
+    <div class="title-banner">
+      {{ section.settings.title }}
+    </div>
+    <div class="swiper more-options">
+      <ul class="swiper-wrapper">
+        {% for item in section.blocks %}
+          {% if item.type == 'card' %}
+            <li class="swiper-slide card-more-op {% if item.settings.card_highlight %}card-highlight{% endif %}">
+              <div class="wrapper-img">
+                {% if item.settings.img != blank %}
+                  {{
+                    item.settings.img
+                    | image_url: width: item.settings.img.width, height: item.settings.img.height
+                    | image_tag
+                  }}
+                {% endif %}
+              </div>
+              <div class="content">
+                <div class="title-card">
+                  <p>
+                    {{ item.settings.title }}
+                  </p>
+                </div>
+                <div class="subtitle-card">
+                  <p>
+                    {{ item.settings.subtitle }}
+                  </p>
+                </div>
+                <div class="buy-area">
+                  <button
+                    style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color }}"
+                    class="{% if item.settings.btn_has_border %}btn-border{% endif %}"
+                  >
+                    {{ item.settings.btn_label }}
+                  </button>
+                </div>
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+    new Swiper('.more-options-{{ section.id }} .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    breakpoints: {
+        700: {
+            spaceBetween: 32,
+        },
+      },
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Mais opções",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_wrapper_content",
+      "label": "Cor do background sessão",
+      "default": "radial-gradient(50% 200% at 50% 50%, #013356 0%, #111C30 100%)"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titulo sessão",
+      "default": "<h2>Mais opções para sua <br/><strong>saúde e equilíbrio</h2>"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "default": "#fff",
+      "label": "Cor do titulo da sessão"
+    },
+    {
+      "type": "color",
+      "id": "color_content",
+      "default": "#fff",
+      "label": "Cor do conteudo texto"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "card_highlight",
+          "label": "Card destaque"
+        },
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Imagem do card"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo do card"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitulo do card"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Texto do botão"
+        },
+        {
+          "type": "color",
+          "id": "btn_color",
+          "label": "Cor do background botão"
+        },
+        {
+          "type": "color",
+          "id": "btn_color_text",
+          "label": "Cor do texto botão"
+        },
+        {
+          "type": "checkbox",
+          "id": "btn_has_border",
+          "label": "Botão possui borda"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mais opções",
+      "blocks": [
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
