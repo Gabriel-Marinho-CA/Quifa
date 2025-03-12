@@ -13,7 +13,69 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "settings": {}
+      "blocks": {
+        "logo_8JDDGK": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Frame_1261153518_51c89a53-1be7-447e-b19f-8ab2e8b73011.png",
+            "width": 205,
+            "text_rodape": ""
+          }
+        },
+        "newsletter_XpGTKd": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "",
+            "placeholder": "Seu melhor e-mail:",
+            "button": "Enviar",
+            "button_side": false
+          }
+        },
+        "contact_6yqUqd": {
+          "type": "contact",
+          "settings": {
+            "heading": "<h4>Contato</h4>",
+            "body": "<p>Atendimento: Segunda à Sexta: 09:00 às 18:00</p>"
+          }
+        },
+        "socias_W3YLxe": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial.svg",
+            "link_social": ""
+          }
+        },
+        "socias_3RtXyB": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial_1.svg",
+            "link_social": ""
+          }
+        },
+        "socias_iNpPTg": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial_2.svg",
+            "link_social": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_8JDDGK",
+        "newsletter_XpGTKd",
+        "contact_6yqUqd",
+        "socias_W3YLxe",
+        "socias_3RtXyB",
+        "socias_iNpPTg"
+      ],
+      "settings": {
+        "copyright_text": "",
+        "color_scheme": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48",
+        "bg_copy_color": "",
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
