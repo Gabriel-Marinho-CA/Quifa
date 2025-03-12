@@ -127,6 +127,73 @@
         border-radius: 12px;
       }
     }
+    .buy-together {
+      border: 1px solid #f2f2f2;
+      box-shadow: 0px 4px 8px 0px #00000014;
+      border-radius: 16px;
+      padding: 1rem;
+
+      * {
+        margin: 0;
+      }
+
+      .title-btg {
+        margin-bottom: 0.35rem;
+        p {
+          color: #727376;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+
+      .wrapper-btg-content {
+        display: flex;
+        gap: 1rem;
+        justify-content:space-between;
+
+        .btg-pdp-info {
+          display: flex;
+          gap: 1rem;
+
+          .title-btg-info {
+            color: #434752;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+          }
+
+          .best-price-btg {
+            margin: 0;
+            color: #434752;
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .list-price-btg {
+            margin: 0;
+            color: #727376;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration:line-through;
+          }
+
+        }
+        .buy-area-info {
+          button {
+            border: 1.5px solid #111C30;
+            background:none;
+            height:30px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding-inline:.65rem;
+            font-size:16px;
+            font-weight:700;
+            text-transform:uppercase;
+          }
+        }
+      }
+    }
   </style>
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -625,9 +692,35 @@
                     </p>
                   </div>
                 {%- endif -%}
-                {% when 'buy_together' %}
-                    {{ block.settings.product_buy_tg.title }}
-                {%- when 'complementary' -%}
+              {% when 'buy_together' %}
+                {% assign buy_tg = block.settings.product_buy_tg %}
+                <div class="buy-together">
+                  <p class="title-btg">Complete sua suplementação</p>
+                  <div class="wrapper-btg-content">
+                    <div class="btg-pdp-info">
+                      <div class="wrapper-img">
+                        {{ buy_tg.featured_media | image_url: width: 60, height: 60 | image_tag }}
+                      </div>
+                      <div class="wrapper-info">
+                        <p class="title-btg-info">
+                          {{ buy_tg.title }}
+                        </p>
+                        <div class="wrapper-prices-info">
+                          <p class="best-price-btg">{{ buy_tg.price | money }}</p>
+                          <p class="list-price-btg">
+                            {% if buy_tg.selected_or_first_available_variant.compare_at_price > buy_tg.price %}
+                              {{ buy_tg.selected_or_first_available_variant.compare_at_price | money }}
+                            {% endif %}
+                          </p>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="buy-area-info">
+                        <button data-btg-id="{{ buy_tg.id }}">LEVAR JUNTO</button>
+                      </div>
+                  </div>
+                </div>
+              {%- when 'complementary' -%}
                 <product-recommendations
                   class="complementary-products quick-add-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
                   data-url="{{ routes.product_recommendations_url }}?limit={{ block.settings.product_list_limit }}&intent=complementary"
@@ -778,8 +871,7 @@
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
-            
-              {%- endcase -%}
+            {%- endcase -%}
           {%- endfor -%}
           <div class="wrapper-extra-info-pdp">
             <ul>
@@ -928,13 +1020,13 @@
       "type": "@app"
     },
     {
-      "type":"buy_together",
-      "name":"Comprar junto",
+      "type": "buy_together",
+      "name": "Comprar junto",
       "settings": [
         {
-          "type":"product",
-          "id":"product_buy_tg",
-          "label":"Produto para comprar junto"
+          "type": "product",
+          "id": "product_buy_tg",
+          "label": "Produto para comprar junto"
         }
       ]
     },
