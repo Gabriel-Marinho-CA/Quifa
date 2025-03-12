@@ -208,8 +208,8 @@
     "body_support_turbo_UTEUAY": {
       "type": "body-support-turbo",
       "settings": {
-        "bg_wrapper_content": "linear-gradient(180deg, rgba(17, 28, 48, 1), rgba(1, 51, 86, 1) 100%)",
-        "color_content": "#fff",
+        "bg_wrapper_content": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "color_content": "#111c30",
         "link": "",
         "padding_top": 36,
         "padding_bottom": 36
