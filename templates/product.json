@@ -246,7 +246,7 @@
           "settings": {
             "img": "shopify://shop_images/Layer_1_8429b1b9-d823-4f9c-b4ce-d82832011113.svg",
             "title": "Envio nacional",
-            "subtitle": "entregamos em todo o Brasil"
+            "subtitle": "<p>entregamos em</p><p>todo o Brasil</p>"
           }
         },
         "card_pVgfEx": {
@@ -254,7 +254,7 @@
           "settings": {
             "img": "shopify://shop_images/Layer_1_1.svg",
             "title": "100% satisfação",
-            "subtitle": "a melhor experiênciaem cada pedido"
+            "subtitle": "<p>a melhor experiência</p><p>em cada pedido</p>"
           }
         },
         "card_73kmbR": {
@@ -262,7 +262,7 @@
           "settings": {
             "img": "shopify://shop_images/Layer_1_2.svg",
             "title": "Site 100% seguro",
-            "subtitle": "seus dadosestão protegidos"
+            "subtitle": "<p>seus dados</p><p>estão protegidos</p>"
           }
         }
       },
@@ -273,7 +273,7 @@
       ],
       "settings": {
         "bg_wrapper_content": "linear-gradient(90deg, rgba(17, 28, 48, 1), rgba(1, 51, 86, 1) 100%)",
-        "color_content": "#fff",
+        "color_content": "#ffffff",
         "padding_top": 52,
         "padding_bottom": 52
       }
