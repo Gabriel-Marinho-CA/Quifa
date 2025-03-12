@@ -320,7 +320,7 @@
                       {% assign title_colapse_row = block.settings.heading | handleize %}
 
                       {% if title_colapse_row == 'tabela-nutricional' %}
-                        {{ product.metafields.custom.tabela_nutricional }}
+                        {{ product.metafields.custom.tabela_nutricional | metafield_tag }}
 
                       {% elsif block.settings.enable_description %}
                         {{ product.description }}
