@@ -46,7 +46,8 @@
           "settings": {
             "heading": "Descrição",
             "icon": "none",
-            "content": "{{ block.settings.page.content }}",
+            "content": "<p>{{ block.settings.page.content }}</p>",
+            "enable_description": true,
             "page": ""
           }
         }
