@@ -344,6 +344,9 @@
         "deal_rywCe6",
         "deal_FVk8Ei"
       ],
+      "custom_css": [
+        "li {flex-direction:column;}"
+      ],
       "settings": {
         "bg_color": "#013F56",
         "text_color": "#fff",
