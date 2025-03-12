@@ -11,13 +11,63 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_gHVMme": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_D4imn6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Para não ter dúvida",
+            "heading_size": "h0"
+          }
+        },
+        "text_Xgbj93": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_V3JHDd": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_D4imn6",
+        "text_Xgbj93",
+        "button_V3JHDd"
+      ],
+      "custom_css": [
+        ".custom-rich-text {background:#013F56;}",
+        ".custom-rich-text * {color:#fff; text-transform:uppercase;}"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_gHVMme"
   ]
 }
