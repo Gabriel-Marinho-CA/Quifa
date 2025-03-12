@@ -292,6 +292,64 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "ofertas_info_by_turbo_dDQGNL": {
+      "type": "ofertas-info-by-turbo",
+      "blocks": {
+        "deal_CtJJKh": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_b80b8bd8-3d79-4331-866e-036e47e45102.svg",
+            "title": "<p>Vitaminas</p><p>essenciais</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_eABhdT": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_1_0eabfef9-cf72-4d6f-a20f-2afbacd17d26.svg",
+            "title": "<p>antioxidante</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_GUbqAT": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_2.svg",
+            "title": "<p>Imunidade</p><p>reforçada</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_rywCe6": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_2.svg",
+            "title": "<p>Equilíbrio</p><p>nutricional</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_FVk8Ei": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1_4.svg",
+            "title": "<p>Metabolismo</p><p>energético</p>",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "deal_CtJJKh",
+        "deal_eABhdT",
+        "deal_GUbqAT",
+        "deal_rywCe6",
+        "deal_FVk8Ei"
+      ],
+      "settings": {
+        "bg_color": "#013F56",
+        "text_color": "#fff",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     }
   },
   "order": [
@@ -301,6 +359,7 @@
     "linha_section_pagina_ciencia_turbo_tB3FbE",
     "linha_section_pagina_ciencia_turbo_tLBcED",
     "more_options_pdp_turbo_RMPLCW",
-    "section_depoimentos_turbo_mYFhr8"
+    "section_depoimentos_turbo_mYFhr8",
+    "ofertas_info_by_turbo_dDQGNL"
   ]
 }
