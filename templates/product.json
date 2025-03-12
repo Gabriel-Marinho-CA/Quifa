@@ -34,10 +34,6 @@
             "swatch_shape": "circle"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -61,14 +57,15 @@
         "title",
         "price",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description",
         "share"
       ],
       "settings": {
+        "section_id": "produto",
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
+        "pix_text": "",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -78,6 +75,8 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
+        "installments_text": "",
+        "safe_text": "",
         "padding_top": 36,
         "padding_bottom": 12
       }
