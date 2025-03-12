@@ -100,13 +100,14 @@
       justify-content: space-between;
 
       @media (max-width:1000px) {
-        flex-direction: column;
+        flex-direction: column !important;
         gap:2.3rem;
       }
 
       &.has_img {
         flex-direction: row-reverse;
         align-items: center;
+
         .right-content {
           display:none;
         }
