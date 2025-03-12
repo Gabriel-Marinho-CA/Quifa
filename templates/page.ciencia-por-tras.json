@@ -166,6 +166,81 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "more_options_pdp_turbo_RMPLCW": {
+      "type": "more-options-pdp-turbo",
+      "blocks": {
+        "card_WPQpYz": {
+          "type": "card",
+          "settings": {
+            "card_highlight": false,
+            "img": "shopify://shop_images/QUIFA_2024_NICOBEN_VITAMINAS_KV_AF1_1_3_1ce45176-875b-452e-98f1-9d276fc7a170.png",
+            "title": "nicoben adulto completo",
+            "subtitle": "Nutrição total para reforçar sua imunidade e manter o corpo em equilíbrio diariamente",
+            "btn_label": "Saber mais",
+            "link_card": "",
+            "btn_color": "",
+            "btn_color_text": "#ffffff",
+            "btn_has_border": true
+          }
+        },
+        "card_PfzNhL": {
+          "type": "card",
+          "settings": {
+            "card_highlight": false,
+            "img": "shopify://shop_images/Frame_1261153491.png",
+            "title": "NICOBEN TRANQUILIDADE",
+            "subtitle": "Auxilia no relaxamento e promove noites de sono mais tranquilas e reparadoras.",
+            "btn_label": "Saber mais",
+            "link_card": "",
+            "btn_color": "",
+            "btn_color_text": "#ffffff",
+            "btn_has_border": true
+          }
+        },
+        "card_z9zNqM": {
+          "type": "card",
+          "settings": {
+            "card_highlight": false,
+            "img": "shopify://shop_images/Frame_1261153491_1.png",
+            "title": "NICOBEN VITALIDADE E DISPOSIÇÃO",
+            "subtitle": "Ajuda a combater o cansaço, promovendo mais energia e disposição ao longo do dia.",
+            "btn_label": "Saber mais",
+            "link_card": "",
+            "btn_color": "",
+            "btn_color_text": "#ffffff",
+            "btn_has_border": true
+          }
+        },
+        "card_NtgmcE": {
+          "type": "card",
+          "settings": {
+            "card_highlight": false,
+            "img": "shopify://shop_images/Frame_1261153491_2.png",
+            "title": "NICOBEN Cabelo, pele e unhas",
+            "subtitle": "Fortalece e revitaliza sua aparência com cuidados para cabelos, pele e unhas.",
+            "btn_label": "Saber mais",
+            "link_card": "",
+            "btn_color": "",
+            "btn_color_text": "#ffffff",
+            "btn_has_border": true
+          }
+        }
+      },
+      "block_order": [
+        "card_WPQpYz",
+        "card_PfzNhL",
+        "card_z9zNqM",
+        "card_NtgmcE"
+      ],
+      "settings": {
+        "bg_wrapper_content": "radial-gradient(rgba(1, 51, 86, 1), rgba(17, 28, 48, 1) 100%)",
+        "title": "<p>Cuidado total</p>",
+        "color_title": "#fff",
+        "color_content": "#fff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -173,6 +248,7 @@
     "rich_text_AW8NKy",
     "linha_section_pagina_ciencia_turbo_jHApjJ",
     "linha_section_pagina_ciencia_turbo_tB3FbE",
-    "linha_section_pagina_ciencia_turbo_tLBcED"
+    "linha_section_pagina_ciencia_turbo_tLBcED",
+    "more_options_pdp_turbo_RMPLCW"
   ]
 }
