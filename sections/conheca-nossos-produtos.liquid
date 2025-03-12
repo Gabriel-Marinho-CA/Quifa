@@ -240,7 +240,7 @@
         </ul>
         <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-button-prev-custom swiper-custom">
+      {% comment %} <div class="swiper-button-prev-custom swiper-custom">
         <div class="">
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </div>
@@ -249,7 +249,7 @@
         <div class="">
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </div>
-      </div>
+      </div> {% endcomment %}
       {% comment %} <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex w-full justify-between z-[1] sm:hidden"> {% endcomment %}
       {% comment %} </div> {% endcomment %}
     </div>
@@ -267,13 +267,10 @@
         el: '.swiper-pagination',
         clickable: true,
       },
-      navigation: {
-        nextEl: '#experimente-tambem .swiper-button-next-custom',
-        prevEl: '#experimente-tambem .swiper-button-prev-custom',
-      },
+
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 22,
         },
       },
