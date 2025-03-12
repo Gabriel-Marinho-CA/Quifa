@@ -221,9 +221,20 @@
       "settings": {
         "title": "<h2>Ativos que fazem a diferença</h2>",
         "fontes": "<p>BRASIL. Agência Nacional de Vigilância Sanitária (ANVISA). Instrução Normativa nº 28, de 26 de julho de 2018. Estabelece as listas de constituintes, limites de uso, alegações e rotulagem complementar dos suplementos alimentares. Disponível em: https://antigo.anvisa.gov.br/documents/10181/3898888/%284%29in_28_2018_comp.pdf/14109256-0ed8-4f38-91ac-60b3cb78fd8e.</p>",
-        "color_title": "#111C30",
+        "color_title": "#111c30",
         "text_color": "#434752",
-        "text_color_title_card": "#1E2239",
+        "text_color_title_card": "#1e2239",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "cientific_results_turbo_pqpfC3": {
+      "type": "cientific-results-turbo",
+      "settings": {
+        "bg_wrapper_content": "#013F56",
+        "color_content": "#fff",
+        "color_title": "#fff",
+        "link": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -236,6 +247,7 @@
     "nutritional_table_turbo_6wKm4A",
     "more_options_pdp_turbo_KmrWnr",
     "body_support_turbo_UTEUAY",
-    "section_actives_difference_gg3nCA"
+    "section_actives_difference_gg3nCA",
+    "cientific_results_turbo_pqpfC3"
   ]
 }
