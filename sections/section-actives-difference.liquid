@@ -97,31 +97,43 @@
     <div class="wrapper-cards">
       <div class="swiper">
         <ul class="swiper-wrapper">
-          {% comment %} {% for item in meta.imagem_ativos %}
-            {% if item.type == 'ativo' %} {% endcomment %}
-              <li class="swiper-slide card-ativo">
-                <div class="image-wrapper">
-                    {% assign dsadsadsa = meta.titulo_card_ativos.value  %}
-                
-                    {{ dsadsadsa[1] }}
+          {% comment %}
+            {% for item in meta.imagem_ativos %}
+            {% if item.type == 'ativo' %}
+          {% endcomment %}
+          <li class="swiper-slide card-ativo">
+            <div class="image-wrapper">
+              {% assign titles = meta.titulo_card_ativos.value %}
+              {% assign content = meta.conteudo_card_ativos.value %}
+              {% assign images_card = meta.imagem_ativos.value %}
+              {% assign cont = 0 %}
 
-           
-                    {% comment %} titulo_card_ativos
-                    conteudo_card_ativos
-                    imagem_ativos {% endcomment %}
-                  {% comment %} {% if meta. != blank %}
-                    {{ meta. | image_url: width: 304, height: 300 | image_tag }}
-                  {% endif %} {% endcomment %}
-                </div>
-                {% comment %} <div class="title-card">
-                  {{ item.settings.title }}
-                </div>
-                <div class="subtitle-card">
-                  {{ item.settings.subtitle }}
-                </div> {% endcomment %}
-              </li>
-            {% comment %} {% endif %}
-          {% endfor %} {% endcomment %}
+              {% for cards in images_card %}
+                <div class="title-card">
+                    {{ titles[cont] }}
+                  </div>
+                  <div class="subtitle-card">
+                    {{ content[cont] }}
+                  </div>
+                {% assign cont = cont | plus: 1 %}
+                {% if cards.value != blank %}
+                  {{ cards.value | image_url: width: 304, height: 300 | image_tag }}
+                {% endif %}
+              {% endfor %}
+            </div>
+            {% comment %}
+              <div class="title-card">
+                {{ item.settings.title }}
+              </div>
+              <div class="subtitle-card">
+                {{ item.settings.subtitle }}
+              </div>
+            {% endcomment %}
+          </li>
+          {% comment %}
+            {% endif %}
+            {% endfor %}
+          {% endcomment %}
         </ul>
       </div>
     </div>
