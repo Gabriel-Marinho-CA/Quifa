@@ -142,8 +142,8 @@
                 }
         }
 
-        &[open] summary > svg {
-                transform: rotate(90deg)_;
+        &[open] svg {
+            transform: rotate(180deg);
         }
     }
   }
@@ -167,10 +167,10 @@
             <details>
               <summary>
                 <p>FONTES</p>
-                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
               <div class="fontes-wrapper">
-                {{ meta.texto_fontes |  metafield_tag}}
+                {{ meta.texto_fontes | metafield_tag }}
               </div>
             </details>
           </div>
