@@ -16,6 +16,21 @@
   .cientific-results-{{ section.id }} {
     background: {{ section.settings.bg_wrapper_content }};
 
+      .desktop,.mobile {
+        display:none;
+      }
+
+      .desktop {
+        @media (min-width:768px) {
+          display:block;
+        }
+      }
+      .mobile {
+        @media (max-width:767px) {
+          display:block;
+        }
+      }
+
     * {
       color: {{ section.settings.color_content }};
     }
@@ -148,7 +163,13 @@
     <div class="wrapper">
       <div class="left">
         {% if meta.imagem_resultados_cientificos != blank %}
-          {{ meta.imagem_resultados_cientificos | image_url: width: 500, height: 700 | image_tag }}
+          <div class="desktop">
+            {{ meta.imagem_resultados_cientificos | image_url: width: 500, height: 700 | image_tag }}
+
+          </div>
+          <div class="mobile">
+            {{ meta.imagem_resultados_cientificos_mobile | image_url: width: 358, height: 300 | image_tag }}        
+          </div>
         {% endif %}
       </div>
       <div class="right">
