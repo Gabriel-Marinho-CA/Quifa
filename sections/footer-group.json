@@ -25,7 +25,7 @@
         "newsletter_XpGTKd": {
           "type": "newsletter",
           "settings": {
-            "heading": "",
+            "heading": "<p>Receba novidades e descontos</p>",
             "placeholder": "Seu melhor e-mail:",
             "button": "Enviar",
             "button_side": false
