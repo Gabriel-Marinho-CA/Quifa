@@ -16,6 +16,15 @@
     .extra-pdp-info-{{ section.id }} {
       background: {{ section.settings.bg_wrapper_content }};
 
+      @media (max-width:547px) {
+        padding-top:1rem !important;
+        padding-bottom:1rem !important;
+
+        ul {
+          margin-top: 0 !important;
+        }
+      }
+
       * {
         color: {{ section.settings.color_content }};
       }
