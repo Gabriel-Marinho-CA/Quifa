@@ -1,39 +1,3 @@
-<script>
-  const addToCart = async (id) => {
-    const productId = parseInt(id);
-
-    let productObj = {
-      items: [
-        {
-          id: productId,
-          quantity: 1,
-        },
-      ],
-    };
-
-    await addItemToCart(productObj);
-  };
-  const addItemToCart = async (productObj) => {
-    const urlAddToCart = '/cart/add.js';
-
-    try {
-      const response = await fetch(urlAddToCart, {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-        body: JSON.stringify(productObj),
-      });
-
-      if (response.ok) {
-        return response;
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-</script>
 
 <div class="shelf-product">
   <div class="wrapper-img">

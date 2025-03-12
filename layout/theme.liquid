@@ -296,15 +296,21 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-        <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-      > 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-      {% comment %} FONTS {% endcomment %}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    {% comment %} FONTS {% endcomment %}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -381,5 +387,41 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+      const addToCart = async (id) => {
+        const productId = parseInt(id);
+
+        let productObj = {
+          items: [
+            {
+              id: productId,
+              quantity: 1,
+            },
+          ],
+        };
+
+        await addItemToCart(productObj);
+      };
+      const addItemToCart = async (productObj) => {
+        const urlAddToCart = '/cart/add.js';
+
+        try {
+          const response = await fetch(urlAddToCart, {
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            body: JSON.stringify(productObj),
+          });
+
+          if (response.ok) {
+            return response;
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      };
+    </script>
   </body>
 </html>
