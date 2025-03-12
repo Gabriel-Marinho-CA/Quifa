@@ -1819,7 +1819,7 @@ a.product__text {
     }
   }
   .pix-price-area {
-    display: inline-block;
+    display: inline-flex;
     background: #111c30;
     border-radius: 4px;
     padding-inline: 0.9rem;
@@ -1836,7 +1836,7 @@ a.product__text {
     }
     .pix-text {
       font-size: 12px;
-      font-weight: 400;
+      font-weight: 600;
       line-height: 19.07px;
       text-align: left;
       text-underline-position: from-font;
