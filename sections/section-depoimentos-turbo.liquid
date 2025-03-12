@@ -33,6 +33,12 @@
               padding: 2.5rem 2rem;
               position:relative;
               max-width: 35vw;
+              
+              &:nth-child(1) {
+                @media (min-width:1400px) {
+                  margin-left: calc(47vw - 670px);                
+                }
+              } 
 
               &::before {
                 content: "";
