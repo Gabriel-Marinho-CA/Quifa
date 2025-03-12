@@ -9,15 +9,15 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Frame_1261153518.png",
-    "logo_width": 160,
+    "logo": "shopify://shop_images/Frame_1000006252.svg",
+    "logo_width": 70,
     "discount_code": "PrimeiraCompra",
     "timer_hours": 65,
     "timer_minutes": 30,
     "timer_seconds": 50,
-    "type_header_font": "montserrat_n4",
+    "type_header_font": "karla_n4",
     "heading_scale": 100,
-    "type_body_font": "montserrat_n4",
+    "type_body_font": "karla_n4",
     "body_scale": 100,
     "page_width": 1400,
     "spacing_sections": 0,
@@ -207,32 +207,21 @@
           "background": "#b4fa64",
           "background_gradient": "",
           "text": "#242323",
-          "button": "#ff4375",
+          "button": "#111C30",
           "button_label": "#ffffff",
-          "secondary_button_label": "#ff4375",
-          "shadow": "#ff4375"
+          "secondary_button_label": "#111C30",
+          "shadow": "#111C30"
         }
       },
       "scheme-507647c6-1b84-49a0-8942-c8e49e155acc": {
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#ff4375",
+          "text": "#111C30",
           "button": "#ffffff",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
-        }
-      },
-      "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48": {
-        "settings": {
-          "background": "#111c30",
-          "background_gradient": "",
-          "text": "#ffffff",
-          "button": "#061433",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#ffffff"
         }
       }
     }

@@ -226,7 +226,7 @@ cart-items {
   flex-direction: column;
 
   .cart__checkout-button {
-    background-color: #FF4375;
+    background-color: #111C30;
     color: #fff;
     font-weight: 500;
     border-radius: 32px;
