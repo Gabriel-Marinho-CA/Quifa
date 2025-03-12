@@ -117,15 +117,22 @@
       "type": "product-highlight-turbo",
       "settings": {
         "bg_wrapper_content": "linear-gradient(180deg, rgba(17, 28, 48, 1), rgba(1, 51, 86, 1) 100%)",
-        "color_content": "#fff",
+        "color_content": "#ffffff",
         "padding_top": 68,
         "padding_bottom": 76
+      }
+    },
+    "nutritional_table_turbo_6wKm4A": {
+      "type": "nutritional-table-turbo",
+      "settings": {
+        "page": "tabela-nutricional-nicoben-adulto-completo"
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "product_highlight_turbo_HakUX6"
+    "product_highlight_turbo_HakUX6",
+    "nutritional_table_turbo_6wKm4A"
   ]
 }
