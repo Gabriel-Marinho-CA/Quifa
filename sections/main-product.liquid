@@ -712,7 +712,7 @@
                           {{ buy_tg.title }}
                         </p>
                         <div class="wrapper-prices-info">
-                          <p class="best-price-btg">{{ buy_tg.price | money }}</p>
+                          <p class="best-price-btg">{{ buy_tg.selected_or_first_available_variant.price | money }}</p>
                           <p class="list-price-btg">
                             {% if buy_tg.selected_or_first_available_variant.compare_at_price > buy_tg.price %}
                               {{ buy_tg.selected_or_first_available_variant.compare_at_price | money }}
