@@ -28,6 +28,9 @@
           color: {{ section.settings.color_title }}
         }
       }
+      .list-cards-op {
+        align-items: center;
+      }
       li {
         /* padding: 4rem 2rem; */
         max-width: 260px;
@@ -61,8 +64,12 @@
           .subtitle-card p{
             font-size: 16px;
           }
+          .wrapper-img  {
+            padding-top: 6rem;
+          }
 
         }
+        
         .wrapper-img {
           width: 100%;
           text-align: center;
@@ -129,7 +136,7 @@
       {{ section.settings.title }}
     </div>
     <div class="swiper more-options">
-      <ul class="swiper-wrapper">
+      <ul class="swiper-wrapper list-cards-op">
         {% for item in section.blocks %}
           {% if item.type == 'card' %}
             <li class="swiper-slide card-more-op {% if item.settings.card_highlight %}card-highlight{% endif %}">
