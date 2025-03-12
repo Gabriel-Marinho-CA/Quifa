@@ -91,7 +91,6 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          color:#1D3469;
           &.btn-border {
             border: 1px solid {{ section.settings.color_content }} ;
             font-size: 16px;
@@ -137,7 +136,7 @@
                 </div>
                 <div class="buy-area">
                   <button
-                    style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color }}"
+                    style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color_text }}"
                     class="{% if item.settings.btn_has_border %}btn-border{% endif %}"
                   >
                     {{ item.settings.btn_label }}
