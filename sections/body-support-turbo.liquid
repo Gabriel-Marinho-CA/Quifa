@@ -173,17 +173,16 @@
         </div>
       </div>
       <div class="right">
-        {% if meta.img_secao_destaque_2 != blank %}
+        {% if meta.imagem_secao_destaque_2 != blank %}
           {{
-            meta.img_secao_destaque_2
-            | image_url: width: meta.img_secao_destaque_2.width, height: meta.img_secao_destaque_2.height
+            meta.imagem_secao_destaque_2
+            | image_url: width: meta.imagem_secao_destaque_2.width, height: meta.imagem_secao_destaque_2.height
             | image_tag
           }}
         {% endif %}
       </div>
     </div>
   </div>
-  {% comment %} </div> {% endcomment %}
 </div>
 
 {% schema %}
