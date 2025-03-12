@@ -232,11 +232,50 @@
       "type": "cientific-results-turbo",
       "settings": {
         "bg_wrapper_content": "#013F56",
-        "color_content": "#fff",
-        "color_title": "#fff",
-        "link": "",
+        "color_content": "#ffffff",
+        "color_title": "#ffffff",
         "padding_top": 60,
         "padding_bottom": 84
+      }
+    },
+    "section_product_extra_info_turbo_4jqtwa": {
+      "type": "section-product-extra-info-turbo",
+      "blocks": {
+        "card_3UWndR": {
+          "type": "card",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1_8429b1b9-d823-4f9c-b4ce-d82832011113.svg",
+            "title": "Envio nacional",
+            "subtitle": "entregamos em todo o Brasil"
+          }
+        },
+        "card_pVgfEx": {
+          "type": "card",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1_1.svg",
+            "title": "100% satisfação",
+            "subtitle": "a melhor experiênciaem cada pedido"
+          }
+        },
+        "card_73kmbR": {
+          "type": "card",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1_2.svg",
+            "title": "Site 100% seguro",
+            "subtitle": "seus dadosestão protegidos"
+          }
+        }
+      },
+      "block_order": [
+        "card_3UWndR",
+        "card_pVgfEx",
+        "card_73kmbR"
+      ],
+      "settings": {
+        "bg_wrapper_content": "linear-gradient(90deg, rgba(17, 28, 48, 1), rgba(1, 51, 86, 1) 100%)",
+        "color_content": "#fff",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     }
   },
@@ -248,6 +287,7 @@
     "more_options_pdp_turbo_KmrWnr",
     "body_support_turbo_UTEUAY",
     "section_actives_difference_gg3nCA",
-    "cientific_results_turbo_pqpfC3"
+    "cientific_results_turbo_pqpfC3",
+    "section_product_extra_info_turbo_4jqtwa"
   ]
 }
