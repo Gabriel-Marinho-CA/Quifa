@@ -60,6 +60,7 @@
       }
 
       .card-ativo {
+        border: 2px solid #111C30;
         .image-wrapper {
             img {
                 border-radius:32px;
@@ -115,27 +116,15 @@
                   {% endif %}
                 </div>
                 <div class="title-card">
-                  {{ titles[cont] }}
+                  <p>{{ titles[cont] }}</p>
                 </div>
                 <div class="subtitle-card">
-                  {{ content[cont] }}
+                  <p>{{ content[cont] }}</p>
                 </div>
                 {% assign cont = cont | plus: 1 %}
               {% endfor %}
             </div>
-            {% comment %}
-              <div class="title-card">
-                {{ item.settings.title }}
-              </div>
-              <div class="subtitle-card">
-                {{ item.settings.subtitle }}
-              </div>
-            {% endcomment %}
           </li>
-          {% comment %}
-            {% endif %}
-            {% endfor %}
-          {% endcomment %}
         </ul>
       </div>
     </div>
@@ -149,17 +138,6 @@
   </div>
 </div>
 
-<script>
-  new Swiper('.ativo-{{ section.id }}  .swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    breakpoints: {
-      700: {
-        spaceBetween: 32,
-      },
-    },
-  });
-</script>
 
 {% schema %}
 {
