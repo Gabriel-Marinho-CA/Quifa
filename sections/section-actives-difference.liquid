@@ -85,6 +85,8 @@
   }
 </style>
 
+{% assign meta = product.metafields.custom %}
+
 <div
   class="ativo-{{ section.id }} ativo-{{ section.id }}-padding"
 >
@@ -95,23 +97,27 @@
     <div class="wrapper-cards">
       <div class="swiper">
         <ul class="swiper-wrapper">
-          {% for item in section.blocks %}
-            {% if item.type == 'ativo' %}
+          {% comment %} {% for item in meta.imagem_ativos %}
+            {% if item.type == 'ativo' %} {% endcomment %}
               <li class="swiper-slide card-ativo">
                 <div class="image-wrapper">
-                  {% if item.settings.img != blank %}
-                    {{ item.settings.img | image_url: width: 304, height: 300 | image_tag }}
-                  {% endif %}
+                    {{ meta.titulo_card_ativos[0] }}
+                    {% comment %} titulo_card_ativos
+                    conteudo_card_ativos
+                    imagem_ativos {% endcomment %}
+                  {% comment %} {% if meta. != blank %}
+                    {{ meta. | image_url: width: 304, height: 300 | image_tag }}
+                  {% endif %} {% endcomment %}
                 </div>
-                <div class="title-card">
+                {% comment %} <div class="title-card">
                   {{ item.settings.title }}
                 </div>
                 <div class="subtitle-card">
                   {{ item.settings.subtitle }}
-                </div>
+                </div> {% endcomment %}
               </li>
-            {% endif %}
-          {% endfor %}
+            {% comment %} {% endif %}
+          {% endfor %} {% endcomment %}
         </ul>
       </div>
     </div>
