@@ -29,15 +29,18 @@
       @media (max-width:1000px) {
         flex-direction:column;
         gap:2rem;
+        align-items: center;
       }
 
       .right {
         flex: 1;
         max-width: 560px;
+        @media (max-width:1000px) {
+            max-width: 100%;
+            }
       }
       .left {
-        @media (max-width:1000px) {
-        }
+
         img {
           height: auto;
           width: 100%;
@@ -145,13 +148,7 @@
     <div class="wrapper">
       <div class="left">
         {% if meta.imagem_resultados_cientificos != blank %}
-          {{
-            meta.imagem_resultados_cientificos
-            | image_url:
-              width: 500,
-              height: 700
-            | image_tag
-          }}
+          {{ meta.imagem_resultados_cientificos | image_url: width: 500, height: 700 | image_tag }}
         {% endif %}
       </div>
       <div class="right">
