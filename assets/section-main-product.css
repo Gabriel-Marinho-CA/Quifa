@@ -306,7 +306,6 @@ a.product__text {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #000;
-  font-family: 'defante';
 
   @media (max-width: 750px) {
     font-size: 26px;
@@ -1923,7 +1922,6 @@ a.product__text {
     padding: 1rem;
 
     * {
-      font-family: "Poppins";
       font-size: 14px;
       font-weight: 300;
       line-height: 22.4px;
