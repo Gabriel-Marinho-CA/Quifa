@@ -21,34 +21,69 @@
       }
       ul {
         padding:0;
+
+        li {
+            max-width: 248px;
+            * {
+                margin:0;
+                line-height: 1;
+                text-align: center;
+            }
+            .title-card {
+                p {
+                    font-size: 24px;
+                    font-weight: 400;
+                    letter-spacing: 0.48px;
+                }
+            }
+            .subtitle-card {
+                p {
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
       }
   }
 </style>
 
 <div id="extra-pdp-info" class="extra-pdp-info-{{ section.id }} extra-pdp-info-{{ section.id }}-padding ">
   <div class="page-width">
-    <ul class="wrapper-cards">
-      {% for item in section.blocks %}
-        {% if item.type == 'card' %}
-          <li>
-            <div class="wrapper-img">
-              {% if item.settings.img != blank %}
-                {{ item.settings.img | image_url: width: 56, height: 56 | image_tag }}
-              {% endif %}
-            </div>
-            <div class="title-card">
-              {{ item.settings.title }}
-            </div>
-            <div class="subtitle-card">
-              {{ item.settings.subtitle }}
-            </div>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    <div class="swiper">
+      <ul class="wrapper-cards swiper-wrapper">
+        {% for item in section.blocks %}
+          {% if item.type == 'card' %}
+            <li class="swiper-slide card-extra-pdp-info">
+              <div class="wrapper-img">
+                {% if item.settings.img != blank %}
+                  {{ item.settings.img | image_url: width: 56, height: 56 | image_tag }}
+                {% endif %}
+              </div>
+              <div class="title-card">
+                <p>{{ item.settings.title }}</p>
+              </div>
+              <div class="subtitle-card">
+                <p>{{ item.settings.subtitle }}</p>
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </div>
 
+<script>
+  new Swiper('.extra-pdp-info-{{ section.id }} .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    breakpoints: {
+      700: {
+        spaceBetween: 47,
+      },
+    },
+  });
+</script>
 {% schema %}
 {
   "name": "Resultados cientificos",
