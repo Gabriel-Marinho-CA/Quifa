@@ -47,7 +47,7 @@
         <ul class="swiper-wrapper collection-showcase summary">
           {%- for product in recommendations.products -%}
             <li class="swiper-slide card-products">
-              {% render 'card-product', card_product: product %}
+              {% render 'shelf-product', product: product %}
             </li>
           {%- endfor -%}
         </ul>
