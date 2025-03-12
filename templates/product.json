@@ -75,6 +75,7 @@
         "section_id": "produto",
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
+        "pix_percent": 5,
         "pix_text": "",
         "media_size": "large",
         "constrain_to_viewport": true,
