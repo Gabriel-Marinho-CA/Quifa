@@ -54,9 +54,9 @@
         "collapsible_tab_Vz7bmP": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Tabela nutricional",
             "icon": "none",
-            "content": "{{ block.settings.page.metafields.custom.tabela_nutricional_2 | metafield_tag }}<p>Lorem ipsum dolr</p>",
+            "content": "",
             "enable_description": false,
             "page": ""
           }
