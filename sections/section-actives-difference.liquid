@@ -114,18 +114,18 @@
 
           {% for cards in images_card %}
             <li class="swiper-slide card-ativo">
-                <div class="wrapper-image">
-                  {% if cards != blank %}
-                    {{ cards | image_url: width: 304, height: 300 | image_tag }}
-                  {% endif %}
-                </div>
-                <div class="title-card">
-                  <p>{{ titles[cont] }}</p>
-                </div>
-                <div class="subtitle-card">
-                  <p>{{ content[cont] }}</p>
-                </div>
-                {% assign cont = cont | plus: 1 %}
+              <div class="wrapper-image">
+                {% if cards != blank %}
+                  {{ cards | image_url: width: 304, height: 300 | image_tag }}
+                {% endif %}
+              </div>
+              <div class="title-card">
+                <p>{{ titles[cont] }}</p>
+              </div>
+              <div class="subtitle-card">
+                <p>{{ content[cont] }}</p>
+              </div>
+              {% assign cont = cont | plus: 1 %}
             </li>
           {% endfor %}
         </ul>
@@ -141,6 +141,17 @@
   </div>
 </div>
 
+<script>
+  new Swiper('.ativo-{{ section.id }} .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    breakpoints: {
+      700: {
+        spaceBetween: 32,
+      },
+    },
+  });
+</script>
 {% schema %}
 {
   "name": "Ativos fazem diferença",
