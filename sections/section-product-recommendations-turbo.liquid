@@ -56,7 +56,18 @@
             </li>
           {%- endfor -%}
         </ul>
+        <div class="swiper-pagination"></div>
       </div>
+      <div class="swiper-button-prev-custom">
+      <div class="">
+        {{- 'icon-caret.svg' | inline_asset_content -}}
+      </div>
+    </div>
+    <div class="swiper-button-next-custom ">
+      <div class="">
+        {{- 'icon-caret.svg' | inline_asset_content -}}
+      </div>
+    </div>
       {% comment %} <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex w-full justify-between z-[1] sm:hidden"> {% endcomment %}
       {% comment %} </div> {% endcomment %}
     {% endif %}
