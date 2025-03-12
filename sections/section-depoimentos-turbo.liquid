@@ -73,11 +73,11 @@
     <div class="swiper">
       <ul class="swiper-wrapper">
         {% for item in section.blocks %}
-          {% if item.type == 'benefit' %}
+          {% if item.type == 'depoimento' %}
             <li class="swiper-slide card-depoimento">
               <div class="image-wrapper">
                 {% if item.settings.img != blank %}
-                  {{ item.settings.img | image_url: width: 304, height: 300 | image_tag }}
+                  {{ item.settings.img | image_url: width: item.settings.img.width, height:item.settings.img.height  | image_tag }}
                 {% endif %}
                 <div class="name-card">
                   {{ item.settings.name }}
