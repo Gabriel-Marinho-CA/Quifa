@@ -13,96 +13,107 @@
 {% endstyle %}
 
 <style>
-  .ativo-{{ section.id }} {
-    .wrapper-cards {
-        * {
-          margin:0;
-          line-height: 1;
-      }
-      @media (max-width:1459px) {
-        padding-left: 15px;
-      }
-    }
-
-
-      ul {
-        padding:0;
-
-        li {
-            max-width:280px;
-            padding-bottom: 4rem;
-
-            border: 2px solid #111C30;
-            border-radius: 24px;
-            padding: 1.2rem;
-
-            @media (max-width:547px) {
-                max-width:67vw;
-            }
-
-            &:nth-child(1) {
-                @media (min-width:1460px) {
-                    margin-left: calc(-670px + 47vw);
-                    }
-
-            }
+    .ativo-{{ section.id }} {
+      .wrapper-cards {
+          * {
+            margin:0;
+            line-height: 1;
+        }
+        @media (max-width:1459px) {
+          padding-left: 15px;
         }
       }
-      .title-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 3.5rem;
 
-        @media (max-width:547px) {
-            .swipper-custom-buttons {
-                display:none;
-            }
-        }
-          *{
-            font-size: 40px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.48px;
-            color: {{ section.settings.color_title }};
-            margin: 0;
 
-            @media (max-width:547px) {
-                font-size: 22px;
-                text-align: center;
-            }
+        ul {
+          padding:0;
+
+          li {
+              max-width:280px;
+              padding-bottom: 4rem;
+
+              border: 2px solid #111C30;
+              border-radius: 24px;
+              padding: 1.2rem;
+
+              @media (max-width:547px) {
+                  max-width:67vw;
+              }
+
+              &:nth-child(1) {
+                  @media (min-width:1460px) {
+                      margin-left: calc(-670px + 47vw);
+                      }
+
+              }
           }
-      }
+        }
+        .title-section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 3.5rem;
 
-      .card-ativo {
+          @media (max-width:547px) {
+              .swipper-custom-buttons {
+                  display:none;
+              }
+          }
+            *{
+              font-size: 40px;
+              font-weight: 500;
+              text-transform: uppercase;
+              letter-spacing: 0.48px;
+              color: {{ section.settings.color_title }};
+              margin: 0;
 
-        .wrapper-image {
-            img {
-                border-radius:32px;
-                height: auto;
-                width: 100%;
+              @media (max-width:547px) {
+                  font-size: 22px;
+                  text-align: center;
+              }
             }
         }
-        .title-card {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-                * {
-                    font-size: 20px;
-                    line-height: 1;
-                    color: {{ section.settings.text_color_title_card }};
-                    font-weight: 500;
-                }
-             }
-        .subtitle-card {
-            min-height: 75px;
-            * {
-                font-size: 15px;
-                line-height: 1;
-                color: {{ section.settings.text_color }};
+
+        .card-ativo {
+
+          .wrapper-image {
+              img {
+                  border-radius:32px;
+                  height: auto;
+                  width: 100%;
+              }
+          }
+          .title-card {
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+                  * {
+                      font-size: 20px;
+                      line-height: 1;
+                      color: {{ section.settings.text_color_title_card }};
+                      font-weight: 500;
+                  }
+               }
+          .subtitle-card {
+              min-height: 75px;
+              * {
+                  font-size: 15px;
+                  line-height: 1;
+                  color: {{ section.settings.text_color }};
+              }
+          }
+        }
+        .fontes-sec {
+            background-color: #F2F2F2;
+            border-radius: 8px;
+            padding: 1rem;
+            .title-fonts {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color:#111C30;
             }
         }
-      }
-  }
+    }
 </style>
 
 {% assign meta = product.metafields.custom %}
@@ -148,8 +159,8 @@
       </div>
     </div>
 
-    <div class="fontes-sec">
-      <p>FONTE</p>
+    <div class="fontes-sec page-width">
+      <p class="title-fonts">FONTE</p>
       <div class="content-fontes">
         {{ section.settings.fontes }}
       </div>
