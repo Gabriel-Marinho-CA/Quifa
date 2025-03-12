@@ -171,6 +171,7 @@
         }
         .buy-area {
           margin-top: 2rem;
+          padding-inline:1rem;
           button {
             background-color: #111c30;
             height: 44px;
@@ -186,6 +187,11 @@
             max-width: 179px;
             margin-inline: auto;
             border-radius: 32px;
+
+            @media (max-width:547px) {
+              height:32px;
+              font-size:10px;
+            }
           }
         }
       }
