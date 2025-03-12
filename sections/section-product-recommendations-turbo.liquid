@@ -17,6 +17,18 @@
       .product-recommendations {
         position:relative;
       }
+      .swiper-recomend {
+        padding-bottom:3rem;
+      }
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 6px;
+        border-radius: 8px;
+      }
+      .swiper-pagination-bullet-active {
+        background: #000;
+      }
+
       .swiper-custom {
         position: absolute;
         top: 50%;
@@ -171,7 +183,7 @@
             {{ section.settings.title_sec }}
           </div>
         {% endif %}
-        <div class="swiper">
+        <div class="swiper swiper-recomend">
           <ul class="swiper-wrapper collection-showcase summary">
             {%- for product in recommendations.products -%}
               <li class="swiper-slide card-products-btg">
