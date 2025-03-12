@@ -92,6 +92,9 @@
         "link_list_DYNk3z",
         "link_list_VryJPw"
       ],
+      "custom_css": [
+        ".list-social {display:none;}"
+      ],
       "settings": {
         "copyright_text": "<p>Nicoben 2025 - Todos os direitos reservados</p>",
         "color_scheme": "scheme-7b2b1aa7-a766-4039-99ed-8e8790013290",
