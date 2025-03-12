@@ -13,44 +13,54 @@
 {% endstyle %}
 
 <style>
-    .depoimentos-{{ section.id }} {
-        background: {{ section.settings.bg_sec }};
+  .depoimentos-{{ section.id }} {
+      background: {{ section.settings.bg_sec }};
 
-        .title-section {
-            margin-bottom: 2rem;
-            * {
-                font-size: 24px;
-                font-weight: 500;
-                letter-spacing: 0.48px;
-                text-transform:uppercase;
-                color: {{ section.settings.color_title }};
-                margin: 0;
-                line-height: 1;
-            }
-        }
-        .wrapper-cards-depoimentos {
-            li {
-                border-radius: 32px;
-                border: 2px solid;
-                border-image-source:linear-gradient(270deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%, #62CEBF 100%);            
+      .title-section {
+          margin-bottom: 2rem;
+          * {
+              font-size: 24px;
+              font-weight: 500;
+              letter-spacing: 0.48px;
+              text-transform:uppercase;
+              color: {{ section.settings.color_title }};
+              margin: 0;
+              line-height: 1;
+          }
+      }
+      .wrapper-cards-depoimentos {
+          li {
+              border-radius: 32px;
+              border: 2px solid;
+              border-image-source:linear-gradient(270deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%, #62CEBF 100%);
 
-                .image-wrapper {
-                    display: flex;
-                    align-items: center;
-                    gap:.85rem;
- 
-                    .name-card {
-                        * {
-                            font-size: 18px;
-                            font-weight:600;
-                            line-height: 1.5;
-                        }
-                    }
+              .image-wrapper {
+                  display: flex;
+                  align-items: center;
+                  gap:.85rem;
+
+                  .name-card {
+                      * {
+                          font-size: 18px;
+                          font-weight:600;
+                          line-height: 1.5;
+                          color: {{ section.settings.color_title}};
+                      }
+                  }
+              }
+              .resume-card {
+                * {
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  color:{{ section.settings.text_color }};
                 }
-            }
-        }
+              }
 
-    }
+          }
+      }
+
+  }
 </style>
 <div
   class="depoimentos-{{ section.id }} depoimentos-{{ section.id }}-padding"
@@ -84,6 +94,17 @@
   </div>
 </div>
 
+<script>
+  new Swiper('.wrapper-cards-depoimentos .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    breakpoints: {
+        700: {
+            spaceBetween: 32,
+        },
+      },
+  });
+</script>
 {% schema %}
 {
   "name": "Depoimentos",
