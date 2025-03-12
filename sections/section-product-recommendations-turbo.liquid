@@ -17,9 +17,10 @@
     }
 
     .wrapper-prices-info {
-      display:flex;
-      gap:.35rem;
-      align-items:center;
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+      justify-content: center;
     }
     .list-price-shelf {
       font-weight: 300;
@@ -35,12 +36,17 @@
       color: #434752;
     }
     .installments {
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 1.2;
+      p {
+        display: block;
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.2;
+        width: 100%;
+      }
     }
     .buy-area {
-      margin-top:2rem;
+      margin-top: 2rem;
       button {
         background-color: #111c30;
         height: 44px;
@@ -52,10 +58,10 @@
         font-weight: 600;
         text-transform: uppercase;
         cursor: pointer;
-        width:100%;
-        max-width:179px;
-        margin-inline:auto;
-        border-radius:32px;
+        width: 100%;
+        max-width: 179px;
+        margin-inline: auto;
+        border-radius: 32px;
       }
     }
   }
