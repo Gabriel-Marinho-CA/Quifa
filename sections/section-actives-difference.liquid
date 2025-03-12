@@ -34,7 +34,9 @@
             padding: 1.2rem;
 
             &:nth-child(1) {
-                margin-left: calc(-670px + 47vw);
+                @media (min-width:1460px) {
+                    margin-left: calc(-670px + 47vw);
+                    }
             }
         }
       }
@@ -90,7 +92,7 @@
                 line-height: 1;
                 color: {{ section.settings.text_color }};
             }
-        } 
+        }
       }
   }
 </style>
@@ -102,10 +104,9 @@
 >
   <div class="wrapper-ativo-content">
     <div class="page-width">
-        <div class="title-section">
-          {{ section.settings.title }}
-        </div>
-
+      <div class="title-section">
+        {{ section.settings.title }}
+      </div>
     </div>
     <div class="wrapper-cards">
       <div class="swiper">
