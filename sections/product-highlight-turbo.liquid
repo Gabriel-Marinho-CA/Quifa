@@ -171,11 +171,14 @@
         </div>
       </div>
       <div class="right">
-        {{
-          meta.img_secao_destaque_1
-          | image_url: width: meta.img_secao_destaque_1.width, height: meta.img_secao_destaque_1.height
-          | image_tag
-        }}
+        {% if meta.img_secao_destaque_1 != blank %}
+          {{
+            meta.img_secao_destaque_1
+            | image_url: width: meta.img_secao_destaque_1.width, height: meta.img_secao_destaque_1.height
+            | image_tag
+          }}
+        
+        {% endif %}
       </div>
     </div>
   </div>
