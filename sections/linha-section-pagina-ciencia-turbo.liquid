@@ -24,6 +24,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 32px;
       p {
         font-size: 12px;
         font-weight: 500;
@@ -133,17 +134,19 @@
         <div class="content">
           {{ main.content }}
         </div>
-        <div class="fontes">
-          <details>
-            <summary>
-              <p>FONTES</p>
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </summary>
-            <div class="fontes-wrapper">
-              {{ main.fontes }}
-            </div>
-          </details>
-        </div>
+        {% if main.fontes != blank %}
+          <div class="fontes">
+            <details>
+              <summary>
+                <p>FONTES</p>
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </summary>
+              <div class="fontes-wrapper">
+                {{ main.fontes }}
+              </div>
+            </details>
+          </div>        
+        {% endif %}
       </div>
       <div class="right-content">
         <ul>
