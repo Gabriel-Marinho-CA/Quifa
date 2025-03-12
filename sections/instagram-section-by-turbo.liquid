@@ -31,9 +31,10 @@
         font-size:18px;
         line-height:1;
         color: {{ section.settings.color_subtitle }};
-        margin:0;
+        margin:.32rem 0 0 0;
         @media (max-width:547px) {
           font-size:14px;
+          text-align:center;
         }
       }
       & .title-section *:not(a){
@@ -42,8 +43,12 @@
           font-size: 24px;
           font-weight: 600;
           line-height: 1.1;
-          text-align: center;
+          text-align: start;
           text-transform:uppercase;
+
+          @media (max-width:547px) {
+            text-align:center;
+          }
       }
 
       & .wrapper-title a {
