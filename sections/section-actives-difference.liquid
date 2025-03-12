@@ -109,16 +109,18 @@
               {% assign cont = 0 %}
 
               {% for cards in images_card %}
+                <div class="wrapper-image">
+                  {% if cards != blank %}
+                    {{ cards | image_url: width: 304, height: 300 | image_tag }}
+                  {% endif %}
+                </div>
                 <div class="title-card">
-                    {{ titles[cont] }}
-                  </div>
-                  <div class="subtitle-card">
-                    {{ content[cont] }}
-                  </div>
+                  {{ titles[cont] }}
+                </div>
+                <div class="subtitle-card">
+                  {{ content[cont] }}
+                </div>
                 {% assign cont = cont | plus: 1 %}
-                {% if cards.value != blank %}
-                  {{ cards.value | image_url: width: 304, height: 300 | image_tag }}
-                {% endif %}
               {% endfor %}
             </div>
             {% comment %}
