@@ -87,6 +87,11 @@
         border-radius: 32px;
         color: #000;
         max-width: calc(100% - 90px);
+        height: 100%;
+
+        &::selection {
+          background-color:#C2D0EF;
+        }
 
         &:focus + label {
           font-size: 10px;
