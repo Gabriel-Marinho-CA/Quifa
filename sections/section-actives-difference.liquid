@@ -102,10 +102,9 @@
               <li class="swiper-slide card-ativo">
                 <div class="image-wrapper">
                     {% assign dsadsadsa = meta.titulo_card_ativos.value | split: ',' %}
-                    {{ dsadsadsa }}
-                    {% for item in dsadsadsa.value %}
-                       ue {{ item }}
-                    {% endfor %}
+                    {{ dsadsadsa[0] }}
+                    {{ dsadsadsa[0].value }}
+
            
                     {% comment %} titulo_card_ativos
                     conteudo_card_ativos
