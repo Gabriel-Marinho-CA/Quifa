@@ -14,6 +14,22 @@
 
 <style>
   .ciencia-diz-{{ section.id }} {
+
+  .mobile,
+    .desk {
+      display: none;
+    }
+
+    @media (min-width:769px) {
+      .desk {
+        display: block !important;
+      }
+    }
+    @media (max-width:768px) {
+      .mobile {
+        display: block !important;
+      }
+    }
     .wrapper * {
       margin:0;
     }
@@ -81,13 +97,21 @@
       align-items: flex-start;
       gap:8px;
       justify-content: space-between;
+
+      &.has_img {
+        flex-direction: row-reverse;
+        align-items: center;
+        .right-content {
+          display:none;
+        }
+      }
     }
     .left-content {
       flex:1;
     }
     .right-content {
       flex:1;
-      
+
 
       ul.list-main {
         display: flex;
@@ -122,9 +146,9 @@
   }
 </style>
 {% assign main = section.settings %}
-<div id="ciencia-diz" class="ciencia-diz-{{ section.id }} ciencia-diz-{{ section.id }}-padding ">
+<div class="ciencia-diz-{{ section.id }} ciencia-diz-{{ section.id }}-padding ">
   <div class="page-width">
-    <div class="wrapper">
+    <div class="wrapper {% if main.image_picker != blank %}has_img{% endif %}">
       <div class="left-content">
         {% if main.tag != blank %}
           <div class="tag">
@@ -148,7 +172,7 @@
                 {{ main.fontes }}
               </div>
             </details>
-          </div>        
+          </div>
         {% endif %}
       </div>
       <div class="right-content">
@@ -163,6 +187,18 @@
           {% endfor %}
         </ul>
       </div>
+      <div class="image-container">
+        {% if main.img != blank %}
+          <div class="desk">
+            {{ main.img | image_url: width: 640, height: 660 | image_tag }}
+          </div>
+        {% endif %}
+        {% if main.img_mobile != blank %}
+          <div class="mobile">
+            {{ main.img_mobile | image_url: width: 356, height: 300 | image_tag }}
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -176,6 +212,16 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "img",
+      "label": "Imagem esquerda"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_mobile",
+      "label": "Imagem esquerda mobile"
+    },
     {
       "type": "text",
       "id": "title",
