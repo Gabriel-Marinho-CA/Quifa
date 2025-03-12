@@ -126,13 +126,9 @@
 </div>
 
 <script>
-  new Swiper('.wrapper-cards .swiper', {
+  new Swiper('.ativo-{{ section.id }}  .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 16,
-    navigation: {
-      nextEl: '.swipper-custom-buttons .swiper-button-next',
-      prevEl: '.swipper-custom-buttons .swiper-button-prev',
-    },
     breakpoints: {
       700: {
         spaceBetween: 32,
