@@ -52,6 +52,13 @@
             "link_social": ""
           }
         },
+        "socias_YMFdtH": {
+          "type": "socias",
+          "settings": {
+            "img_social": "shopify://shop_images/icon-redesocial_3.svg",
+            "link_social": ""
+          }
+        },
         "socias_iNpPTg": {
           "type": "socias",
           "settings": {
@@ -80,6 +87,7 @@
         "contact_6yqUqd",
         "socias_W3YLxe",
         "socias_3RtXyB",
+        "socias_YMFdtH",
         "socias_iNpPTg",
         "link_list_DYNk3z",
         "link_list_VryJPw"
