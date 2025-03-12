@@ -60,6 +60,10 @@
   .newsletter-wrapper {
     flex: 1;
     max-width: 303px;
+    @media (max-width:1000px) {
+      
+      margin-inline: auto;
+    }
     .title-newsleter {
       margin-bottom: 12px;
 
