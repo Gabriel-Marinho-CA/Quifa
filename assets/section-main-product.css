@@ -1847,6 +1847,7 @@ a.product__text {
 }
 
 .product-form__submit {
+  margin-top: 2rem;
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
