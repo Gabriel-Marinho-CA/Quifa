@@ -88,6 +88,7 @@
             color:#000;
             font-size: 12px;
             font-weight: 400;
+            border-radius: 32px;
         }
         @media (max-width:547px) {
           margin-bottom:2.35rem;
@@ -231,7 +232,7 @@
       </div>
       <div class="swiper swiper-recomend">
         <ul class="swiper-wrapper collection-showcase summary">
-          {%- for product in section.settings.collection_reco-%}
+          {%- for product in section.settings.collection_reco.products-%}
             <li class="swiper-slide card-products-btg">
               {% render 'shelf-product', product: product %}
             </li>
