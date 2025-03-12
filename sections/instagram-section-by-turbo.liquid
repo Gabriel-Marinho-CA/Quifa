@@ -15,7 +15,7 @@
       background:{{ main.background_section_color }};
       position:relative;
 
-      & .title-section{
+      & .wrapper-title{
         display:flex;
         justify-content: space-between;
         gap:1rem;
@@ -27,24 +27,25 @@
             gap: 2rem;
         }
       }
-      & .title-section *:not(a){
-        color: {{ main.title_section_color }};
-        margin:0;
-          font-size: 48px;
-          font-weight: 700;
-          line-height: 48px;
-          text-align: center;
-          text-underline-position: from-font;
-          text-decoration-skip-ink: none;
-          font-family: "defante";
-          font-weight:400;
+      & .subtitle-section * {
+        font-size:18px;
+        line-height:1;
+        color: {{ section.settings.color_subtitle }};
 
-          @media (max-width:750px) {
-            font-size:32px;
-            line-height:1;
-          }
+        @media (max-width:547px) {
+          font-size:14px;
+        }
+      }
+      & .title-section *:not(a){
+          color: {{ main.title_section_color }};
+          margin:0;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 1.1;
+          text-align: center;
       }
 
+      & .title-section
       & .title-section a {
         font-size: 18px;
         font-weight: 500;
@@ -55,8 +56,8 @@
         text-align: center;
         width:264px;
         height:64px;
-        background-color: #FF4375;
-        color: #FFf;
+        background-color: {{ section.settings.btn_color_bg}};
+        color: {{ section.settings.btn_color_text}};
         border-radius: 300px;
         text-decoration: none;
       }
@@ -71,9 +72,18 @@
   class="section-{{ section.id }}-padding section-{{ section.id }}"
 >
   <div class="page-width">
-    <div class="title-section">
-      {{ main.title }}
-      <a class="insta-btn" href="{{ main.instagram_link }}" target="_blank">{{ main.instagram_title }}</a>
+    <div class="wrapper-title">
+      <div class="left">
+        <div class="title-section">
+          {{ main.title }}
+        </div>
+        <div class="subtitle-section">
+          {{ main.subtitle }}
+        </div>
+      </div>
+      <div class="right">
+        <a class="insta-btn" href="{{ main.instagram_link }}" target="_blank">{{ main.instagram_title }}</a>
+      </div>
     </div>
   </div>
 </div>
@@ -95,6 +105,11 @@
       "label": "Título"
     },
     {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtítulo"
+    },
+    {
       "type": "text",
       "id": "instagram_title",
       "label": "Texto Instagram"
@@ -112,6 +127,24 @@
       "type": "color",
       "id": "title_section_color",
       "label": "Cor do título da seção",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "color_subtitle",
+      "label": "Cor do subtítulo da seção",
+      "default": "#434752"
+    },
+    {
+      "type": "color",
+      "id": "btn_color_bg",
+      "label": "Cor do background do botão ",
+      "default": "#111C30"
+    },
+    {
+      "type": "color",
+      "id": "btn_color_text",
+      "label": "Cor do texto do botão ",
       "default": "#fff"
     },
     {
