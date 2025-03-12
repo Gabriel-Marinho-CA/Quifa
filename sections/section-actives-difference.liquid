@@ -101,7 +101,7 @@
             {% if item.type == 'ativo' %} {% endcomment %}
               <li class="swiper-slide card-ativo">
                 <div class="image-wrapper">
-                    {% assign dsadsadsa =  meta.titulo_card_ativos | split: ',' %}
+                    {% assign dsadsadsa =  meta.titulo_card_ativos.value | split: ',' %}
                     {% for item in dsadsadsa %}
                        ue {{ item }}
                     {% endfor %}
