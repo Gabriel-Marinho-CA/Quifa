@@ -192,10 +192,12 @@
             display:flex;
             justify-content:center;
             align-items:center;
-            padding-inline:.65rem;
+            padding-inline:1rem;
             font-size:16px;
             font-weight:700;
             text-transform:uppercase;
+            border-radius:32px;
+            font-family:Montserrat;
           }
         }
       }
@@ -700,31 +702,34 @@
                 {%- endif -%}
               {% when 'buy_together' %}
                 {% assign buy_tg = block.settings.product_buy_tg %}
-                <div class="buy-together">
+                <div class="buy-together-wrapper">
                   <p class="title-btg">Complete sua suplementação</p>
-                  <div class="wrapper-btg-content">
-                    <div class="btg-pdp-info">
-                      <div class="wrapper-img">
-                        {{ buy_tg.featured_media | image_url: width: 60, height: 60 | image_tag }}
-                      </div>
-                      <div class="wrapper-info">
-                        <p class="title-btg-info">
-                          {{ buy_tg.title }}
-                        </p>
-                        <div class="wrapper-prices-info">
-                          <p class="best-price-btg">{{ buy_tg.selected_or_first_available_variant.price | money }}</p>
-                          <p class="list-price-btg">
-                            {% if buy_tg.selected_or_first_available_variant.compare_at_price > buy_tg.price %}
-                              {{ buy_tg.selected_or_first_available_variant.compare_at_price | money }}
-                            {% endif %}
-                          </p>
+                  <div class="buy-together">
+                    <div class="wrapper-btg-content">
+                      <div class="btg-pdp-info">
+                        <div class="wrapper-img">
+                          {{ buy_tg.featured_media | image_url: width: 60, height: 60 | image_tag }}
                         </div>
-                      </div>
-                      </div>
-                      <div class="buy-area-info">
-                        <button data-btg-id="{{ buy_tg.id }}">LEVAR JUNTO</button>
-                      </div>
+                        <div class="wrapper-info">
+                          <p class="title-btg-info">
+                            {{ buy_tg.title }}
+                          </p>
+                          <div class="wrapper-prices-info">
+                            <p class="best-price-btg">{{ buy_tg.selected_or_first_available_variant.price | money }}</p>
+                            <p class="list-price-btg">
+                              {% if buy_tg.selected_or_first_available_variant.compare_at_price > buy_tg.price %}
+                                {{ buy_tg.selected_or_first_available_variant.compare_at_price | money }}
+                              {% endif %}
+                            </p>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="buy-area-info">
+                          <button data-btg-id="{{ buy_tg.id }}">LEVAR JUNTO</button>
+                        </div>
+                    </div>
                   </div>
+                 
                 </div>
               {%- when 'complementary' -%}
                 <product-recommendations
