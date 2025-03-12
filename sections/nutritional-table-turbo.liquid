@@ -1,39 +1,58 @@
 <style>
-    .nutritional-table {
-        table tbody{
-            span {
-                font-size: 18px;
-                font-weight: 600;
-                color:#1D234C;
-            }
-            tr:nth-child(1) {
-                td:nth-child(2) {
-                    span {
-                        font-weight: 300;
+  .nutritional-table {
+    table tbody {
+      span {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1d234c;
+      }
+      tr:nth-child(1) {
+        td:nth-child(2) {
+          span {
+            font-weight: 300;
 
-                        strong {
-                            font-weight:600;
-                        }
-                    }
-                }
-                strong {
-                    background-image: linear-gradient( 270deg, #f8c24d 0%, #f51a51 20.5%, #9d36ac 45%, #573bd9 65%, #2396b5 82.25%, #62cebf 100% );
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                }
+            strong {
+              font-weight: 600;
             }
-
-            tr:nth-child(2n) {
-                background-color: #F2F2F2;
-            }
+          }
         }
+        strong {
+          background-image: linear-gradient(
+            270deg,
+            #f8c24d 0%,
+            #f51a51 20.5%,
+            #9d36ac 45%,
+            #573bd9 65%,
+            #2396b5 82.25%,
+            #62cebf 100%
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+
+      tr:nth-child(2n) {
+        background-color: #f2f2f2;
+
+        td:nth-child(2) {
+          background-color: #48c25e;
+          span {
+            color: #fff;
+          }
+        }
+        td:nth-child(3) {
+          background-color: #de6254;
+          span {
+            color: #fff;
+          }
+        }
+      }
     }
+  }
 </style>
 
-<div class="nutritional-table">
-    {{ section.settings.page.content }};
-</div>
+<div class="nutritional-table">{{ section.settings.page.content }};</div>
 
 {% schema %}
 {
@@ -49,7 +68,7 @@
   ],
   "presets": [
     {
-        "name":"Tabela nutricional"
+      "name": "Tabela nutricional"
     }
   ]
 }
