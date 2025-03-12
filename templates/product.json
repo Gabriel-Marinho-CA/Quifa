@@ -287,7 +287,7 @@
       "type": "section-product-recommendations-turbo",
       "settings": {
         "title_sec": "<h2>Experimente também</h2>",
-        "color_title": "#111c30",
+        "color_title": "#1d234c",
         "padding_top": 68,
         "padding_bottom": 88
       }
