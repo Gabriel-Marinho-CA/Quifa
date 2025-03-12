@@ -103,7 +103,7 @@
                 <div class="image-wrapper">
                     {% assign dsadsadsa = meta.titulo_card_ativos.value | split: ',' %}
                     {{ dsadsadsa }}
-                    {% for item in dsadsadsa %}
+                    {% for item in dsadsadsa.value %}
                        ue {{ item }}
                     {% endfor %}
            
