@@ -1,0 +1,27 @@
+<section id="experimente-tambem">
+  <div
+    class="product-recommendations relative"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=5&intent=related"
+  >
+    {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+      {% if recommendations.intent == 'related' %}
+        <h2 class="text-[#1D1D1B] text-[32px] mb-12 md:text-lg md:uppercase font-['REM']">
+          Experimente também
+        </h2>
+      {% endif %}
+      <div class="swiper">
+        <ul class="swiper-wrapper collection-showcase summary">
+          {%- for product in recommendations.products -%}
+            <li class="swiper-slide">
+              {% render 'card-product',
+                card_product: product,
+              %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {% comment %} <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex w-full justify-between z-[1] sm:hidden"> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
+    {% endif %}
+  </div>
+</section>
