@@ -153,12 +153,26 @@
         "padding_top": 68,
         "padding_bottom": 68
       }
+    },
+    "linha_section_pagina_ciencia_turbo_tLBcED": {
+      "type": "linha-section-pagina-ciencia-turbo",
+      "settings": {
+        "img": "shopify://shop_images/Frame_1261153516.png",
+        "img_mobile": "shopify://shop_images/Frame_1261153516_1.png",
+        "title": "Nicoben foi desenvolvido para atender essas necessidades específicas",
+        "tag": "Nosso compromisso",
+        "content": "<p>Criamos fórmulas que combinam vitaminas e minerais essenciais para auxiliar na recuperação nutricional de fumantes e ex-fumantes, ajudando a restabelecer o equilíbrio do organismo. Nosso compromisso é oferecer suporte baseado em ciência, sem exageros ou promessas irreais – apenas nutrição eficiente para quem busca mais vitalidade e bem-estar.</p>",
+        "fontes": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "rich_text_AW8NKy",
     "linha_section_pagina_ciencia_turbo_jHApjJ",
-    "linha_section_pagina_ciencia_turbo_tB3FbE"
+    "linha_section_pagina_ciencia_turbo_tB3FbE",
+    "linha_section_pagina_ciencia_turbo_tLBcED"
   ]
 }
