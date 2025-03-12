@@ -292,8 +292,17 @@
         "instagram_link": "",
         "title_section_color": "#111c30",
         "color_subtitle": "#434752",
-        "btn_color_bg": "#111C30",
-        "btn_color_text": "#fff",
+        "btn_color_bg": "#111c30",
+        "btn_color_text": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_product_recommendations_turbo_4kemDW": {
+      "type": "section-product-recommendations-turbo",
+      "settings": {
+        "title_sec": "<h2>Experimente também</h2>",
+        "color_title": "#111C30",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -310,6 +319,7 @@
     "cientific_results_turbo_pqpfC3",
     "section_product_extra_info_turbo_4jqtwa",
     "faq_section_turbo_etLL8J",
-    "instagram_section_by_turbo_NcLPAD"
+    "instagram_section_by_turbo_NcLPAD",
+    "section_product_recommendations_turbo_4kemDW"
   ]
 }
