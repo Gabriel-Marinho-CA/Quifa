@@ -48,7 +48,7 @@
       ],
       "custom_css": [
         ".custom-rich-text {background: linear-gradient(90deg, #111c30 0%, #013356 100%);}",
-        "a {background: #fff; opacity: 1; border-radius: 32px; text-transform:uppercase; font-size:16px;}",
+        "a {background: #fff; opacity: 1; border-radius: 32px; text-transform: uppercase; font-size: 16px;}",
         "a::after,a::before {border-radius: 32px;}"
       ],
       "settings": {
@@ -59,10 +59,58 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "linha_section_pagina_ciencia_turbo_jHApjJ": {
+      "type": "linha-section-pagina-ciencia-turbo",
+      "blocks": {
+        "lista_iRQbAL": {
+          "type": "lista",
+          "settings": {
+            "title": "1. Sistema Imunológico",
+            "subtitle": "<p>O tabagismo compromete a resposta imune, tornando o organismo mais vulnerável a infecções e doenças.</p>"
+          }
+        },
+        "lista_c64xnD": {
+          "type": "lista",
+          "settings": {
+            "title": "2. Menos Energia e Vitalidade",
+            "subtitle": "<p>Fumantes relatam mais fadiga e menor desempenho físico devido à redução na absorção de nutrientes essenciais</p>"
+          }
+        },
+        "lista_R6PMRU": {
+          "type": "lista",
+          "settings": {
+            "title": "3. Sono e Estresse",
+            "subtitle": "<p>O hábito de fumar pode afetar a qualidade do sono e aumentar os níveis de estresse e ansiedade.</p>"
+          }
+        },
+        "lista_brqGx6": {
+          "type": "lista",
+          "settings": {
+            "title": "4. Saúde da Pele e Envelhecimento",
+            "subtitle": "<p>O cigarro acelera o envelhecimento da pele, reduzindo a produção de colágeno e dificultando a cicatrização.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "lista_iRQbAL",
+        "lista_c64xnD",
+        "lista_R6PMRU",
+        "lista_brqGx6"
+      ],
+      "settings": {
+        "title": "O que a ciência diz?",
+        "tag": "",
+        "content": "<p>O tabagismo é conhecido por seus impactos devastadores à saúde, sendo uma das principais causas evitáveis de doenças crônicas e mortalidade precoce.  Menos discutido, mas igualmente preocupante, é como o cigarro afeta o equilíbrio nutricional do corpo. Fumantes podem apresentar deficiências de vitaminas e minerais essenciais devido à combinação de estresse oxidativo elevado, menor absorção de nutrientes e alterações metabólicas.  Deficiências nutricionais específicas, que podem ser exacerbadas pelo cigarro, podem estar relacionadas as seguintes queixas na saúde:</p>",
+        "fontes": "<p>WORLD HEALTH ORGANIZATION (WHO). \"Micronutrient Deficiencies.\" Disponível em: https://www.who.int/nutrition/topics/micronutrients/en/PRENTICE, A. (2004). \"Micronutrients and the Bone Mineral Content of the Mother, Fetus and Newborn.\" The Journal of Nutrition, 134(9), 2163S-2166S. Institute of Medicine (IOM). \"Dietary Reference Intakes for Calcium and Vitamin D.\" National Academies Press, 2011. Disponível em: https://pubmed.ncbi.nlm.nih.gov/12730486/QIU, F.; LIANG, C. L.; LIU, H.; et al. Impacts of cigarette smoking on immune responsiveness: Up and down or upside down? Disponível em: https://pubmed.ncbi.nlm.nih.gov/27902485/LEE, C. L.; CHANG, W. D. The effects of cigarette smoking on aerobic and anaerobic capacity and heart rate variability among female university students. International Journal of Women's Health. Disponível em: https://pubmed.ncbi.nlm.nih.gov/24204174/FARRIS, S. G.; MATSKO, S. V.; UEBELACKER, L.; et al. Anxiety Sensitivity and Daily Cigarette Smoking in Relation to Sleep Disturbances in Treatment-Seeking Smokers. Cognitive and Behavioral Therapy. Disponível em: https://pubmed.ncbi.nlm.nih.gov/30947621/ORTIZ, A.; GRANDO, S. A. Smoking and the skin. International Journal of Dermatology. Disponível em: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-4632.2011.05205.x</p>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_AW8NKy"
+    "rich_text_AW8NKy",
+    "linha_section_pagina_ciencia_turbo_jHApjJ"
   ]
 }
