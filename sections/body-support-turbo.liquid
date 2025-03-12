@@ -1,0 +1,234 @@
+{% style %}
+    .product-highlight-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .product-highlight-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+  .product-highlight-{{ section.id }} {
+
+
+    * {
+      color: {{ section.settings.color_content }};
+    }
+
+    .wrapper {
+      background: {{ section.settings.bg_wrapper_content }};
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 3rem;
+
+      @media (min-width:1500px) {
+        gap:15rem;
+      }
+      @media (max-width:1000px) {
+        flex-direction:column-reverse;
+        gap:2rem;
+      }
+
+      .left {
+        flex: 1;
+        max-width: 582px;
+        padding-left:50px;
+        padding-top: 96px;
+        padding-bottom: 96px;
+        @media (min-width:1460px) {
+          margin-left: calc(-670px + 47vw);
+          padding-left:0px;
+        }
+        @media (max-width:1000px) {
+          padding-top: 0;
+          padding-bottom: 4rem;
+          max-width:100%;
+          padding-inline:15px;
+        }
+      }
+      .right {
+        flex: 1;
+        @media (max-width:1000px) {
+          align-self: flex-end;
+        }
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+    .title-text {
+      margin-top:.68rem;
+      margin-bottom: 2rem;
+      * {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing:0.64px;
+        text-transform: uppercase;
+        margin: 0;
+
+        @media (max-width:1000px) {
+          font-size: 24px;
+        }
+      }
+    }
+    .content-text {
+      h1,h2,h3,h4,h5,h6,h7 {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform:uppercase;
+        line-height:1.5;
+        opacity:1;
+        color: {{ section.settings.color_content }};
+        margin-top:2rem;
+      }
+      *{
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0;
+        color:#fefcfcb5;
+
+        @media (max-width:1000px) {
+          font-size: 16px;
+        }
+      }
+      strong {
+        font-weight: 600;
+        opacity:1;
+        color: {{ section.settings.color_content }}
+      }
+    }
+    .buy-button {
+        margin-top:4rem;
+        button,a {
+          width: 100%;
+          max-width: 244px;
+          height:56px;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          color:#1D3469;
+          background-color:#fff;
+          font-size:16px;
+          font-weight:500;
+          border:none;
+          border-radius: 32px;
+          cursor: pointer;
+
+          @media (max-width:1000px) {
+            max-width:100%;
+          }
+        }
+    }
+  }
+</style>
+
+{% assign meta = product.metafields.custom %}
+
+<div id="product-highlight" class="product-highlight-{{ section.id }} product-highlight-{{ section.id }}-padding ">
+  <div class="section-wrapper-img-bg">
+    {% comment %} <div class="page-width"> {% endcomment %}
+    <div class="wrapper">
+      <div class="left">
+        <div class="wrapper-text">
+          <div class="title-text">
+            {{ meta.titulo_secao_destaque_2 | metafield_tag }}
+          </div>
+          <div class="content-text">
+            {{ meta.conteudo_secao_destaque_2 | metafield_tag }}
+          </div>
+          <div class="fontes">
+            <details>
+              <summary>
+                <p>FONTES</p>
+                <span class="arrow">
+                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                </span>
+              </summary>
+              <div class="fontes-wrapper">
+                {{ meta.fontes_secao_destaque_2 }}
+              </div>
+            </details>
+          </div>
+          <div class="buy-button">
+            <a href="{{ section.settings.url }}"> Experimentar agora </a>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        {{
+          meta.img_secao_destaque_2
+          | image_url: width: meta.img_secao_destaque_2.width, height: meta.img_secao_destaque_2.height
+          | image_tag
+        }}
+      </div>
+    </div>
+  </div>
+  {% comment %} </div> {% endcomment %}
+</div>
+
+{% schema %}
+{
+  "name": "Seção Suporte diario",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_wrapper_content",
+      "label": "Cor do background sessão",
+      "default": "linear-gradient(50% 50% at 50% 50%, #111C30 0%, #013356 100%)"
+    },
+    {
+      "type": "color",
+      "id": "color_content",
+      "default": "#fff",
+      "label": "Cor do conteudo texto"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link experimentar"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Seção Suporte diario"
+    }
+  ]
+}
+{% endschema %}
