@@ -56,7 +56,7 @@
           "settings": {
             "heading": "Collapsible row",
             "icon": "none",
-            "content": "",
+            "content": "{{ block.settings.page.metafields.custom.tabela_nutricional_2 | metafield_tag }}<p>Lorem ipsum dolr</p>",
             "enable_description": false,
             "page": ""
           }
