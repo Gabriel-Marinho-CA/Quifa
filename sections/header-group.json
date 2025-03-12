@@ -49,6 +49,7 @@
         "header_categ_nav_dREp6k": {
           "type": "header_categ_nav",
           "settings": {
+            "categ_link": "",
             "text_categ": "Categoria",
             "image_categ": "shopify://shop_images/caixa.png",
             "btn_label": "Comprar",
