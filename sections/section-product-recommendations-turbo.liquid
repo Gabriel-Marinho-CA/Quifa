@@ -37,6 +37,10 @@
         transform:translateY(-50%);
         z-index:2;
 
+        @media (max-width:768px) {
+          display:none;
+        }
+
         >div {
           background: #1D3469;
           border-radius: 50%;
@@ -95,6 +99,10 @@
 
       .shelf-product {
         padding: 3.5rem;
+
+        @media (max-width:768px) {
+          padding:.5rem;
+        }
       }
       .card-products-btg {
         box-shadow: 0px 4px 16px 0px #00000029;
