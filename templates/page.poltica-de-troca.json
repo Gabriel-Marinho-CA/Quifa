@@ -64,10 +64,41 @@
         "padding_top": 68,
         "padding_bottom": 68
       }
+    },
+    "rich_text_Ldh6fn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_w8z4k3": {
+          "type": "heading",
+          "settings": {
+            "heading": "POLITICA DE TROCA",
+            "heading_size": "h2"
+          }
+        },
+        "text_dcVcxd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Trocas e Devoluções</p><p>Nós não trocamos sua plena satisfação por nada deste mundo!!! Portanto, se você quiser trocar ou devolver um produto, conte com a gente para te ajudar!Desenvolvemos uma Política de Troca e Devolução justamente para facilitar o processo. Afinal, nossa prioridade é que você desfrute de momentos incríveis nos ambientes que nossos produtos vão habitar!Saiba tudo sobre nossa política de trocas e devolução:As presentes condições são aplicadas a todos os clientes da nossa loja virtual. Todos os detalhes foram visados para garantir sua plena satisfação e segurança. As instruções devem ser seguidas rigorosamente para que a sua solicitação seja atendida.O Código de Defesa do Consumidor garante ao cliente o direito de arrependimento pela compra onde, amparado na lei, o comprador poderá pedir a troca ou a devolução da mercadoria em sete dias, sem justificar os motivos nem sofrer penalidade. Contudo, isso somente vale para as compras feitas fora do estabelecimento comercial, porque o consumidor não tem todas as informações referentes ao produto ou serviço, ou seja: não viu, não experimentou, não testou, enfim, ao receber o produto poderá não gostar daquilo que adquiriu.Quando for constatado, em até 90 dias, que o produto adquirido apresentou defeito e se, após 30 dias, não conseguirmos saná-lo, o consumidor poderá escolher entre a substituição do produto por outro em perfeitas condições de uso, a restituição imediata da quantia paga ou o abatimento proporcional do preço, conforme previsão expressa no artigo 18 do Código de Defesa do Consumidor.Atenção:- O processo de devolução ou troca somente se inicia com o recebimento do produto a ser devolvido ou trocado na loja.- Toda troca deve ser comunicada à Central de Atendimento (TURBO@CONTATO.COM.BR) no prazo de até 7 dias após o recebimento da mercadoria. Os produtos remetidos à TURBO para troca sem essa comunicação anterior serão reenviados ao cliente sem prévia consulta. - Os valores a serem considerados na troca serão aqueles do efetivo pagamento, mesmo que o produto em questão, em decorrência de promoção, esteja sendo vendido por um preço mais baixo.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_w8z4k3",
+        "text_dcVcxd"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_gHVMme"
+    "rich_text_gHVMme",
+    "rich_text_Ldh6fn"
   ]
 }
