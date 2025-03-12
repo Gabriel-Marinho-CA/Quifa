@@ -21,10 +21,16 @@
       }
       ul {
         padding:0;
-        justify-content: center;
+
+        @media (min-width:1000px) {
+            justify-content: center;
+        }
 
         li {
             max-width: 248px;
+            @media (min-width:547px) {
+                max-width:36vw;
+            }
             * {
                 margin:0;
                 line-height: 1;
