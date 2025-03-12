@@ -1,0 +1,69 @@
+<div class="shelf-product">
+  <div class="wrapper-img">
+    {{ product.featured_media | image_url: width: 218, height: 218 | image_tag }}
+  </div>
+  <div class="shelf-info">
+    <div class="title-shelf">{{ product.title }}</div>
+    <div class="wrapper-prices-info">
+      <p class="best-price-shelf">
+        {{ product.selected_or_first_available_variant.price | money }}
+      </p>
+      <p class="list-price-shelf">
+        {% if product.selected_or_first_available_variant.compare_at_price > product.price %}
+          {{ product.selected_or_first_available_variant.compare_at_price | money }}
+        {% endif %}
+      </p>
+    </div>
+    <div class="installments">
+      <p>ou 12x {{ product.price |  divided_by: : 12 | money }}</p>
+    </div>
+    <div class="buy-area">
+      <button
+        data-id="{{ product.id }}"
+        onclick="addToCart({{ product.id }})"
+        class="add-to-cart-shelf"
+      >
+        COMPRAR AGORA
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const addToCart = async (id) => {
+      const productId = parseInt(id);
+
+      let productObj = {
+        items: [
+          {
+            id: productId,
+            quantity: 1,
+          },
+        ],
+      };
+
+      await addItemToCart(productObj);
+    };
+    const addItemToCart = async (productObj) => {
+      const urlAddToCart = '/cart/add.js';
+
+      try {
+        const response = await fetch(urlAddToCart, {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          method: 'POST',
+          body: JSON.stringify(productObj),
+        });
+
+        if (response.ok) {
+          return response;
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  });
+</script>

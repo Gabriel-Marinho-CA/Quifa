@@ -1,3 +1,37 @@
+<style>
+  .card-products {
+    padding: 1rem;
+    box-shadow: 0px 4px 16px 0px #00000029;
+    border-radius: 16px;
+
+    .title-shelf {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #434752;
+    }
+
+    .list-price-shelf {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.2;
+      color: #585858;
+      text-decoration: line-through;
+    }
+    .best-price-shelf {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.2;
+      color: #434752;
+    }
+    .installments {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+</style>
+
 <div id="experimente-tambem" class="page-width">
   <div
     class="product-recommendations relative "
@@ -12,7 +46,7 @@
       <div class="swiper">
         <ul class="swiper-wrapper collection-showcase summary">
           {%- for product in recommendations.products -%}
-            <li class="swiper-slide">
+            <li class="swiper-slide card-products">
               {% render 'card-product', card_product: product %}
             </li>
           {%- endfor -%}
@@ -25,9 +59,9 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  handleProductRecomendations();
-})
+  document.addEventListener('DOMContentLoaded', function () {
+    handleProductRecomendations();
+  });
   function handleProductRecomendations() {
     const productRecommendationsSection = document.querySelector('#experimente-tambem .product-recommendations');
 
