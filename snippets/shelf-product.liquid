@@ -21,7 +21,7 @@
     <div class="buy-area">
       <button
         data-id="{{ product.id }}"
-        onclick="addToCart({{ product.id }})"
+        onclick="addToCart('{{ product.variants[forloop.index0].id }}')"
         class="add-to-cart-shelf"
       >
         COMPRAR AGORA
