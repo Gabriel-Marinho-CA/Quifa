@@ -12,9 +12,52 @@
     "main": {
       "type": "main-ciencia-por-tras",
       "settings": {}
+    },
+    "rich_text_AW8NKy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cVEETK": {
+          "type": "heading",
+          "settings": {
+            "heading": "A ciência por trás dos nutrientes essenciais",
+            "heading_size": "h0"
+          }
+        },
+        "text_cpgwkJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pesquisas que fundamentam nossa fórmula</p>"
+          }
+        },
+        "button_eGUNap": {
+          "type": "button",
+          "settings": {
+            "button_label": "Saiba mais",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cVEETK",
+        "text_cpgwkJ",
+        "button_eGUNap"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_AW8NKy"
   ]
 }
