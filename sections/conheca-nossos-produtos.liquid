@@ -1,0 +1,345 @@
+{% style %}
+    .experimente-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .experimente-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+  #experimente-tambem {
+    .product-recommendations {
+      position:relative;
+    }
+    .swiper-recomend {
+      padding-bottom:3rem;
+      /* width:fit-content;
+      margin-inline:auto; */
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 6px;
+      border-radius: 8px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #000;
+    }
+
+    .swiper-custom {
+      position: absolute;
+      top: 50%;
+      transform:translateY(-50%);
+      z-index:2;
+
+      @media (max-width:768px) {
+        display:none;
+      }
+
+      >div {
+        background: #1D3469;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        height: 40px;
+        box-shadow: 0px 5.33px 21.33px 0px #00000014;
+      }
+      svg {
+        color:#fff;
+        width: 20px;
+        rotate: -90deg;
+        color: #fff;
+        height: 35px;
+      }
+    }
+    .swiper-button-prev-custom {
+        left:0;
+
+        svg {
+          rotate: 90deg;
+        }
+    }
+    .swiper-button-next-custom {
+      right:0;
+      svg {
+          rotate: -90deg;
+        }
+    }
+    .title-sec {
+        margin-bottom: 3.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            border: 2px solid #000000;
+            text-decoration: none;
+            width: 125px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#000;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        @media (max-width:547px) {
+          margin-bottom:2.35rem;
+        }
+      * {
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing:0.64px;
+            text-transform: uppercase;
+            margin: 0;
+            color: {{ section.settings.color_title }};
+            text-align:center;
+            @media (max-width:1000px) {
+            font-size: 24px;
+            }
+      }
+    }
+    ul {
+      padding: 0;
+      /* justify-content: center; */
+      li {
+        /* width:fit-content;
+        max-width: 280px; */
+      }
+    }
+
+    .shelf-product {
+      padding: 3.5rem;
+      box-shadow: 0px 4px 16px 0px #00000029;
+      border-radius: 16px;
+      margin:1rem !important;
+
+      @media (max-width:768px) {
+        padding:1rem 1rem  2rem  1rem ;
+        margin:.5rem !important;
+      }
+    }
+    .card-products-btg {
+      padding-bottom:1rem;
+
+      * {
+        text-align: center;
+        margin: 0;
+      }
+
+      .title-shelf {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #434752;
+        min-height: 39px;
+        @media (max-width:547px) {
+          font-size:12px;
+        }
+      }
+
+      .wrapper-img {
+        padding: 1rem 0;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      .wrapper-prices-info {
+        display: flex;
+        gap: 0.35rem;
+        align-items: center;
+        justify-content: center;
+      }
+      .list-price-shelf {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #585858;
+        text-decoration: line-through;
+        @media (max-width:547px) {
+          font-size:12px;
+        }
+      }
+      .best-price-shelf {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #434752;
+        @media (max-width:547px) {
+          font-size:12px;
+        }
+      }
+      .installments {
+        p {
+          display: block;
+          text-align: center;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 1.2;
+          width: 100%;
+          @media (max-width:547px) {
+            font-size:12px;
+          }
+        }
+      }
+      .buy-area {
+        margin-top: 2rem;
+        padding-inline:1rem;
+        button {
+          background-color: #111c30;
+          height: 44px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          cursor: pointer;
+          width: 100%;
+          max-width: 179px;
+          margin-inline: auto;
+          border-radius: 32px;
+
+          @media (max-width:547px) {
+            height:32px;
+            font-size:10px;
+            padding-inline:0;
+          }
+        }
+      }
+    }
+  }
+</style>
+
+<div id="experimente-tambem" class="experimente-{{ section.id }} experimente-{{ section.id }}-padding">
+  <div class="page-width">
+    <div
+      class="product-recommendations relative"
+    >
+      <div class="title-sec">
+        {{ section.settings.title_sec }}
+        <a href="{{ section.settings.link_collection }}">VER TODOS</a>
+      </div>
+      <div class="swiper swiper-recomend">
+        <ul class="swiper-wrapper collection-showcase summary">
+          {%- for product in section.settings.collection_reco-%}
+            <li class="swiper-slide card-products-btg">
+              {% render 'shelf-product', product: product %}
+            </li>
+          {%- endfor -%}
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="swiper-button-prev-custom swiper-custom">
+        <div class="">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </div>
+      </div>
+      <div class="swiper-button-next-custom swiper-custom">
+        <div class="">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </div>
+      </div>
+      {% comment %} <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex w-full justify-between z-[1] sm:hidden"> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    swiperProductRecomendations();
+  });
+  const swiperProductRecomendations = () => {
+    new Swiper('#experimente-tambem .swiper', {
+      slidesPerView: 2,
+      spaceBetween: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '#experimente-tambem .swiper-button-next-custom',
+        prevEl: '#experimente-tambem .swiper-button-prev-custom',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 22,
+        },
+      },
+    });
+  };
+</script>
+
+{% schema %}
+{
+  "name": "Produtos recomendados",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection_reco",
+      "label": "Coleção"
+    },
+    {
+      "type": "richtext",
+      "id": "title_sec",
+      "label": "Titulo da seção",
+      "default": "<h2>Experimente também</h2>"
+    },
+    {
+      "type": "url",
+      "id": "link_collection",
+      "label": "Link ver todos"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "default": "#111C30",
+      "label": "Cor do titulo da sessão"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Produtos recomendados turbo"
+    }
+  ]
+}
+{% endschema %}

@@ -345,7 +345,8 @@
         "deal_FVk8Ei"
       ],
       "custom_css": [
-        "li {flex-direction:column;}"
+        "li {flex-direction: column;}",
+        "@media (max-width: 950px) {ul {}}"
       ],
       "settings": {
         "bg_color": "#013F56",
