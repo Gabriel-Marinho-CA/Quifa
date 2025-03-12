@@ -211,7 +211,7 @@
         "bg_wrapper_content": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
         "color_content": "#111c30",
         "color_title": "#1e2239",
-        "link": "",
+        "link_call": "",
         "padding_top": 0,
         "padding_bottom": 100
       }
@@ -277,6 +277,17 @@
         "padding_top": 52,
         "padding_bottom": 52
       }
+    },
+    "faq_section_turbo_etLL8J": {
+      "type": "faq-section-turbo",
+      "settings": {
+        "title_sec": "<h2>PERGUNTAS FREQUENTES</h2>",
+        "color_content": "#111C30",
+        "color_content_title": "#434752",
+        "color_title": "#111C30",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
     }
   },
   "order": [
@@ -288,6 +299,7 @@
     "body_support_turbo_UTEUAY",
     "section_actives_difference_gg3nCA",
     "cientific_results_turbo_pqpfC3",
-    "section_product_extra_info_turbo_4jqtwa"
+    "section_product_extra_info_turbo_4jqtwa",
+    "faq_section_turbo_etLL8J"
   ]
 }
