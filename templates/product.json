@@ -23,10 +23,6 @@
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -65,7 +61,6 @@
       "block_order": [
         "vendor",
         "title",
-        "price",
         "variant_picker",
         "buy_buttons",
         "collapsible_tab_czLAMX",
