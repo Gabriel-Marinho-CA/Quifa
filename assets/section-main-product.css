@@ -30,7 +30,7 @@ product-info {
     max-width: 100% !important;
   }
 
-  @media (min-width:750px) and (max-width:1000px) {
+  @media (min-width: 750px) and (max-width: 1000px) {
     margin-bottom: 3rem;
   }
 }
@@ -346,7 +346,6 @@ a.product__text {
 .product .price--sold-out .price__badge-sale {
   display: none;
 }
-
 
 @media screen and (min-width: 750px) {
   .product__info-container .price--on-sale .price-item--regular {
@@ -1614,14 +1613,14 @@ a.product__text {
   padding: 2rem;
 
   input {
-    accent-color: #FF4375;
+    accent-color: #ff4375;
   }
 
   &.active-variant {
-    border: 2px solid #FF4375;
+    border: 2px solid #ff4375;
 
     .tag-variant-discount {
-      background: #FF4375;
+      background: #ff4375;
 
       p {
         color: #fff;
@@ -1720,7 +1719,7 @@ a.product__text {
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: row;
-      gap:1rem;
+      gap: 1rem;
     }
 
     .each-price-list {
@@ -1821,23 +1820,28 @@ a.product__text {
   }
   .pix-price-area {
     display: inline-block;
+    background: #111c30;
+    border-radius: 4px;
+    padding-inline: 0.9rem;
+
     .pix-price {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 600;
       line-height: 20.8px;
       letter-spacing: 0.02em;
       text-align: center;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
-      color: #ff4375;
+      color: #fff;
     }
     .pix-text {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
       line-height: 19.07px;
       text-align: left;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
+      color: #fff;
     }
   }
 }
@@ -1854,7 +1858,7 @@ a.product__text {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #fff;
-  background: #FF4375;
+  background: #ff4375;
   transition: all 0.5s ease;
   border-radius: 300px;
 
@@ -1933,10 +1937,9 @@ a.product__text {
 }
 
 media-gallery {
-
   & .product__modal-opener {
     .product__media {
-      background-color: #F8F8FA;
+      background-color: #f8f8fa;
     }
   }
   @media (max-width: 1000px) {
@@ -1950,7 +1953,6 @@ media-gallery {
       & .product__media {
         position: initial;
         padding: 0 !important;
-
 
         & img {
           position: initial !important;
@@ -2080,4 +2082,3 @@ media-gallery {
     /* margin-bottom: 4rem; */
   }
 }
-
