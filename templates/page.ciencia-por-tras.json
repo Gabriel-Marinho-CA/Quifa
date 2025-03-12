@@ -106,11 +106,59 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "linha_section_pagina_ciencia_turbo_tB3FbE": {
+      "type": "linha-section-pagina-ciencia-turbo",
+      "blocks": {
+        "lista_fJNLmY": {
+          "type": "lista",
+          "settings": {
+            "title": "1. Nicoben Adulto Completo:",
+            "subtitle": "<ul><li>Combinação de 22 micronutrientes essenciais.</li><li>Fortalece o sistema imunológico e protege contra infecções.</li><li>Ação antioxidante.</li><li>Auxilia no funcionamento do metabolismo energético</li></ul>"
+          }
+        },
+        "lista_KdEg46": {
+          "type": "lista",
+          "settings": {
+            "title": "2. Nicoben Vitalidade e Disposição:",
+            "subtitle": "<p>Blend de Cafeína, L-carnitina, Vitaminas do Complexo B, Manganês, Zinco e mais.Aumenta a energia e combate a fadiga.Auxilia no funcionamento do metabolismo energético.</p>"
+          }
+        },
+        "lista_TedmDr": {
+          "type": "lista",
+          "settings": {
+            "title": "3. Nicoben Tranquilidade:",
+            "subtitle": "<p>Contém Melatonina, L-triptofano, Selênio e mais.Ajuda a melhorar a qualidade do sono e reduzir a ansiedade.Auxilia no funcionamento do metabolismo energético.</p>"
+          }
+        },
+        "lista_b7zbHt": {
+          "type": "lista",
+          "settings": {
+            "title": "4. Nicoben Cabelo, Pele e Unhas:",
+            "subtitle": "<p>Fórmula rica em biotina e silício.Ajuda a melhorar a qualidade do cabelo, pele e unhas.Combate os efeitos visuais do cigarro.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "lista_fJNLmY",
+        "lista_KdEg46",
+        "lista_TedmDr",
+        "lista_b7zbHt"
+      ],
+      "settings": {
+        "title": "Suplementação direcionada para fumantes",
+        "tag": "A solução",
+        "content": "<p>A linha Nicoben foca nas queixas mais comuns e nas deficiências associadas ao tabagismo. Conheça o que os produtos da linha Nicoben podem oferecer:</p>",
+        "fontes": "",
+        "padding_top": 68,
+        "padding_bottom": 68
+      }
     }
   },
   "order": [
     "main",
     "rich_text_AW8NKy",
-    "linha_section_pagina_ciencia_turbo_jHApjJ"
+    "linha_section_pagina_ciencia_turbo_jHApjJ",
+    "linha_section_pagina_ciencia_turbo_tB3FbE"
   ]
 }
