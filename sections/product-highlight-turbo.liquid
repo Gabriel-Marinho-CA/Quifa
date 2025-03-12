@@ -164,7 +164,7 @@
             {{ meta.conteudo_secao_destaque_1 | metafield_tag }}
           </div>
           <div class="buy-button">
-            <button data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+            <button  onclick="addToCart('{{ product.variants.first.id }}')" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
               Adicionar ao carrinho
             </button>
           </div>
