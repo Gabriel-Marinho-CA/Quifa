@@ -41,14 +41,13 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
+        "collapsible_tab_czLAMX": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Descrição",
+            "icon": "none",
+            "content": "{{ block.settings.page.content }}",
+            "page": ""
           }
         }
       },
@@ -58,8 +57,7 @@
         "price",
         "variant_picker",
         "buy_buttons",
-        "description",
-        "share"
+        "collapsible_tab_czLAMX"
       ],
       "settings": {
         "section_id": "produto",
