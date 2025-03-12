@@ -535,22 +535,22 @@
               </ul>
             {%- endif -%}
           </div>
+          <div class="shipping-bar-drawer">
+            <div class="bar">
+              <div
+                class="inner-bar"
+                style="width:{{ calc_shipping_bar }}%"
+              ></div>
+            </div>
+            {% if remainingAmount > 1 %}
+              <p class="shipping-text">Faltam <strong>{{ remainingAmountFormatted }}</strong> para o frete grátis</p>
+              {% else %}
+              <p class="shipping-text">Você ganhou <strong>frete grátis</strong></p>
+            {% endif %}
+           
+          </div>
 
           <div class="totals" role="status">
-            <div class="shipping-bar-drawer">
-              <div class="bar">
-                <div
-                  class="inner-bar"
-                  style="width:{{ calc_shipping_bar }}%"
-                ></div>
-              </div>
-              {% if remainingAmount > 1 %}
-                <p class="shipping-text">Faltam <strong>{{ remainingAmountFormatted }}</strong> para o frete grátis</p>
-                {% else %}
-                <p class="shipping-text">Você ganhou <strong>frete grátis</strong></p>
-              {% endif %}
-             
-            </div>
             <h2 class="totals__total totals_cart_drawer">Total:</h2>
             <p class="totals__total-value totals_value_drawer">{{ cart.total_price | money }}</p>
           </div>
