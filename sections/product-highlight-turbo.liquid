@@ -14,10 +14,35 @@
 
 <style>
   .product-highlight-{{ section.id }} {
-    background: {{ section.settings.bg_wrapper_content }};
+
 
     * {
       color: {{ section.settings.color_content }};
+    }
+
+    .wrapper {
+      background: {{ section.settings.bg_wrapper_content }};
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15rem;
+
+      .left {
+        flex: 1;
+        max-width: 582px;
+        padding-left:50px;
+        @media (min-width:1400px) {
+          margin-left: calc(-670px + 47vw);
+          padding-left:0px;
+        }
+      }
+      .right {
+        flex: 1;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
     }
 
     .tag {
@@ -80,8 +105,8 @@
           color:#1D3469;
           background-color:#fff;
           font-size:16px;
-          font-weight:500;       
-          border:none;   
+          font-weight:500;
+          border:none;
           border-radius: 32px;
           cursor: pointer;
         }
@@ -94,34 +119,34 @@
 <div id="product-highlight" class="product-highlight-{{ section.id }} product-highlight-{{ section.id }}-padding ">
   <div class="section-wrapper-img-bg">
     {% comment %} <div class="page-width"> {% endcomment %}
-      <div class="wrapper">
-        <div class="left">
-          <div class="wrapper-text">
-            <div class="tag">
-              {{ product.title }}
-            </div>
-            <div class="title-text">
-              {{ meta.titulo_secao_destaque_1 | metafield_tag }}
-            </div>
-            <div class="content-text">
-              {{ meta.conteudo_secao_destaque_1 | metafield_tag }}
-            </div>
-            <div class="buy-button">
-              <button data-variant-id="{{ product.selected_or_first_available_variant.id }}">
-                Adicionar ao carrinho
-              </button>
-            </div>
+    <div class="wrapper">
+      <div class="left">
+        <div class="wrapper-text">
+          <div class="tag">
+            {{ product.title }}
+          </div>
+          <div class="title-text">
+            {{ meta.titulo_secao_destaque_1 | metafield_tag }}
+          </div>
+          <div class="content-text">
+            {{ meta.conteudo_secao_destaque_1 | metafield_tag }}
+          </div>
+          <div class="buy-button">
+            <button data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+              Adicionar ao carrinho
+            </button>
           </div>
         </div>
-        <div class="right">
-          {{
-            meta.img_secao_destaque_1
-            | image_url: width: meta.img_secao_destaque_1.width, height: meta.img_secao_destaque_1.height
-            | image_tag
-          }}
-        </div>
+      </div>
+      <div class="right">
+        {{
+          meta.img_secao_destaque_1
+          | image_url: width: meta.img_secao_destaque_1.width, height: meta.img_secao_destaque_1.height
+          | image_tag
+        }}
       </div>
     </div>
+  </div>
   {% comment %} </div> {% endcomment %}
 </div>
 
