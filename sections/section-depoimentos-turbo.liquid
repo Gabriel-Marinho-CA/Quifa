@@ -1,0 +1,178 @@
+{% style %}
+    .depoimentos-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .depoimentos-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+    .depoimentos-{{ section.id }} {
+        background: {{ section.settings.bg_sec }};
+
+        .title-section {
+            margin-bottom: 2rem;
+            * {
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 0.48px;
+                text-transform:uppercase;
+                color: {{ section.settings.color_title }};
+                margin: 0;
+                line-height: 1;
+            }
+        }
+        .wrapper-cards-depoimentos {
+            li {
+                border-radius: 32px;
+                border: 2px solid;
+                border-image-source:linear-gradient(270deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%, #62CEBF 100%);            
+
+                .image-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap:.85rem;
+ 
+                    .name-card {
+                        * {
+                            font-size: 18px;
+                            font-weight:600;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+</style>
+<div
+  class="depoimentos-{{ section.id }} depoimentos-{{ section.id }}-padding"
+>
+  <div class="title-section">
+    {{ section.settings.title }}
+  </div>
+
+  <div class="wrapper-cards-depoimentos">
+    <div class="swiper">
+      <ul class="swiper-wrapper">
+        {% for item in section.blocks %}
+          {% if item.type == 'benefit' %}
+            <li class="swiper-slide card-depoimento">
+              <div class="image-wrapper">
+                {% if item.settings.img != blank %}
+                  {{ item.settings.img | image_url: width: 304, height: 300 | image_tag }}
+                {% endif %}
+                <div class="name-card">
+                  {{ item.settings.name }}
+                </div>
+              </div>
+              <div class="resume-card">
+                {{ item.settings.resume }}
+              </div>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Depoimentos",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_sec",
+      "default": "linear-gradient(90deg, #111C30 0%, #013356 100%)",
+      "label": "Cor background da seção"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titulo sessão",
+      "default": "<h2>Depoimentos</h2>"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "default": "#fff",
+      "label": "Cor do titulo da sessão"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#fff",
+      "label": "Cor dos textos"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "depoimento",
+      "name": "Card depoimento",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Imagem usuario"
+        },
+        {
+          "type": "richtext",
+          "id": "name",
+          "label": "Nome do usuario"
+        },
+        {
+          "type": "richtext",
+          "id": "resume",
+          "label": "Depoimento"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Depoimentos"
+    }
+  ]
+}
+{% endschema %}
