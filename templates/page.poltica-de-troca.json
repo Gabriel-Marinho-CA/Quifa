@@ -53,16 +53,16 @@
         "button_V3JHDd"
       ],
       "custom_css": [
-        ".custom-rich-text {background:#013F56;}",
-        ".custom-rich-text * {color:#fff; text-transform:uppercase;}"
+        ".custom-rich-text {background: #013f56;}",
+        ".custom-rich-text * {color: #fff; text-transform: uppercase;}"
       ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 68,
+        "padding_bottom": 68
       }
     }
   },
