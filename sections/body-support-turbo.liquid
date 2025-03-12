@@ -73,6 +73,7 @@
         letter-spacing:0.64px;
         text-transform: uppercase;
         margin: 0;
+        color: {{ section.settings.color_title }};
 
         @media (max-width:1000px) {
           font-size: 24px;
@@ -127,6 +128,15 @@
           }
         }
     }
+    details {
+        background-color: #F2F2F2;
+        border-radius: 8px;
+        summary {
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
+        }
+    }
   }
 </style>
 
@@ -163,11 +173,13 @@
         </div>
       </div>
       <div class="right">
-        {{
-          meta.img_secao_destaque_2
-          | image_url: width: meta.img_secao_destaque_2.width, height: meta.img_secao_destaque_2.height
-          | image_tag
-        }}
+        {% if meta.img_secao_destaque_2 != blank %}
+          {{
+            meta.img_secao_destaque_2
+            | image_url: width: meta.img_secao_destaque_2.width, height: meta.img_secao_destaque_2.height
+            | image_tag
+          }}
+        {% endif %}
       </div>
     </div>
   </div>
@@ -187,13 +199,19 @@
       "type": "color_background",
       "id": "bg_wrapper_content",
       "label": "Cor do background sessão",
-      "default": "linear-gradient(50% 50% at 50% 50%, #111C30 0%, #013356 100%)"
+      "default": "#fff"
     },
     {
       "type": "color",
       "id": "color_content",
-      "default": "#fff",
+      "default": "#111C30",
       "label": "Cor do conteudo texto"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "default": "#fff",
+      "label": "Cor do titulo da sessão"
     },
     {
       "type": "url",
