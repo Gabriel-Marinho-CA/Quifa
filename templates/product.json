@@ -30,6 +30,12 @@
             "show_gift_card_recipient": true
           }
         },
+        "buy_together_VfeTwP": {
+          "type": "buy_together",
+          "settings": {
+            "product_buy_tg": "nicoben-tranquilidade"
+          }
+        },
         "collapsible_tab_czLAMX": {
           "type": "collapsible_tab",
           "settings": {
@@ -55,6 +61,7 @@
         "title",
         "variant_picker",
         "buy_buttons",
+        "buy_together_VfeTwP",
         "collapsible_tab_czLAMX",
         "collapsible_tab_Vz7bmP"
       ],
@@ -270,7 +277,7 @@
         "title_sec": "<h2>PERGUNTAS FREQUENTES</h2>",
         "color_content": "#434752",
         "color_content_title": "#111c30",
-        "color_title": "#111C30",
+        "color_title": "#111c30",
         "padding_top": 96,
         "padding_bottom": 96
       }
