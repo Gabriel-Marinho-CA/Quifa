@@ -176,12 +176,13 @@
                 </div>
                 <div class="buy-area">
                   {% if item.settings.btn_has_border %}
-                    <button
+                    <a
+                      href="{{ item.settings.link_card }}"
                       style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color_text }}"
                       class="{% if item.settings.btn_has_border %}btn-border{% endif %}"
                     >
                       {{ item.settings.btn_label }}
-                    </button>
+                    </a>
                   {% else %}
                     <a
                       href="{{ item.settings.link_card }}"
