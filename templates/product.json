@@ -49,6 +49,19 @@
             "enable_description": false,
             "page": ""
           }
+        },
+        "complementary_XeNrJL": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Complete sua suplementação",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 1,
+            "products_per_page": 1,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
         }
       },
       "block_order": [
@@ -56,7 +69,8 @@
         "variant_picker",
         "buy_buttons",
         "collapsible_tab_czLAMX",
-        "collapsible_tab_Vz7bmP"
+        "collapsible_tab_Vz7bmP",
+        "complementary_XeNrJL"
       ],
       "settings": {
         "section_id": "produto",
