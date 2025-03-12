@@ -1,3 +1,17 @@
+{% style %}
+    .experimente-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .experimente-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
 <style>
   #experimente-tambem {
     ul {
@@ -72,43 +86,44 @@
   }
 </style>
 
-<div id="experimente-tambem" class="page-width">
-  <div
-    class="product-recommendations relative "
-    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=5&intent=related"
-  >
-    {%- if recommendations.performed? and recommendations.products_count > 0 -%}
-      {% if recommendations.intent == 'related' %}
-        <div class="title-sec">
-          {{ section.settings.title_sec }}
+<div id="experimente-tambem" class="experimente-{{ section.id }} experimente-{{ section.id }}-padding">
+  <div class="page-width">
+    <div
+      class="product-recommendations relative "
+      data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=5&intent=related"
+    >
+      {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+        {% if recommendations.intent == 'related' %}
+          <div class="title-sec">
+            {{ section.settings.title_sec }}
+          </div>
+        {% endif %}
+        <div class="swiper">
+          <ul class="swiper-wrapper collection-showcase summary">
+            {%- for product in recommendations.products -%}
+              <li class="swiper-slide card-products-btg">
+                {% render 'shelf-product', product: product %}
+              </li>
+            {%- endfor -%}
+          </ul>
+          <div class="swiper-pagination"></div>
         </div>
+        <div class="swiper-button-prev-custom">
+          <div class="">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </div>
+        </div>
+        <div class="swiper-button-next-custom ">
+          <div class="">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </div>
+        </div>
+        {% comment %} <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex w-full justify-between z-[1] sm:hidden"> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
       {% endif %}
-      <div class="swiper">
-        <ul class="swiper-wrapper collection-showcase summary">
-          {%- for product in recommendations.products -%}
-            <li class="swiper-slide card-products-btg">
-              {% render 'shelf-product', product: product %}
-            </li>
-          {%- endfor -%}
-        </ul>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="swiper-button-prev-custom">
-        <div class="">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </div>
-      </div>
-      <div class="swiper-button-next-custom ">
-        <div class="">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
-        </div>
-      </div>
-      {% comment %} <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex w-full justify-between z-[1] sm:hidden"> {% endcomment %}
-      {% comment %} </div> {% endcomment %}
-    {% endif %}
+    </div>
   </div>
 </div>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     handleProductRecomendations();
