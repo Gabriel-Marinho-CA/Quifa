@@ -11,13 +11,64 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_7jHCGV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yf7APT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Um caminho guiado pela ciência e pesquisa",
+            "heading_size": "h1"
+          }
+        },
+        "text_eBUhYT": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_fBfjAU": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_yf7APT",
+        "text_eBUhYT",
+        "button_fBfjAU"
+      ],
+      "custom_css": [
+        ".custom-rich-text {background: linear-gradient(90deg, #111c30 0%, #013356 100%);}",
+        ".custom-rich-text * {color: #fff; font-size: 56px; text-transform: uppercase;}",
+        "@media (max-width: 1000px) {.custom-rich-text * {font-size: 24px; }}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_7jHCGV"
   ]
 }
