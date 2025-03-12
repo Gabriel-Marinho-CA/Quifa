@@ -41,7 +41,10 @@
         padding-left:50px;
         padding-top: 96px;
         padding-bottom: 96px;
-
+        @media (min-width:1460px) {
+          margin-left: calc(-670px + 47vw);
+          padding-left:0px;
+        }
         @media (max-width:1000px) {
           padding-top: 0;
           padding-bottom: 4rem;
@@ -52,7 +55,7 @@
       }
       .right {
         flex: 1;
-        max-width: 700px;
+        /* max-width: 700px; */
         @media (max-width:1000px) {
           align-self: flex-end;
           padding-left: 6vw;
