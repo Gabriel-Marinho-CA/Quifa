@@ -38,10 +38,11 @@
     }
     details {
         border-bottom: 2px solid #111C30;
+        padding-inline: 1.5rem;
         summary {
             display: flex;
             justify-content: space-between;
-            padding-inline: 1.5rem;
+     
             * {
                 color: {{ section.settings.color_content_title }};
             }
@@ -52,20 +53,13 @@
         .response {
 
         }
-         .open,
-         .close {
-        width:32px;
 
-        @media (max-width:1015px) {
-            width:24px;
-        }
-        }
-        .close svg {
-        width:25px;
+       svg {
+        width:24px;
 
-        @media (max-width:768px) {
-        width:16px;
-        }
+            @media (max-width:768px) {
+                width:18px;
+            }
         }
         &[open]  {
           & summary{
