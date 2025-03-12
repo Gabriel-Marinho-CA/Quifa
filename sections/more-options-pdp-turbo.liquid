@@ -92,6 +92,7 @@
           justify-content: center;
           align-items: center;
           background:transparent;
+          cursor: pointer;
           &.btn-border {
             border: 1px solid {{ section.settings.color_content }} ;
             font-size: 16px;
@@ -136,12 +137,22 @@
                   </p>
                 </div>
                 <div class="buy-area">
-                  <button
-                    style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color_text }}"
-                    class="{% if item.settings.btn_has_border %}btn-border{% endif %}"
-                  >
-                    {{ item.settings.btn_label }}
-                  </button>
+                  {% if item.settings.btn_has_border %}
+                    <button
+                      style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color_text }}"
+                      class="{% if item.settings.btn_has_border %}btn-border{% endif %}"
+                    >
+                      {{ item.settings.btn_label }}
+                    </button>
+                  {% else %}
+                    <a
+                      href="{{ item.settings.link_card }}"
+                      style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color_text }}"
+                      class="{% if item.settings.btn_has_border %}btn-border{% endif %}"
+                    >
+                      {{ item.settings.btn_label }}
+                    </a>
+                  {% endif %}
                 </div>
               </div>
             </li>
@@ -153,14 +164,14 @@
 </div>
 
 <script>
-    new Swiper('.more-options-{{ section.id }} .swiper', {
+  new Swiper('.more-options-{{ section.id }} .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 16,
     breakpoints: {
-        700: {
-            spaceBetween: 32,
-        },
+      700: {
+        spaceBetween: 32,
       },
+    },
   });
 </script>
 
@@ -251,6 +262,11 @@
           "type": "text",
           "id": "btn_label",
           "label": "Texto do botão"
+        },
+        {
+          "type": "url",
+          "id": "link_card",
+          "label": "Link do botão"
         },
         {
           "type": "color",
