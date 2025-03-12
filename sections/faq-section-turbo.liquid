@@ -21,7 +21,7 @@
         color: {{ section.settings.color_content }};
       }
       .title-text {
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
       * {
             font-size: 56px;
             font-weight: 400;
@@ -45,6 +45,18 @@
         .response {
        
         }
+        & details[open]  {
+          & summary{
+            background-color: #fff;
+
+            .open {
+              display:none;
+            }
+            .close {
+              display:block;
+            }
+          }
+        }
     }
   }
 </style>
@@ -62,6 +74,12 @@
         <details>
           <summary>
             <p>{{ item }}</p>
+            <div class="open">
+                {{- 'icon-plus.svg' | inline_asset_content -}}
+              </div>
+              <div class="close">
+                {{- 'icon-minus.svg' | inline_asset_content -}}
+              </div>
           </summary>
           <div class="response">
             <p>{{ resp[count] }}</p>
