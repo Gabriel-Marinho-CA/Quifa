@@ -1,8 +1,13 @@
 <style>
-  .card-products {
+  .card-products-btg {
     padding: 1rem;
     box-shadow: 0px 4px 16px 0px #00000029;
     border-radius: 16px;
+
+    *:not(img) {
+    text-align:center;
+    margin:0;
+    }
 
     .title-shelf {
       font-size: 16px;
@@ -46,7 +51,7 @@
       <div class="swiper">
         <ul class="swiper-wrapper collection-showcase summary">
           {%- for product in recommendations.products -%}
-            <li class="swiper-slide card-products">
+            <li class="swiper-slide card-products-btg">
               {% render 'shelf-product', product: product %}
             </li>
           {%- endfor -%}
