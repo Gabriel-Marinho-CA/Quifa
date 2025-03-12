@@ -41,14 +41,30 @@
             * {
                 color: {{ section.settings.color_content_title }};
             }
+            .close {
+            display:none;
+          }
         }
         .response {
-       
+
+        }
+         .open,
+         .close {
+        width:32px;
+
+        @media (max-width:1015px) {
+            width:24px;
+        }
+        }
+        .close svg {
+        width:25px;
+
+        @media (max-width:768px) {
+        width:16px;
+        }
         }
         &[open]  {
           & summary{
-            background-color: #fff;
-
             .open {
               display:none;
             }
@@ -75,11 +91,11 @@
           <summary>
             <p>{{ item }}</p>
             <div class="open">
-                {{- 'icon-plus.svg' | inline_asset_content -}}
-              </div>
-              <div class="close">
-                {{- 'icon-minus.svg' | inline_asset_content -}}
-              </div>
+              {{- 'icon-plus.svg' | inline_asset_content -}}
+            </div>
+            <div class="close">
+              {{- 'icon-minus.svg' | inline_asset_content -}}
+            </div>
           </summary>
           <div class="response">
             <p>{{ resp[count] }}</p>
