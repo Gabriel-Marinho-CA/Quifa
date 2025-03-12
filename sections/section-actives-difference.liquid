@@ -103,18 +103,17 @@
     <div class="wrapper-cards">
       <div class="swiper">
         <ul class="swiper-wrapper">
+          {% assign titles = meta.titulo_card_ativos.value %}
+          {% assign content = meta.conteudo_card_ativos.value %}
+          {% assign images_card = meta.imagem_ativos.value %}
           {% comment %}
             {% for item in meta.imagem_ativos %}
             {% if item.type == 'ativo' %}
           {% endcomment %}
-          <li class="swiper-slide card-ativo">
-            <div class="image-wrapper">
-              {% assign titles = meta.titulo_card_ativos.value %}
-              {% assign content = meta.conteudo_card_ativos.value %}
-              {% assign images_card = meta.imagem_ativos.value %}
-              {% assign cont = 0 %}
+          {% assign cont = 0 %}
 
-              {% for cards in images_card %}
+          {% for cards in images_card %}
+            <li class="swiper-slide card-ativo">
                 <div class="wrapper-image">
                   {% if cards != blank %}
                     {{ cards | image_url: width: 304, height: 300 | image_tag }}
@@ -127,9 +126,8 @@
                   <p>{{ content[cont] }}</p>
                 </div>
                 {% assign cont = cont | plus: 1 %}
-              {% endfor %}
-            </div>
-          </li>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
