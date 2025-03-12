@@ -4,9 +4,9 @@
     box-shadow: 0px 4px 16px 0px #00000029;
     border-radius: 16px;
 
-    *{
-    text-align:center;
-    margin:0;
+    * {
+      text-align: center;
+      margin: 0;
     }
 
     .title-shelf {
@@ -34,6 +34,24 @@
       font-size: 12px;
       line-height: 1.2;
     }
+    .buy-area {
+      margin-top:2rem;
+      button {
+        background-color: #111c30;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        width:100%;
+        max-width:179px;
+        margin-inline:auto;
+      }
+    }
   }
 </style>
 
@@ -59,15 +77,15 @@
         <div class="swiper-pagination"></div>
       </div>
       <div class="swiper-button-prev-custom">
-      <div class="">
-        {{- 'icon-caret.svg' | inline_asset_content -}}
+        <div class="">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </div>
       </div>
-    </div>
-    <div class="swiper-button-next-custom ">
-      <div class="">
-        {{- 'icon-caret.svg' | inline_asset_content -}}
+      <div class="swiper-button-next-custom ">
+        <div class="">
+          {{- 'icon-caret.svg' | inline_asset_content -}}
+        </div>
       </div>
-    </div>
       {% comment %} <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 flex w-full justify-between z-[1] sm:hidden"> {% endcomment %}
       {% comment %} </div> {% endcomment %}
     {% endif %}
@@ -101,26 +119,26 @@
     }
   }
   const swiperProductRecomendations = () => {
-      new Swiper('#experimente-tambem .swiper', {
-        loop: true,
-        slidesPerView: 2,
-        spaceBetween: 16,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+    new Swiper('#experimente-tambem .swiper', {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '#experimente-tambem .swiper-button-next-custom',
+        prevEl: '#experimente-tambem .swiper-button-prev-custom',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 22,
         },
-        navigation: {
-          nextEl: '#experimente-tambem .swiper-button-next-custom',
-          prevEl: '#experimente-tambem .swiper-button-prev-custom',
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 22,
-          },
-        },
-      });
-    };
+      },
+    });
+  };
 </script>
 
 {% schema %}
