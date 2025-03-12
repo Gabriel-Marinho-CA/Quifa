@@ -1,0 +1,235 @@
+{% style %}
+    .ciencia-diz-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .ciencia-diz-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+  .ciencia-diz-{{ section.id }} {
+    * {
+      margin:0;
+    }
+    .tag {
+      background-color:#013F56;
+      width: 100px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        color:#fff;
+      }
+    }
+    .title-sec {
+      h3 {
+        font-size: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #1E2239;
+        line-height: 1.1;
+      }
+    }
+    .content {
+      * {
+        color:#1E2239A3;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+    }
+    details {
+        margin-top: 2.5rem;
+        background-color: #F2F2F2;
+        border-radius: 8px;
+        padding: 1rem;
+        summary {
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
+
+                p {
+                    margin: 0;
+                }
+        }
+        .fontes-wrapper {
+            overflow-y: auto;
+            max-height: 27rem;
+        }
+
+        &[open] svg {
+            transform: rotate(180deg);
+        }
+    }
+    .wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap:8px;
+      justify-content: space-between;
+    }
+    .right-content {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        li {
+          border: 2px solid #013F56;
+          padding: 1.3rem 1.5rem;
+        }
+      }
+      .title-list {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: #013F56;
+        margin-bottom: .35rem;
+      }
+    .subtitle-list {
+      * {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        color:#1E2239A3;
+      }
+    }
+    }
+  }
+</style>
+{% assign main = section.settings %}
+<div id="ciencia-diz" class="ciencia-diz-{{ section.id }} ciencia-diz-{{ section.id }}-padding ">
+  <div class="page-width">
+    <div class="wrapper">
+      <div class="left-content">
+        {% if main.tag != blank %}
+          <div class="tag">
+            <p>{{ main.tag }}</p>
+          </div>
+        {% endif %}
+        <div class="title-sec">
+          <h3>{{ main.title }}</h3>
+        </div>
+        <div class="content">
+          {{ main.content }}
+        </div>
+        <div class="fontes">
+          <details>
+            <summary>
+              <p>FONTES</p>
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </summary>
+            <div class="fontes-wrapper">
+              {{ main.fontes }}
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="right-content">
+        <ul>
+          {% for item in main.blocks %}
+            {% if item.type == 'lista' %}
+              <li>
+                <p class="title-list">{{ item.settings.title }}</p>
+                <p class="subtitle-list">{{ item.settings.subtitle }}</p>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ciencia linha",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "titulo esquerda"
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "tag esquerda"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Conteúdo"
+    },
+    {
+      "type": "richtext",
+      "id": "fontes",
+      "label": "Fontes"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "lista",
+      "name": "Lista ciencia diz",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "titulo card lista"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "subtitulo card lista"
+        }
+      ]
+    } 
+  ],
+  "presets": [
+    {
+      "name": "Ciencia linha"
+    }
+  ]
+}
+{% endschema %}
