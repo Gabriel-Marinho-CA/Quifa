@@ -100,6 +100,27 @@
       console.error(error);
     }
   }
+  const swiperProductRecomendations = () => {
+      new Swiper('#experimente-tambem .swiper', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 16,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '#experimente-tambem .swiper-button-next-custom',
+          prevEl: '#experimente-tambem .swiper-button-prev-custom',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 22,
+          },
+        },
+      });
+    };
 </script>
 
 {% schema %}
