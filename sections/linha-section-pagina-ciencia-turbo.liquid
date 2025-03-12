@@ -110,7 +110,7 @@
     .image-container {
       flex:1;
     }
-    
+
     .right-content {
       flex:1;
 
@@ -189,18 +189,19 @@
           {% endfor %}
         </ul>
       </div>
-      <div class="image-container">
-        {% if main.img != blank %}
+      {% if main.img != blank %}
+        <div class="image-container">
           <div class="desk">
             {{ main.img | image_url: width: 640, height: 660 | image_tag }}
           </div>
-        {% endif %}
-        {% if main.img_mobile != blank %}
-          <div class="mobile">
-            {{ main.img_mobile | image_url: width: 356, height: 300 | image_tag }}
-          </div>
-        {% endif %}
-      </div>
+
+          {% if main.img_mobile != blank %}
+            <div class="mobile">
+              {{ main.img_mobile | image_url: width: 356, height: 300 | image_tag }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
