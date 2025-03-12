@@ -184,13 +184,14 @@
                       {{ item.settings.btn_label }}
                     </a>
                   {% else %}
-                    <a
+                    <button
+                     onclick="addToCart('{{ buy_tg.variants.first.id }}')"
                       href="{{ item.settings.link_card }}"
                       style="background-color: {{ item.settings.btn_color }}; color: {{ item.settings.btn_color_text }}"
                       class="{% if item.settings.btn_has_border %}btn-border{% endif %}"
                     >
                       {{ item.settings.btn_label }}
-                    </a>
+                    </button>
                   {% endif %}
                 </div>
               </div>
