@@ -46,10 +46,15 @@
         "text_cpgwkJ",
         "button_eGUNap"
       ],
+      "custom_css": [
+        ".custom-rich-text {background: linear-gradient(90deg, #111c30 0%, #013356 100%);}",
+        "a {background: #fff; opacity: 1; border-radius: 32px; text-transform:uppercase; font-size:16px;}",
+        "a::after,a::before {border-radius: 32px;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-fb02b5ef-daf1-4576-9c08-02a3b87df2cf",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
