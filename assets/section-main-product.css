@@ -2045,6 +2045,7 @@ media-gallery {
 
 @media (min-width: 750px) {
   .variant-container {
+    margin-top: 3rem;
     float: right;
     width: 100%;
   }
