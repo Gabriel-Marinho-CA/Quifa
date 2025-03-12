@@ -99,6 +99,11 @@
       gap:10rem;
       justify-content: space-between;
 
+      @media (max-width:1000px) {
+        flex-direction: column;
+        gap:1.5rem;
+      }
+
       &.has_img {
         flex-direction: row-reverse;
         align-items: center;
