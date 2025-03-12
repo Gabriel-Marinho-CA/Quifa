@@ -1613,14 +1613,14 @@ a.product__text {
   padding: 2rem;
 
   input {
-    accent-color: #ff4375;
+    accent-color: #111C30;
   }
 
   &.active-variant {
-    border: 2px solid #ff4375;
+    border: 2px solid #111C30;
 
     .tag-variant-discount {
-      background: #ff4375;
+      background: #111C30;
 
       p {
         color: #fff;
@@ -1858,7 +1858,7 @@ a.product__text {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #fff;
-  background: #ff4375;
+  background: #111C30;
   transition: all 0.5s ease;
   border-radius: 300px;
 
