@@ -15,6 +15,7 @@
 <style>
   .body-support-sec-{{ section.id }} {
 
+
     * {
       color: {{ section.settings.color_content }};
     }
@@ -30,24 +31,30 @@
         gap:15rem;
       }
       @media (max-width:1000px) {
-        flex-direction:column;
+        flex-direction:column-reverse;
         gap:2rem;
       }
 
-      .right {
+      .left {
         flex: 1;
-        max-width: 560px;
+        max-width: 582px;
+        padding-left:50px;
+        padding-top: 96px;
+        padding-bottom: 96px;
 
         @media (max-width:1000px) {
           padding-top: 0;
           padding-bottom: 4rem;
-          max-width:100%;    
+          max-width:100%;
+        
+          
         }
       }
-      .left {
+      .right {
         flex: 1;
         @media (max-width:1000px) {
           align-self: flex-end;
+          padding-left: 6vw;
         }
         img {
           height: auto;
@@ -59,7 +66,7 @@
       margin-top:.68rem;
       margin-bottom: 2rem;
       * {
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 500;
         line-height: 1.1;
         letter-spacing:0.64px;
@@ -75,7 +82,7 @@
     .content-text {
       h1,h2,h3,h4,h5,h6,h7 {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 500;
         text-transform:uppercase;
         line-height:1.5;
         opacity:1;
@@ -83,8 +90,8 @@
         margin-top:2rem;
       }
       *{
-        font-size: 15px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: 300;
         margin: 0;
 
         @media (max-width:1000px) {
