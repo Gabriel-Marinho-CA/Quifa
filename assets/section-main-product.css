@@ -307,6 +307,7 @@ a.product__text {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #1E2239;
+  text-transform: uppercase;
 
   @media (max-width: 750px) {
     font-size: 20px;
