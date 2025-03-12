@@ -25,7 +25,12 @@
           font-weight: 500;
           text-transform: uppercase;
           text-align: center;
-          color: {{ section.settings.color_title }}
+          color: {{ section.settings.color_title }};
+
+          @media (max-width:547px)
+           {
+            font-size:24px;
+           }
         }
       }
       .list-cards-op {
