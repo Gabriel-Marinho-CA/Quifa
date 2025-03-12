@@ -317,8 +317,14 @@
                       {{- 'icon-caret.svg' | inline_asset_content -}}
                     </summary>
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {% if block.settings.enable_description %}
+                      {% assign title_colapse_row = block.settings.heading | handleize %}
+
+                      {% if title_colapse_row == 'tabela-nutricional' %}
+                        {{ product.metafields.custom.tabela_nutricional }}
+
+                      {% elsif block.settings.enable_description %}
                         {{ product.description }}
+
                       {% else %}
                         {{ block.settings.content }}
                         {{ block.settings.page.content }}
