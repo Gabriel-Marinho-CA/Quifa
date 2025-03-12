@@ -15,7 +15,6 @@
 <style>
   .cientific-results-{{ section.id }} {
 
-
     * {
       color: {{ section.settings.color_content }};
     }
@@ -31,33 +30,17 @@
         gap:15rem;
       }
       @media (max-width:1000px) {
-        flex-direction:column-reverse;
+        flex-direction:column;
         gap:2rem;
       }
 
-      .left {
-        flex: 1;
-        max-width: 582px;
-        padding-left:50px;
-        padding-top: 96px;
-        padding-bottom: 96px;
-        @media (min-width:1460px) {
-          margin-left: calc(-670px + 47vw);
-          padding-left:0px;
-        }
-        @media (max-width:1000px) {
-          padding-top: 0;
-          padding-bottom: 4rem;
-          max-width:100%;
-
-
-        }
-      }
       .right {
         flex: 1;
+        max-width: 560px;
+      }
+      .left {
+        flex: 1;
         @media (max-width:1000px) {
-          align-self: flex-end;
-          padding-left: 6vw;
         }
         img {
           height: auto;
@@ -69,8 +52,8 @@
       margin-top:.68rem;
       margin-bottom: 2rem;
       * {
-        font-size: 32px;
-        font-weight: 500;
+        font-size: 40px;
+        font-weight: 400;
         line-height: 1.1;
         letter-spacing:0.64px;
         text-transform: uppercase;
@@ -85,7 +68,7 @@
     .content-text {
       h1,h2,h3,h4,h5,h6,h7 {
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 700;
         text-transform:uppercase;
         line-height:1.5;
         opacity:1;
@@ -93,9 +76,10 @@
         margin-top:2rem;
       }
       *{
-        font-size: 18px;
-        font-weight: 300;
+        font-size: 15px;
+        font-weight: 400;
         margin: 0;
+        line-height: 1;
 
         @media (max-width:1000px) {
           font-size: 16px;
