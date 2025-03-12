@@ -13,110 +13,150 @@
 {% endstyle %}
 
 <style>
-  #experimente-tambem {
-    .title-sec {
-        margin-bottom: 3.75rem;
-      * {
-            font-size: 48px;
-            font-weight: 500;
-            line-height: 1.1;
-            letter-spacing:0.64px;
-            text-transform: uppercase;
-            margin: 0;
-            color: {{ section.settings.color_title }};
-            text-align:center;
-            @media (max-width:1000px) {
-            font-size: 24px;
-            }
+    #experimente-tambem {
+      .product-recommendations {
+        position:relative;
       }
-    }
-    ul {
-      padding: 0;
-      justify-content: center;
-      li {
-        max-width: 280px;
-      }
-    }
-
-    .shelf-product {
-      padding: 2.5rem;
-    }
-    .card-products-btg {
-      margin: 0.1rem;
-      padding: 1rem;
-      box-shadow: 0px 4px 16px 0px #00000029;
-      border-radius: 16px;
-
-      * {
-        text-align: center;
-        margin: 0;
-      }
-
-      .title-shelf {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.2;
-        color: #434752;
-        min-height: 39px;
-      }
-
-      .wrapper-img {
-        padding: 1rem 0;
-        img {
-          height: auto;
-          width: 100%;
-        }
-      }
-      .wrapper-prices-info {
-        display: flex;
-        gap: 0.35rem;
-        align-items: center;
-        justify-content: center;
-      }
-      .list-price-shelf {
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 1.2;
-        color: #585858;
-        text-decoration: line-through;
-      }
-      .best-price-shelf {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.2;
-        color: #434752;
-      }
-      .installments {
-        p {
-          display: block;
-          text-align: center;
-          font-weight: 300;
-          font-size: 12px;
-          line-height: 1.2;
-          width: 100%;
-        }
-      }
-      .buy-area {
-        margin-top: 2rem;
-        button {
-          background-color: #111c30;
-          height: 44px;
+      .swiper-custom {
+        position: absolute;
+        top: 50%;
+        transform:translateY(-50%);
+        z-index:2;
+        
+        >div {
+          background: #1D3469;
+          border-radius: 50%;
           display: flex;
-          justify-content: center;
           align-items: center;
+          justify-content: center;
+          padding: 1rem;
+          height: 40px;
+          box-shadow: 0px 5.33px 21.33px 0px #00000014;
+        }
+        svg {
+          color:#fff;
+          width: 20px;
+          rotate: -90deg;
           color: #fff;
-          font-size: 12px;
+          height: 35px;
+        }
+      }
+      .swiper-button-prev-custom {
+          left:0;
+
+          svg {
+            rotate: 90deg;
+          }
+      }
+      .swiper-button-next-custom {
+        right:0;
+        svg {
+            rotate: -90deg;
+          }
+      }
+      .title-sec {
+          margin-bottom: 3.75rem;
+        * {
+              font-size: 48px;
+              font-weight: 500;
+              line-height: 1.1;
+              letter-spacing:0.64px;
+              text-transform: uppercase;
+              margin: 0;
+              color: {{ section.settings.color_title }};
+              text-align:center;
+              @media (max-width:1000px) {
+              font-size: 24px;
+              }
+        }
+      }
+      ul {
+        padding: 0;
+        justify-content: center;
+        li {
+          max-width: 280px;
+        }
+      }
+
+      .shelf-product {
+        padding: 2.5rem;
+      }
+      .card-products-btg {
+        margin: 0.1rem;
+        padding: 1rem;
+        box-shadow: 0px 4px 16px 0px #00000029;
+        border-radius: 16px;
+
+        * {
+          text-align: center;
+          margin: 0;
+        }
+
+        .title-shelf {
+          font-size: 16px;
           font-weight: 600;
-          text-transform: uppercase;
-          cursor: pointer;
-          width: 100%;
-          max-width: 179px;
-          margin-inline: auto;
-          border-radius: 32px;
+          line-height: 1.2;
+          color: #434752;
+          min-height: 39px;
+        }
+
+        .wrapper-img {
+          padding: 1rem 0;
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+        .wrapper-prices-info {
+          display: flex;
+          gap: 0.35rem;
+          align-items: center;
+          justify-content: center;
+        }
+        .list-price-shelf {
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 1.2;
+          color: #585858;
+          text-decoration: line-through;
+        }
+        .best-price-shelf {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1.2;
+          color: #434752;
+        }
+        .installments {
+          p {
+            display: block;
+            text-align: center;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 1.2;
+            width: 100%;
+          }
+        }
+        .buy-area {
+          margin-top: 2rem;
+          button {
+            background-color: #111c30;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            max-width: 179px;
+            margin-inline: auto;
+            border-radius: 32px;
+          }
         }
       }
     }
-  }
 </style>
 
 <div id="experimente-tambem" class="experimente-{{ section.id }} experimente-{{ section.id }}-padding">
@@ -141,12 +181,12 @@
           </ul>
           <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-button-prev-custom">
+        <div class="swiper-button-prev-custom swiper-custom">
           <div class="">
             {{- 'icon-caret.svg' | inline_asset_content -}}
           </div>
         </div>
-        <div class="swiper-button-next-custom ">
+        <div class="swiper-button-next-custom swiper-custom">
           <div class="">
             {{- 'icon-caret.svg' | inline_asset_content -}}
           </div>
