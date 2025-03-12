@@ -1,13 +1,26 @@
+{% style %}
+    .nutritional-table-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .nutritional-table-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
 <style>
-  .nutritional-table {
+  .nutritional-table-{{ section.id }}{
     tr,
     td,
     table,
     tbody,
     th,
     thead {
-        border:none !important;
-        box-shadow:none !important;
+      border: none !important;
+      box-shadow: none !important;
     }
     table tbody {
       span {
@@ -19,10 +32,10 @@
         span {
         }
         td:nth-child(1) {
-            span {
-                font-size: 18px;
-                font-weight: 600;
-            }
+          span {
+            font-size: 18px;
+            font-weight: 600;
+          }
         }
         td:nth-child(2) {
           span {
@@ -35,10 +48,10 @@
           }
         }
         td:nth-child(3) {
-            span {
-                font-size:14px;
-                font-weight:600;
-            }
+          span {
+            font-size: 14px;
+            font-weight: 600;
+          }
         }
         strong {
           background-image: linear-gradient(
@@ -73,10 +86,37 @@
         }
       }
     }
+    .wrapper {
+        display:flex;
+        align-items:flex-start;
+        justify-content: space-between;
+        gap:4rem;
+    }
   }
 </style>
 
-<div class="nutritional-table">{{ section.settings.page.content }};</div>
+<div
+  class="nutritional-table-{{ section.id }} nutritional-table-{{ section.id }}-padding"
+>
+  <div class="page-width">
+    <div class="wrapper">
+      <div class="left">
+        {% if product.metafields.custom.imagem_do_produto_tabela_nutricao != blank %}
+          {{
+            product.metafields.custom.imagem_do_produto_tabela_nutricao
+            | image_url:
+              width: product.metafields.custom.imagem_do_produto_tabela_nutricao.width,
+              height: product.metafields.custom.imagem_do_produto_tabela_nutricao.height
+            | image_tag
+          }}
+        {% endif %}
+      </div>
+      <div class="right table-nutri-content">
+        {{ section.settings.page.content }}
+      </div>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
@@ -88,7 +128,35 @@
   },
 
   "settings": [
-    { "type": "page", "id": "page", "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label" }
+    {
+      "type": "page",
+      "id": "page",
+      "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
   ],
   "presets": [
     {
