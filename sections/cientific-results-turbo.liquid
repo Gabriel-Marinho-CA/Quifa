@@ -14,13 +14,13 @@
 
 <style>
   .cientific-results-{{ section.id }} {
+    background: {{ section.settings.bg_wrapper_content }};
 
     * {
       color: {{ section.settings.color_content }};
     }
 
     .wrapper {
-      background: {{ section.settings.bg_wrapper_content }};
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -147,8 +147,8 @@ imagem_resultados_cientificos
           {{
             meta.imagem_resultados_cientificos
             | image_url:
-              width: meta.imagem_resultados_cientificos.width,
-              height: meta.imagem_resultados_cientificos.height
+              width: 500,
+              height: 700
             | image_tag
           }}
         {% endif %}
