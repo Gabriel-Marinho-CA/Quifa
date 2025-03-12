@@ -129,13 +129,13 @@
     }
 
     .title-btg {
-          margin-bottom: 0.35rem;
-          color: #727376;
-          font-size: 16px;
-          font-weight: 500;
-          margin: 0;
-          text-align:center;
-      }
+      margin-bottom: 0.75rem;
+      color: #727376;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+      text-align: center;
+    }
     .buy-together {
       border: 1px solid #f2f2f2;
       box-shadow: 0px 4px 8px 0px #00000014;
@@ -149,7 +149,7 @@
       .wrapper-btg-content {
         display: flex;
         gap: 1rem;
-        justify-content:space-between;
+        justify-content: space-between;
 
         .btg-pdp-info {
           display: flex;
@@ -163,9 +163,9 @@
           }
 
           .wrapper-prices-info {
-            display:flex;
-            align-items:center;
-            gap:.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
           }
 
           .best-price-btg {
@@ -179,24 +179,23 @@
             color: #727376;
             font-size: 14px;
             font-weight: 600;
-            text-decoration:line-through;
+            text-decoration: line-through;
           }
-
         }
         .buy-area-info {
           button {
-            border: 1.5px solid #111C30;
-            background:none;
-            height:30px;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            padding-inline:1rem;
-            font-size:16px;
-            font-weight:700;
-            text-transform:uppercase;
-            border-radius:32px;
-            font-family:Montserrat;
+            border: 1.5px solid #111c30;
+            background: none;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 1rem;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 32px;
+            font-family: Montserrat;
           }
         }
       }
@@ -722,13 +721,12 @@
                             </p>
                           </div>
                         </div>
-                        </div>
-                        <div class="buy-area-info">
-                          <button data-btg-id="{{ buy_tg.id }}">LEVAR JUNTO</button>
-                        </div>
+                      </div>
+                      <div class="buy-area-info">
+                        <button data-btg-id="{{ buy_tg.id }}">LEVAR JUNTO</button>
+                      </div>
                     </div>
                   </div>
-                 
                 </div>
               {%- when 'complementary' -%}
                 <product-recommendations
