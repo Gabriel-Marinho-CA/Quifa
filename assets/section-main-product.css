@@ -1820,8 +1820,7 @@ a.product__text {
     }
   }
   .pix-price-area {
-    display: block;
-    margin-bottom: 1.5rem;
+    display: inline-block;
     .pix-price {
       font-size: 16px;
       font-weight: 600;
