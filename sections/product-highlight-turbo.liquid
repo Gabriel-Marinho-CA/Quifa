@@ -1,0 +1,105 @@
+{% style %}
+    .product-highlight-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.55 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .product-highlight-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<style>
+  .product-highlight-{{ section.id }} {
+    background: {{ section.settings.bg_wrapper_content }};
+  }
+</style>
+
+{% assign meta = product.metafields.custom %}
+
+<div id="product-highlight" class="product-highlight-{{ section.id }} product-highlight-{{ section.id }}-padding ">
+  <div class="section-wrapper-img-bg">
+    <div class="page-width">
+      <div class="wrapper">
+        <div class="left">
+          <div class="wrapper-text">
+            <div class="tag">
+              {{ product.title }}
+            </div>
+            <div class="title-text">
+              {{ meta.titulo_secao_destaque_1 }}
+            </div>
+            <div class="content-text">
+              {{ meta.conteudo_secao_destaque_1 }}
+            </div>
+            <div class="buy-button">
+              <button data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+                Adicionar ao carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          {{ meta.img_secao_destaque_1 }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Seção destaque produto",
+  "class": "section",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_wrapper_content",
+      "label": "Cor do background sessão",
+      "default": "linear-gradient(50% 50% at 50% 50%, #111C30 0%, #013356 100%)"
+    },
+    {
+      "type": "color",
+      "id": "color_content",
+      "default": "#fff",
+      "label": "Cor do conteudo texto"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Seção destaque produto"
+    }
+  ]
+}
+{% endschema %}
