@@ -36,8 +36,16 @@
             }
       }
     }
-
-
+    details {
+        summary {
+            * {
+                color: {{ section.settings.color_content_title }};
+            }
+        }
+        .response {
+       
+        }
+    }
   }
 </style>
 <div id="faq" class="faq-{{ section.id }} faq-{{ section.id }}-padding ">
@@ -85,6 +93,12 @@
       "id": "color_content",
       "default": "#111C30",
       "label": "Cor do conteudo texto"
+    },
+    {
+      "type": "color",
+      "id": "color_content_title",
+      "default": "#434752",
+      "label": "Cor do titulo das perguntas"
     },
     {
       "type": "color",
