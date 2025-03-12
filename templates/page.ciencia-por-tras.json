@@ -236,8 +236,8 @@
       "settings": {
         "bg_wrapper_content": "radial-gradient(rgba(1, 51, 86, 1), rgba(17, 28, 48, 1) 100%)",
         "title": "<p>Cuidado total</p>",
-        "color_title": "#fff",
-        "color_content": "#fff",
+        "color_title": "#ffffff",
+        "color_content": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -287,8 +287,8 @@
       "settings": {
         "bg_sec": "linear-gradient(90deg, rgba(1, 63, 86, 1), rgba(1, 63, 86, 1) 100%)",
         "title": "<h2>Depoimentos</h2>",
-        "color_title": "#fff",
-        "text_color": "#fff",
+        "color_title": "#ffffff",
+        "text_color": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -349,10 +349,21 @@
         "@media (max-width: 950px) {ul {}}"
       ],
       "settings": {
-        "bg_color": "#013F56",
-        "text_color": "#fff",
+        "bg_color": "#013f56",
+        "text_color": "#ffffff",
         "padding_top": 56,
         "padding_bottom": 56
+      }
+    },
+    "conheca_nossos_produtos_QPEUWc": {
+      "type": "conheca-nossos-produtos",
+      "settings": {
+        "collection_reco": "frontpage",
+        "title_sec": "<p>conheça os produtos</p>",
+        "link_collection": "",
+        "color_title": "#111C30",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -364,6 +375,7 @@
     "linha_section_pagina_ciencia_turbo_tLBcED",
     "more_options_pdp_turbo_RMPLCW",
     "section_depoimentos_turbo_mYFhr8",
-    "ofertas_info_by_turbo_dDQGNL"
+    "ofertas_info_by_turbo_dDQGNL",
+    "conheca_nossos_produtos_QPEUWc"
   ]
 }
