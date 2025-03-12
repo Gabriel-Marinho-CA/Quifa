@@ -141,6 +141,10 @@
                     margin: 0;
                 }
         }
+
+        &[open] summary > svg {
+                transform: rotate(90deg)_;
+        }
     }
   }
 </style>
@@ -163,9 +167,7 @@
             <details>
               <summary>
                 <p>FONTES</p>
-                <span class="arrow">
                   {{- 'icon-caret.svg' | inline_asset_content -}}
-                </span>
               </summary>
               <div class="fontes-wrapper">
                 {{ meta.texto_fontes |  metafield_tag}}
