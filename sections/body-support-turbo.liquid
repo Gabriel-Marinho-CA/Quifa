@@ -31,33 +31,24 @@
         gap:15rem;
       }
       @media (max-width:1000px) {
-        flex-direction:column-reverse;
+        flex-direction:column;
         gap:2rem;
       }
 
-      .left {
+      .right {
         flex: 1;
-        max-width: 582px;
-        padding-left:50px;
-        padding-top: 96px;
-        padding-bottom: 96px;
-        @media (min-width:1460px) {
-          margin-left: calc(-670px + 47vw);
-          padding-left:0px;
-        }
+        max-width: 560px;
+
         @media (max-width:1000px) {
           padding-top: 0;
           padding-bottom: 4rem;
-          max-width:100%;
-        
-          
+          max-width:100%;    
         }
       }
-      .right {
+      .left {
         flex: 1;
         @media (max-width:1000px) {
           align-self: flex-end;
-          padding-left: 6vw;
         }
         img {
           height: auto;
