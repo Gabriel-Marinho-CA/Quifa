@@ -32,11 +32,27 @@
           li {
               border-radius: 32px;
               border: 2px solid;
-              border-image-source:linear-gradient(270deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%, #62CEBF 100%);
+              border-image-source:
               padding: 2.5rem 2rem;
               border-width: 2px;
               border-image-slice: 1;
-              
+              position:relative;
+
+              &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50px;
+                padding: 10px; /* control the border thickness */
+                background: linear-gradient(270deg, #F8C24D 0%, #F51A51 20.5%, #9D36AC 45%, #573BD9 65%, #2396B5 82.25%, #62CEBF 100%);
+                -webkit-mask: 
+                  linear-gradient(#fff 0 0) content-box, 
+                  linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                        mask-composite: exclude;
+                pointer-events: none;
+              }
+
               .image-wrapper {
                   display: flex;
                   align-items: center;
