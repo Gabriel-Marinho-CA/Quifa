@@ -1867,7 +1867,7 @@ a.product__text {
 .product-form__submit {
   margin-top: 1.3rem;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px;
   height: 64px;
   display: flex;
@@ -1880,6 +1880,10 @@ a.product__text {
   background: #111C30;
   transition: all 0.5s ease;
   border-radius: 300px;
+
+  @media (max-width:547px) {
+    height: 56px;
+  }
 
   &::before,
   &::after {
