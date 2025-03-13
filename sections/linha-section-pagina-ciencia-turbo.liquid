@@ -76,12 +76,16 @@
     }
     .fontes {
       margin-top: 4rem;
-
+      @media (max-width:1000px) {
+          margin-bottom:1.5rem;
+          margin-top:2.75rem;
+        }
     }
     details {
         background-color: #F2F2F2;
         border-radius: 8px;
         padding: 1rem;
+ 
         summary {
                 display: flex;
                 justify-content: space-between;
@@ -110,6 +114,7 @@
       @media (max-width:1000px) {
         flex-direction: column !important;
         gap:2.3rem;
+        display: block;
       }
 
       &.has_img {
