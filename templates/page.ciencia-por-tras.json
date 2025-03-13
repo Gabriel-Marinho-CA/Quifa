@@ -224,6 +224,8 @@
       ],
       "settings": {
         "bg_color": "#013f56",
+        "title_sec": "<p>Ciência aplicada à sua saúde</p>",
+        "subtitle_sec": "Sinta-se melhor todos os dias",
         "text_color": "#ffffff",
         "padding_top": 56,
         "padding_bottom": 56
@@ -376,8 +378,8 @@
         "instagram_link": "",
         "title_section_color": "#111c30",
         "color_subtitle": "#434752",
-        "btn_color_bg": "#111C30",
-        "btn_color_text": "#fff",
+        "btn_color_bg": "#111c30",
+        "btn_color_text": "#ffffff",
         "padding_top": 36,
         "padding_bottom": 36
       }
