@@ -1,3 +1,5 @@
+
+
 class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
@@ -23,11 +25,7 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
-    document.querySelectorAll(".add-to-cart-shelf").forEach(el => el.addEventListener("click",function() {
-      setTimeout(() => {
-        this.onCartUpdate();
-      },3000)
-    }))
+
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -39,6 +37,19 @@ class CartItems extends HTMLElement {
       }
       this.onCartUpdate();
     });
+  
+    // Adicionando um evento de clique ao botão que você deseja
+   
+    const updateCartButton = document.querySelectorAll(".add-to-cart-shelf");
+    if (updateCartButton) {
+      updateCartButton.forEach(el => el.addEventListener("click",() => {
+        setTimeout(() => {
+          this.onCartUpdate();
+
+        },3000)
+      }))
+       // Chama a função de atualização do minicart
+    }
   }
 
   disconnectedCallback() {
