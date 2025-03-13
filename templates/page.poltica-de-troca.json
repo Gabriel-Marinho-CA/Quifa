@@ -94,11 +94,22 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "page_DY7T4A": {
+      "type": "page",
+      "settings": {
+        "page": "politicas",
+        "heading_size": "h0",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "rich_text_gHVMme",
-    "rich_text_Ldh6fn"
+    "rich_text_Ldh6fn",
+    "page_DY7T4A"
   ]
 }
