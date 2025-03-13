@@ -1,23 +1,27 @@
-
 <div class="shelf-product">
-  <div class="wrapper-img">
-    {{ product.featured_media | image_url: width: 218, height: 218 | image_tag }}
-  </div>
+  <a href="{{ product.url }}" style="text-decoration: none;">
+    <div class="wrapper-img">
+      {{ product.featured_media | image_url: width: 218, height: 218 | image_tag }}
+    </div>
+  </a>
+
   <div class="shelf-info">
-    <div class="title-shelf">{{ product.title }}</div>
-    <div class="wrapper-prices-info">
-      <p class="best-price-shelf">
-        {{ product.selected_or_first_available_variant.price | money }}
-      </p>
-      <p class="list-price-shelf">
-        {% if product.selected_or_first_available_variant.compare_at_price > product.price %}
-          {{ product.selected_or_first_available_variant.compare_at_price | money }}
-        {% endif %}
-      </p>
-    </div>
-    <div class="installments">
-      <p>ou 12x {{ product.price | divided_by: 12 | money }}</p>
-    </div>
+    <a href="{{ product.url }}" style="text-decoration: none;">
+      <div class="title-shelf">{{ product.title }}</div>
+      <div class="wrapper-prices-info">
+        <p class="best-price-shelf">
+          {{ product.selected_or_first_available_variant.price | money }}
+        </p>
+        <p class="list-price-shelf">
+          {% if product.selected_or_first_available_variant.compare_at_price > product.price %}
+            {{ product.selected_or_first_available_variant.compare_at_price | money }}
+          {% endif %}
+        </p>
+      </div>
+      <div class="installments">
+        <p>ou 12x {{ product.price | divided_by: 12 | money }}</p>
+      </div>
+    </a> 
     <div class="buy-area">
       <button
         data-id="{{ product.variants.first.id  }}"
