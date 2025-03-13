@@ -12,101 +12,131 @@
   }
 {% endstyle %}
 <style>
-  .deals-bar-fixed.deals-{{ section.id }} {
-    width: 100%;
-    background-color: {{ section.settings.bg_color }};
-
-    * {
-      color: {{ section.settings.text_color }};
-      text-transform:uppercase;
-    }
-
-    @media (max-width: 799px) {
-
-      &.mobile {
-        ul {
-          overflow-x: scroll;
-          -webkit-overflow-scrolling: touch;
-          -webkit-overflow-scrolling: auto;
-          padding: 0 0 1rem 0;
-
-          li {
-            min-width: fit-content;
-          }
-        }
-      }
-    }
-
-    ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 64px;
-
-      @media (max-width:950px) {
-        display: grid;
-        grid-template-columns: repeat(2,auto);
-        row-gap: 2rem;
-        column-gap: 2rem;
-        padding: 0;
-
-        img {
-          max-width: 32px;
-          height: auto;
-          width: 100%;
-        }
-      }
-
-      @media (max-width:360px) {
-        img {
-          max-width:25px
-        }
-      }
+    .deals-bar-fixed.deals-{{ section.id }} {
+      width: 100%;
+      background-color: {{ section.settings.bg_color }};
 
       * {
-        margin: 0;
-        line-height: 1;
+        color: {{ section.settings.text_color }};
+        text-transform:uppercase;
       }
 
-      li {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-
-        @media (max-width:950px) {
-          justify-content: center;
+      .title-sec {
+        * {
+          color: #fff;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 1.1;
+          letter-spacing: 2%;
+          text-transform: uppercase;
+          @media (max-width:547px) {
+          font-weight: 500;
+          font-size: 20px;
+          letter-spacing: 2%;
+          text-transform: uppercase;
+          }
         }
-        .title-card {
-          * {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: 0.2px;
+      }
+      .subtitle-sec {
+        p {
+          color:#fff;
+          opacity:.64;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 1.4;
+          text-align: center;
 
-            @media (max-width:950px) {
-              font-size: 15px;
-            }
-            @media (max-width:360px) {
-              font-size: 13px;
+          @media (max-width:547px) {
+            font-size: 14px;
+          }
+        }
+      }
+      @media (max-width: 799px) {
+
+        &.mobile {
+          ul {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            -webkit-overflow-scrolling: auto;
+            padding: 0 0 1rem 0;
+
+            li {
+              min-width: fit-content;
             }
           }
         }
-        .subtitle-card {
-          * {
-            font-weight: 300;
-            font-size: 18px;
+      }
 
-            @media (max-width:950px) {
-              font-size: 13px;
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+
+        @media (max-width:950px) {
+          display: grid;
+          grid-template-columns: repeat(2,auto);
+          row-gap: 2rem;
+          column-gap: 2rem;
+          padding: 0;
+
+          img {
+            max-width: 32px;
+            height: auto;
+            width: 100%;
+          }
+        }
+
+        @media (max-width:360px) {
+          img {
+            max-width:25px
+          }
+        }
+
+        * {
+          margin: 0;
+          line-height: 1;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          @media (max-width:950px) {
+            justify-content: center;
+          }
+          .title-card {
+            * {
+              font-size: 20px;
+              font-weight: 600;
+              letter-spacing: 0.2px;
+
+              @media (max-width:950px) {
+                font-size: 15px;
+              }
+              @media (max-width:360px) {
+                font-size: 13px;
+              }
             }
-            @media (max-width:360px) {
-              font-size: 12px;
+          }
+          .subtitle-card {
+            * {
+              font-weight: 300;
+              font-size: 18px;
+
+              @media (max-width:950px) {
+                font-size: 13px;
+              }
+              @media (max-width:360px) {
+                /* font-size: 12px; */
+              }
             }
           }
         }
       }
     }
-  }
 </style>
 
 <div
@@ -116,6 +146,20 @@
   {% endif %}
 >
   <div class="page-width">
+    {% if section.settings.title_sec != blank %}
+      <div class="title-sec">
+        {{ section.settings.title_sec }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.subtitle_sec != blank %}
+      <div class="subtitle-sec">
+        <p>
+          {{ section.settings.subtitle_sec }}
+        </p>
+      </div>
+    {% endif %}
+
     <div class="wrapper-deals">
       <ul>
         {% for block in section.blocks %}
@@ -160,6 +204,16 @@
       "id": "bg_color",
       "default": "#013F56",
       "label": "Cor background"
+    },
+    {
+      "type": "richtext",
+      "id": "title_sec",
+      "label": "Titulo da seção"
+    },
+    {
+      "type": "text",
+      "id": "subtitle_sec",
+      "label": "Titulo da seção"
     },
     {
       "type": "color",
