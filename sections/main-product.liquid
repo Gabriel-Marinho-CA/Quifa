@@ -50,11 +50,14 @@
   <style>
     .product__media {
         img {
-          max-width: fit-content !important;
+          @media (min-width:1000px) {
+            max-width: fit-content !important;
           height: auto !important;
           left: 50% !important;
           top: 50% !important;
           transform: translate(-50%, -50%);
+          }
+
         }
     }
     .jdgm-prev-badge__text {
