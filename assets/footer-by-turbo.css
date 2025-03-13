@@ -92,6 +92,7 @@
         color: #000;
         max-width: calc(100% - 90px);
         height: 100%;
+        box-shadow: none;
 
         &::selection {
           background-color:#C2D0EF;
