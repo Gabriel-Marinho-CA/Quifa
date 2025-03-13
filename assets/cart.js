@@ -40,16 +40,6 @@ class CartItems extends HTMLElement {
   
     // Adicionando um evento de clique ao botão que você deseja
    
-    const updateCartButton = document.querySelectorAll(".add-to-cart-shelf");
-    if (updateCartButton) {
-      updateCartButton.forEach(el => el.addEventListener("click",() => {
-        setTimeout(() => {
-          this.onCartUpdate();
-
-        },3000)
-      }))
-       // Chama a função de atualização do minicart
-    }
   }
 
   disconnectedCallback() {
@@ -103,7 +93,6 @@ class CartItems extends HTMLElement {
   }
 
   onCartUpdate() {
-    console.log("called")
     if (this.tagName === 'CART-DRAWER-ITEMS') {
       fetch(`${routes.cart_url}?section_id=cart-drawer`)
         .then((response) => response.text())
@@ -122,7 +111,6 @@ class CartItems extends HTMLElement {
           console.error(e);
         });
     } else {
-      console.log("called2")
       fetch(`${routes.cart_url}?section_id=main-cart-items`)
         .then((response) => response.text())
         .then((responseText) => {
