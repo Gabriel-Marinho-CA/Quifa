@@ -50,7 +50,9 @@
         ".custom-rich-text {background: linear-gradient(90deg, #111c30 0%, #013356 100%);}",
         "a {background: #fff; opacity: 1; border-radius: 32px; text-transform: uppercase; font-size: 16px;}",
         "a::after,a::before {border-radius: 32px;}",
-        ".custom-rich-text h2 {font-size: 44px; line-height: 1; text-transform: uppercase;}"
+        ".custom-rich-text h2 {font-size: 44px; line-height: 1; text-transform: uppercase;}",
+        "p {line-height: 1.4;}",
+        "@media (max-width: 547px) {.custom-rich-text {padding-top: 3.5rem; padding-bottom: 3.5rem; } .custom-rich-text h2 {font-size: 20px; } p,a {font-size: 14px; }}"
       ],
       "settings": {
         "desktop_content_position": "center",
