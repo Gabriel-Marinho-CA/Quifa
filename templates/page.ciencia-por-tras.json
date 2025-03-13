@@ -103,6 +103,19 @@
         "tag": "",
         "content": "<p>O tabagismo é conhecido por seus impactos devastadores à saúde, sendo uma das principais causas evitáveis de doenças crônicas e mortalidade precoce.  Menos discutido, mas igualmente preocupante, é como o cigarro afeta o equilíbrio nutricional do corpo. Fumantes podem apresentar deficiências de vitaminas e minerais essenciais devido à combinação de estresse oxidativo elevado, menor absorção de nutrientes e alterações metabólicas.  Deficiências nutricionais específicas, que podem ser exacerbadas pelo cigarro, podem estar relacionadas as seguintes queixas na saúde:</p>",
         "fontes": "<p>WORLD HEALTH ORGANIZATION (WHO). \"Micronutrient Deficiencies.\" Disponível em: https://www.who.int/nutrition/topics/micronutrients/en/PRENTICE, A. (2004). \"Micronutrients and the Bone Mineral Content of the Mother, Fetus and Newborn.\" The Journal of Nutrition, 134(9), 2163S-2166S. Institute of Medicine (IOM). \"Dietary Reference Intakes for Calcium and Vitamin D.\" National Academies Press, 2011. Disponível em: https://pubmed.ncbi.nlm.nih.gov/12730486/QIU, F.; LIANG, C. L.; LIU, H.; et al. Impacts of cigarette smoking on immune responsiveness: Up and down or upside down? Disponível em: https://pubmed.ncbi.nlm.nih.gov/27902485/LEE, C. L.; CHANG, W. D. The effects of cigarette smoking on aerobic and anaerobic capacity and heart rate variability among female university students. International Journal of Women's Health. Disponível em: https://pubmed.ncbi.nlm.nih.gov/24204174/FARRIS, S. G.; MATSKO, S. V.; UEBELACKER, L.; et al. Anxiety Sensitivity and Daily Cigarette Smoking in Relation to Sleep Disturbances in Treatment-Seeking Smokers. Cognitive and Behavioral Therapy. Disponível em: https://pubmed.ncbi.nlm.nih.gov/30947621/ORTIZ, A.; GRANDO, S. A. Smoking and the skin. International Journal of Dermatology. Disponível em: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-4632.2011.05205.x</p>",
+        "padding_top": 84,
+        "padding_bottom": 84
+      }
+    },
+    "linha_section_pagina_ciencia_turbo_tLBcED": {
+      "type": "linha-section-pagina-ciencia-turbo",
+      "settings": {
+        "img": "shopify://shop_images/Frame_1261153516.png",
+        "img_mobile": "shopify://shop_images/Frame_1261153516_1.png",
+        "title": "Nicoben foi desenvolvido para atender essas necessidades específicas",
+        "tag": "Nosso compromisso",
+        "content": "<p>Criamos fórmulas que combinam vitaminas e minerais essenciais para auxiliar na recuperação nutricional de fumantes e ex-fumantes, ajudando a restabelecer o equilíbrio do organismo. Nosso compromisso é oferecer suporte baseado em ciência, sem exageros ou promessas irreais – apenas nutrição eficiente para quem busca mais vitalidade e bem-estar.</p>",
+        "fontes": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -154,17 +167,66 @@
         "padding_bottom": 68
       }
     },
-    "linha_section_pagina_ciencia_turbo_tLBcED": {
-      "type": "linha-section-pagina-ciencia-turbo",
+    "ofertas_info_by_turbo_dDQGNL": {
+      "type": "ofertas-info-by-turbo",
+      "blocks": {
+        "deal_CtJJKh": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_b80b8bd8-3d79-4331-866e-036e47e45102.svg",
+            "title": "<p>Vitaminas</p><p>essenciais</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_eABhdT": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_1_0eabfef9-cf72-4d6f-a20f-2afbacd17d26.svg",
+            "title": "<p>antioxidante</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_GUbqAT": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_2.svg",
+            "title": "<p>Imunidade</p><p>reforçada</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_rywCe6": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Capa_1_2.svg",
+            "title": "<p>Equilíbrio</p><p>nutricional</p>",
+            "subtitle": ""
+          }
+        },
+        "deal_FVk8Ei": {
+          "type": "deal",
+          "settings": {
+            "img": "shopify://shop_images/Layer_1_4.svg",
+            "title": "<p>Metabolismo</p><p>energético</p>",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "deal_CtJJKh",
+        "deal_eABhdT",
+        "deal_GUbqAT",
+        "deal_rywCe6",
+        "deal_FVk8Ei"
+      ],
+      "custom_css": [
+        "li {flex-direction: column;}",
+        "@media (max-width: 950px) {ul {}}"
+      ],
       "settings": {
-        "img": "shopify://shop_images/Frame_1261153516.png",
-        "img_mobile": "shopify://shop_images/Frame_1261153516_1.png",
-        "title": "Nicoben foi desenvolvido para atender essas necessidades específicas",
-        "tag": "Nosso compromisso",
-        "content": "<p>Criamos fórmulas que combinam vitaminas e minerais essenciais para auxiliar na recuperação nutricional de fumantes e ex-fumantes, ajudando a restabelecer o equilíbrio do organismo. Nosso compromisso é oferecer suporte baseado em ciência, sem exageros ou promessas irreais – apenas nutrição eficiente para quem busca mais vitalidade e bem-estar.</p>",
-        "fontes": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_color": "#013f56",
+        "text_color": "#ffffff",
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "more_options_pdp_turbo_RMPLCW": {
@@ -293,75 +355,29 @@
         "padding_bottom": 36
       }
     },
-    "ofertas_info_by_turbo_dDQGNL": {
-      "type": "ofertas-info-by-turbo",
-      "blocks": {
-        "deal_CtJJKh": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Capa_1_b80b8bd8-3d79-4331-866e-036e47e45102.svg",
-            "title": "<p>Vitaminas</p><p>essenciais</p>",
-            "subtitle": ""
-          }
-        },
-        "deal_eABhdT": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Capa_1_1_0eabfef9-cf72-4d6f-a20f-2afbacd17d26.svg",
-            "title": "<p>antioxidante</p>",
-            "subtitle": ""
-          }
-        },
-        "deal_GUbqAT": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Capa_1_2.svg",
-            "title": "<p>Imunidade</p><p>reforçada</p>",
-            "subtitle": ""
-          }
-        },
-        "deal_rywCe6": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Capa_1_2.svg",
-            "title": "<p>Equilíbrio</p><p>nutricional</p>",
-            "subtitle": ""
-          }
-        },
-        "deal_FVk8Ei": {
-          "type": "deal",
-          "settings": {
-            "img": "shopify://shop_images/Layer_1_4.svg",
-            "title": "<p>Metabolismo</p><p>energético</p>",
-            "subtitle": ""
-          }
-        }
-      },
-      "block_order": [
-        "deal_CtJJKh",
-        "deal_eABhdT",
-        "deal_GUbqAT",
-        "deal_rywCe6",
-        "deal_FVk8Ei"
-      ],
-      "custom_css": [
-        "li {flex-direction: column;}",
-        "@media (max-width: 950px) {ul {}}"
-      ],
-      "settings": {
-        "bg_color": "#013f56",
-        "text_color": "#ffffff",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
     "conheca_nossos_produtos_QPEUWc": {
       "type": "conheca-nossos-produtos",
       "settings": {
         "collection_reco": "frontpage",
         "title_sec": "<p>conheça os produtos</p>",
         "link_collection": "",
-        "color_title": "#111C30",
+        "color_title": "#111c30",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "instagram_section_by_turbo_XWyfQp": {
+      "type": "instagram-section-by-turbo",
+      "settings": {
+        "id_section": "",
+        "title": "<p>Acompanhe nosso instagram</p>",
+        "subtitle": "<p>Dicas e conteúdo para uma vida mais saudável</p>",
+        "instagram_title": "@nicoben",
+        "instagram_link": "",
+        "title_section_color": "#111c30",
+        "color_subtitle": "#434752",
+        "btn_color_bg": "#111C30",
+        "btn_color_text": "#fff",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -371,11 +387,12 @@
     "main",
     "rich_text_AW8NKy",
     "linha_section_pagina_ciencia_turbo_jHApjJ",
-    "linha_section_pagina_ciencia_turbo_tB3FbE",
     "linha_section_pagina_ciencia_turbo_tLBcED",
+    "linha_section_pagina_ciencia_turbo_tB3FbE",
+    "ofertas_info_by_turbo_dDQGNL",
     "more_options_pdp_turbo_RMPLCW",
     "section_depoimentos_turbo_mYFhr8",
-    "ofertas_info_by_turbo_dDQGNL",
-    "conheca_nossos_produtos_QPEUWc"
+    "conheca_nossos_produtos_QPEUWc",
+    "instagram_section_by_turbo_XWyfQp"
   ]
 }
