@@ -1,5 +1,3 @@
-
-
 class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
@@ -25,7 +23,6 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
-
   }
 
   cartUpdateUnsubscriber = undefined;
@@ -37,9 +34,6 @@ class CartItems extends HTMLElement {
       }
       this.onCartUpdate();
     });
-  
-    // Adicionando um evento de clique ao botão que você deseja
-   
   }
 
   disconnectedCallback() {
