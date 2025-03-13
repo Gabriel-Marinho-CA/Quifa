@@ -55,8 +55,8 @@
       "custom_css": [
         ".custom-rich-text {background: #013f56;}",
         ".custom-rich-text * {color: #fff; text-transform: uppercase;}",
-        ".custom-rich-text * {font-weight: 400; font-size: 56px; line-height: 100%; letter-spacing: 0%; text-transform: uppercase;}",
-        "@media (max-width: 547px) {.custom-rich-text * {font-weight: 400; font-size: 24px; line-height: 100%; letter-spacing: 0%; }}"
+        ".custom-rich-text * {font-weight: 400; font-size: 56px; line-height: 100%; text-transform: uppercase;}",
+        "@media (max-width: 547px) {.custom-rich-text * {font-weight: 400; font-size: 24px; line-height: 100%; }}"
       ],
       "settings": {
         "desktop_content_position": "left",
