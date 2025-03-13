@@ -98,6 +98,7 @@
     },
     "page_DY7T4A": {
       "type": "page",
+      "custom_css": [],
       "settings": {
         "page": "politicas",
         "heading_size": "h0",
@@ -105,12 +106,22 @@
         "padding_top": 40,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_ffyUGr": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.page-width:has(.page-title) {\n .page-title {\ndisplay:none;\n}\n  width: 100%;\n  max-width: 1400px;\n  padding-inline: 50px;\n\nh2 {\n\n}\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "rich_text_gHVMme",
     "rich_text_Ldh6fn",
-    "page_DY7T4A"
+    "page_DY7T4A",
+    "custom_liquid_ffyUGr"
   ]
 }
