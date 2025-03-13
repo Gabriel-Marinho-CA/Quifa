@@ -23,6 +23,11 @@ class CartItems extends HTMLElement {
     }, ON_CHANGE_DEBOUNCE_TIMER);
 
     this.addEventListener('change', debouncedOnChange.bind(this));
+    document.querySelectorAll(".add-to-cart-shelf").forEach(el => el.addEventListener("click",function() {
+      setTimeout(() => {
+        this.onCartUpdate();
+      },3000)
+    }))
   }
 
   cartUpdateUnsubscriber = undefined;
