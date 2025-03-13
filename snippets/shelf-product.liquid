@@ -9,13 +9,13 @@
     <a href="{{ product.url }}" style="text-decoration: none;">
       <div class="title-shelf">{{ product.title }}</div>
       <div class="wrapper-prices-info">
-        <p class="best-price-shelf">
-          {{ product.selected_or_first_available_variant.price | money }}
-        </p>
         <p class="list-price-shelf">
           {% if product.selected_or_first_available_variant.compare_at_price > product.price %}
             {{ product.selected_or_first_available_variant.compare_at_price | money }}
           {% endif %}
+        </p>
+        <p class="best-price-shelf">
+          {{ product.selected_or_first_available_variant.price | money }}
         </p>
       </div>
       <div class="installments">
