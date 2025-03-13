@@ -220,6 +220,7 @@
       ],
       "custom_css": [
         "li {flex-direction: column;}",
+        ".title-card *{font-size: 14px; text-align:center;}",
         "@media (max-width: 950px) {ul {}}"
       ],
       "settings": {
