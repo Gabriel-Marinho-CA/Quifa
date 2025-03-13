@@ -220,7 +220,7 @@
       ],
       "custom_css": [
         "li {flex-direction: column;}",
-        ".title-card *{font-size: 14px; text-align:center;}",
+        ".title-card * {font-size: 14px; text-align: center;}",
         "@media (max-width: 950px) {ul {}}"
       ],
       "settings": {
@@ -365,8 +365,8 @@
         "title_sec": "<p>conheça os produtos</p>",
         "link_collection": "",
         "color_title": "#111c30",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 76
       }
     },
     "instagram_section_by_turbo_XWyfQp": {
