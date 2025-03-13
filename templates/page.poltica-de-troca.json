@@ -56,7 +56,7 @@
         ".custom-rich-text {background: #013f56;}",
         ".custom-rich-text * {color: #fff; text-transform: uppercase;}",
         ".custom-rich-text * {font-weight: 400; font-size: 56px; line-height: 100%; text-transform: uppercase;}",
-        "@media (max-width: 547px) {.custom-rich-text * {font-weight: 400; font-size: 24px; line-height: 100%; } .custom-rich-text {padding-top: 3rem; padding-bottom: 3rem; } }"
+        "@media (max-width: 547px) {.custom-rich-text * {font-weight: 400; font-size: 24px; line-height: 100%; } .custom-rich-text {padding-top: 3rem; padding-bottom: 3rem; }}"
       ],
       "settings": {
         "desktop_content_position": "left",
@@ -112,7 +112,7 @@
     "custom_liquid_ffyUGr": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n.page-width:has(.page-title) {\n .page-title {\ndisplay:none;\n}\n  width: 100%;\n  max-width: 1400px;\n  padding-inline: 50px;\n@media (max-width:1000px) {\npadding-inline:15px;\n}\nh2 *{\nfont-size:32px !important;\ncolor:#383637;\n}\n* {\ncolor:#5C5C5C;\nfont-size:18px;\nline-height:1.5;\n}\n}\n</style>",
+        "custom_liquid": "<style>\n.page-width:has(.page-title) {\n .page-title {\ndisplay:none;\n}\n  width: 100%;\n  max-width: 1400px;\n  padding-inline: 50px;\n@media (max-width:1000px) {\npadding-inline:15px;\n}\nh2 *{\nfont-size:32px !important;\ncolor:#383637;\n@media (max-width:1000px) {\nfont-size:20px !important;}\n}\n* {\ncolor:#5C5C5C;\nfont-size:18px;\nline-height:1.5;\n\n@media (max-width:1000px) {\nfont-size:16px}\n}\n}\n}\n</style>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
