@@ -46,12 +46,12 @@
     "header": {
       "type": "header",
       "blocks": {
-        "header_categ_nav_dREp6k": {
+        "header_categ_nav_ipx6th": {
           "type": "header_categ_nav",
           "settings": {
-            "categ_link": "",
-            "text_categ": "Categoria",
-            "image_categ": "shopify://shop_images/caixa.png",
+            "categ_link": "shopify://products/nicoben-adulto-completo",
+            "text_categ": "Adulto Completo",
+            "image_categ": "shopify://shop_images/QUIFA_2024_NICOBEN_VITAMINAS_KV_AF1_1_3_1.png",
             "btn_label": "Comprar",
             "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
           }
@@ -59,9 +59,9 @@
         "header_categ_nav_nfAL6k": {
           "type": "header_categ_nav",
           "settings": {
-            "categ_link": "",
-            "text_categ": "Categoria",
-            "image_categ": "shopify://shop_images/caixa.png",
+            "categ_link": "shopify://products/nicoben-cabelo-pele-e-unhas",
+            "text_categ": "Cabelo, Pele e unhas",
+            "image_categ": "shopify://shop_images/Frame_1261153509_20d503c2-2ee0-47f5-8c51-3b9c9387c9d7.png",
             "btn_label": "Comprar",
             "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
           }
@@ -69,29 +69,29 @@
         "header_categ_nav_yFFnnn": {
           "type": "header_categ_nav",
           "settings": {
-            "categ_link": "",
-            "text_categ": "Categoria",
-            "image_categ": "shopify://shop_images/caixa.png",
+            "categ_link": "shopify://products/nicoben-tranquilidade",
+            "text_categ": "Tranquilidade",
+            "image_categ": "shopify://shop_images/Frame_1261153510.png",
             "btn_label": "Comprar",
             "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
           }
         },
-        "header_categ_nav_ipx6th": {
+        "header_categ_nav_G6eqnJ": {
           "type": "header_categ_nav",
           "settings": {
-            "categ_link": "",
+            "categ_link": "shopify://products/nicoben-vitalidade-e-disposicao",
             "text_categ": "Categoria",
-            "image_categ": "shopify://shop_images/caixa.png",
+            "image_categ": "shopify://shop_images/Frame_1261153491_1.png",
             "btn_label": "Comprar",
-            "color_scheme_categ": "scheme-4a51e21a-a8da-4c29-b88d-ae7bc1256f48"
+            "color_scheme_categ": ""
           }
         }
       },
       "block_order": [
-        "header_categ_nav_dREp6k",
+        "header_categ_nav_ipx6th",
         "header_categ_nav_nfAL6k",
         "header_categ_nav_yFFnnn",
-        "header_categ_nav_ipx6th"
+        "header_categ_nav_G6eqnJ"
       ],
       "settings": {
         "logo_position": "middle-left",
